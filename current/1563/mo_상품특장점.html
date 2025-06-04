@@ -1,7 +1,11 @@
 <div class="pi-1563-content">
   <div class="pi-1563-section">
-    <h2 class="pduct-m-heading ctit">전화/문자 받기 전 번호정보를 알려주는 <strong class="pduct-bold">후후 기본 서비스</strong>에 더해, 월 1,100원으로
-      <strong class="pduct-red">프리미엄 안심 서비스</strong>를 제공합니다</h2>
+    <h2 class="pduct-m-heading ctit">
+      전화/문자 받기 전 번호정보를 <br class="hide">
+      알려주는 <strong class="pduct-bold">후후 기본 서비스</strong>에 더해,<br> 
+      월 1,100원으로 <strong class="pduct-red">프리미엄 <br class="hide">
+      안심 서비스</strong>를 제공합니다
+    </h2>
   </div>
   <!-- 
   <div class="pi-1563-section">
@@ -129,13 +133,17 @@
   </div>
 </div>
 <style type="text/css">
+  @media (min-width: 625px) {
+    br.hide {
+      display: none;
+    }
+  }
   .pi-1563-content,
   .pi-1563-content * {
     box-sizing: border-box;
   }
 
   .forte-area .pi-1563-content h2.ctit {
-    max-width: 360px;
     margin: 0 auto;
     padding: 0 30px;
     word-break: keep-all;
