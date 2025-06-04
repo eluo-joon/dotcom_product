@@ -1,0 +1,83 @@
+@use './variables' as *;
+
+// font style
+@mixin font-style ($fz, $fw: inherit, $lh: normal, $ls: 0px) {
+  font-family: $font-f-noto;
+  font-size: $fz;
+  font-style: normal;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  @content;
+}
+
+@mixin font-title-46 ($fz:46px, $fw:400, $lh:130.435%, $ls:-1.84px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
+@mixin font-info-20 ($fz:20px, $fw:400, $lh:normal, $ls:-1px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+@mixin font-info-30 ($fz:30px, $fw:400, $lh:normal, $ls:-1.5px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
+@mixin font-info-35 ($fz:35px, $fw:500, $lh:normal, $ls:-1.75px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
+// layout
+@mixin flex ($direction: row, $ai: center, $jc: flex-start, $gap: 0) { 
+  display: flex;
+  flex-direction: $direction;
+  align-items: $ai;
+  justify-content: $jc;
+  gap: $gap;
+  @content;
+}
+
+// 가상요소 생성
+@mixin after($w, $h) {
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: $w;
+    height: $h;
+    @content;
+  }
+}
+
+@mixin before($w, $h) {
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: $w;
+    height: $h;
+    @content;
+  }
+}
+
+@mixin before-flex($w, $h, $gap: 0, $content: '') {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: $gap;
+  
+  &::before {
+    display: block;
+    content: $content;
+    width: $w;
+    height: $h;
+    @content;
+  }
+}

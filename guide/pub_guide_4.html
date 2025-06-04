@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<title>Web Accessibility</title>
+	<link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+</head>
+
+<body>
+	<div class="guide-inner field_guide">
+		<h1>a11y Common Rule</h1>
+
+		<div class="guide-inner-content">
+			<h2>웹 접근성 심사 가이드</h2>
+			<p class="pt20">
+				웹 접근성 품질 인증 심사를 받기 위해 필요한 절차 및 기준을 설명합니다.<br>
+				아래 사항을 준수하여 사전 준비 및 심사 대응을 진행해야 합니다.
+			</p>
+			<div class="guide_desc">
+				<div>
+					<p class="tit">1. 웹 접근성 심사 개요</p>
+					<p>심사업체: <strong><a href="https://www.webwatch.or.kr/" target="_blank" title="새 창 이동">웹와치</a></strong></p>
+					<ul>
+						<li>심사 기준: KWCAG 2.2 (한국형 웹 콘텐츠 접근성 지침 2.2 / <a href="./KWCAG2.2.pdf" target="_blank" download="KWCAG2.2.pdf">파일 다운로드</a>)</li>
+						<li><strong>심사 유형:</strong> 서면 심사 (자가진단 결과서 검토), 기술 심사 (전문가 + 사용자 심사)</li>
+					</ul>
+				</div>
+				<div>
+					<p class="tit">2. 사전 준비 및 접수 절차</p>
+					<p>심사 신청 전 필수 준비 사항</p>
+					<strong>자가진단 결과서 작성</strong>
+					<ul>
+						<li>자동진단도구 최신버전을 사용하여 10개 페이지를 검사</li>
+						<li>자동진단 항목의 준수율이 95% 이상일 경우에만 심사 신청 가능</li>
+						<li>자가진단 결과서 다운로드: <a href="https://www.webwatch.or.kr/accessibility/webwatch_down.html?MenuCD=730#contents" target="_blank" title="새 창 이동">자가 진단도구 다운로드</a></li>
+						<li>자동 검사 불가능한 경우, 해당 사유를 신청서에 기재</li>
+					</ul>
+				</div>
+				<div>
+					<p class="tit">3. 심사 절차 및 기준</p>
+					<strong>1차: 서면 심사 (자가진단 결과서 검토)</strong>
+					<ul>
+						<li>심사 내용: 자동진단 도구로 검출 가능한 항목의 준수율 95% 이상 여부 확인</li>
+					</ul>
+					<strong>2차: 기술 심사 (전문가 + 사용자 심사)</strong>
+					<ul>
+						<li>전문가 심사: 심사 대상 페이지에서 모든 검사 항목이 "권고" 이상이어야 통과</li>
+						<li>사용자 심사: 선정된 심사 과업을 모든 장애 유형이 수행 가능해야 함</li>
+					</ul>
+					<strong>수정 유예기간 부여 (불합격 시)</strong>
+					<ul>
+						<li>전문가 심사에서 미비한 오류로 불합격 시, <strong>보고서 제공 + 10일(영업일 기준) 수정/보완 가능</strong></li>
+						<li><strong>2차 심사 요청 가능 (1회 한정)</strong><br>2차 심사에서도 불합격 시, 심사 종료 → 최종 불합격 처리</li>
+					</ul>
+					<strong>이의 신청 가능</strong>
+					<ul>
+						<li>최종 불합격 시, 심사 보고서의 오류 사항에 대해 이의 신청 가능</li>
+						<li>이의 신청 자료 검토 후, 기술위원회 결정에 따라 처리</li>
+					</ul>
+				</div>
+				<div>
+					<p class="tit">4. 2차 심사 진행 여부 (기준 충족 시 가능)</p>
+					<strong> 기본 원칙:</strong>
+					<ul>
+						<li>기술 심사는 원칙적으로 1차 심사만 진행</li>
+						<li>단, 다음 기준을 충족하면 2차 심사 가능</li>
+					</ul>
+					<table>
+						<colgroup>
+							<col style="width:40%">
+							<col style="width:60%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>심사 항목</th>
+								<th>기준</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="first">
+								<td>전문가 심사</td>
+								<td>33개 검사 항목별 준수율 95% 이상</td>
+							</tr>
+							<tr>
+								<td>사용자 심사</td>
+								<td>과업 성공률 85% 이상</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<p class="tit">5. 인증 및 유지보수 사항</p>
+					<strong>인증 절차</strong>
+					<ul>
+						<li>기술 심사 통과 시, "WA 품질인증" 마크 부여</li>
+						<li>인증 신청 기관(기업)에는 "웹 접근성 품질 인증서" 수여</li>
+					</ul>
+					<strong>인증 유지 및 갱신</strong>
+					<ul>
+						<li>인증 유효기간: 1년</li>
+						<li>유효기간 만료 전 심사 신청 필수(기한 내 신청하면 갱신 심사로 진행 가능)</li>
+						<li>사이트 개편 시 신규 심사 필요</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2>ARIA 속성 가이드</h2>
+			<div class="guide_desc">
+				<div>
+					<p class="tit">1. aria-labelledby (ID 기반 참조)</p>
+					<ul>
+						<li>특정 요소의 이름을 다른 요소에서 가져와 스크린 리더가 읽도록 함.</li>
+						<li><strong>사용 예시:</strong> 탭 패널과 버튼 연결</li>
+					</ul>
+					<xmp>
+<button id="tab1" aria-controls="panel1">탭 1</button>
+<div id="panel1" role="tabpanel" aria-labelledby="tab1">탭 1의 내용</div>
+					</xmp>
+				</div>
+
+				<div>
+					<p class="tit">2. aria-hidden (스크린 리더 숨김)</p>
+					<ul>
+						<li>요소를 스크린 리더에서 숨길 때 사용 (단순히 display: none;과 다름)</li>
+						<li><strong>사용 예시:</strong> 활성화되지 않은 콘텐츠 숨기기</li>
+					</ul>
+					<xmp>
+<div role="tabpanel" aria-hidden="true">이 패널은 비활성화 상태입니다.</div>
+					</xmp>
+					<strong>예외 처리 케이스:</strong>
+					<ul>
+						<li>.tab-wrap--scroll-fixed--arrow, .tab-wrap--scroll-fixed</li>
+						<li><strong></strong></li>
+					</ul>
+				</div>
+				
+				<div>
+					<p class="tit">3. aria-label (대체 라벨 제공)</p>
+					<ul>
+						<li>요소에 대체 텍스트를 제공하여 스크린 리더가 읽을 내용을 지정.</li>
+						<li><strong>사용 예시:</strong> 텍스트 없는 링크 설명<br>
+							<xmp>
+<button aria-label="검색">🔍</button>
+							</xmp>
+						</li>
+						<li><strong>사용 예시:</strong> 텍스트 없는 링크 설명<br>
+							<xmp>
+<a href="home.html" aria-label="홈으로 이동">
+	<img src="home-icon.svg" alt="">
+</a>
+							</xmp>
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<p class="tit">4. aria-controls (연결된 요소 참조)</p>
+					<ul>
+						<li>버튼과 관련된 패널이나 콘텐츠를 제어할 때 사용</li>
+						<li><strong>사용 예시:</strong> 탭과 패널 연결</li>
+					</ul>
+					<xmp>
+<button id="tab1" aria-controls="panel1">탭 1</button>
+<div id="panel1" role="tabpanel">탭 1 내용</div>
+					</xmp>
+				</div>
+			</div>
+
+			<h2>title 속성 가이드</h2>
+			<div class="guide_desc">
+				<div>
+					<p class="tit">1. &lt;a&gt; 태그에서 title 사용</p>
+					<ul>
+						<li>툴팁을 제공하며, 새 창 열림 등 추가 정보를 전달할 때 사용</li>
+						<li><strong>사용 예시:</strong> </li>
+					</ul>
+					<xmp>
+<a href="https://example.com" target="_blank" title="새 창에서 열림">예제 사이트</a>
+					</xmp>
+				</div>
+				<div>
+					<p class="tit">2. &lt;button&gt; 태그에서 title 사용</p>
+					<ul>
+						<li>툴팁을 제공하며, 버튼의 기능을 마우스 사용자에게 추가 설명</li>
+						<li><strong>사용 예시:</strong> </li>
+					</ul>
+					<xmp>
+<button title="파일 저장">💾</button>
+					</xmp>
+				</div>
+			</div>
+
+			<h2>tabindex</h2>
+			<div class="guide-block">
+				<ul>
+					<li>무시 가능한 요소 tabindex = '-1'</li>
+					<li>그 외 필요 시 tabindex = '0'</li>
+					<li>필요시 ui 스크립트 작성시 동적 생성 삭제 / <strong>그 외 숫자사용 금지 (한번 숫자 지정 시 순차 흐름대로 전부 필요)</strong></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

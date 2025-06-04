@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>KT닷컴 상품/혜택 퍼블리싱 운영 가이드</title>
+    <link rel="stylesheet" href="./common/css/guide.css">
+    <script type="text/javascript" src="./common/js/dtree.js"></script>
+</head>
+
+<body>
+
+    <h1 class="guide-tree-title">KT닷컴 상품/혜택 퍼블리싱 운영 가이드</h1>
+
+    <div class="btn-guide-tree-all">
+        <a href="javascript: p.openAll();" title="Expand All" class="btn-guide-tree-all-open">Expand All</a>
+        <a href="javascript: p.closeAll();" title="Collapse All" class="">Collapse All</a>
+    </div>
+    <script type='text/javascript'>
+        var tree = {
+            '퍼블리싱 운영 가이드': {
+                '작업사항': {
+                    '기본 작업사항': ['../guide/pub_guide_1.html', '', 'mainFrame'],
+                    '상세 - 용어정의': ['../guide/pub_guide_2.html', '', 'mainFrame'],
+                    '상세 - 클릭이벤트(통계)': ['../guide/pub_guide_3.html', '', 'mainFrame'],
+                    '상세 - 기타': ['../guide/pub_guide_2.html', '', 'mainFrame'],
+                },
+                '상품서비스': {
+                    '상세페이지' : {
+                        'Layout(Web)': {
+                            'Component': {
+                                '기본형' : ['./../../product_layout_component_1.html', '', 'mainFrame'],
+                                '기본형 + 비교함제외' : ['../html/solution/health_care.html', '', 'mainFrame'],
+                                '앱형' : ['../html/solution/distribution.html', '', 'mainFrame'],
+                                'HTML업로드형' : ['../html/solution/360_solution.html', '', 'mainFrame'],
+                            },
+                            'UI': {
+                                '아코디언(구)' : ['./../../product_layout_ui_accord_1.html', '', 'mainFrame'],
+                                '아코디언(신규)' : ['../html/story/vision.html', '', 'mainFrame'],
+                                '아코디언(QnA)' : ['../html/story/archive.html', '', 'mainFrame'],
+                                '영상(자막제공)' : ['../html/story/news_list.html', '', 'mainFrame'],
+                            },
+                        },
+                        'Layout(Mobile)': {
+                        },
+                    }
+                },
+            }
+        };
+        var p = new dTree('p', tree);
+        document.write(p);
+    </script>
+
+</body>
+
+</html>

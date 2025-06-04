@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<title>기본 작업사항 | 작업사항</title>
+	<link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+</head>
+
+<body>
+	<div class="guide-inner">
+		<h1>Common Rule</h1>
+		
+		<div class="guide-inner-content">
+
+			<h2>1. 기본 사항</h2>
+			<div class="guide-block">
+				<ul>
+					<li>별도 형상관리 툴 부재로 CMS 및 로컬 작업을 진행하므로 항시 백업 후 작업.</li>
+					<li>
+						적응형 사이트로 웹 / 모바일 화면 각각 작업 필요.
+						<ul>
+							<li class="li-caption">URL 각각 분리, 단순 브라우저 리사이징으로 디바이스 전환 불가</li>
+							<li>Web: https://product.kt.com/<strong class="fc-primary td-underline">wDic</strong>/index.do?CateCode=6003</li>
+							<li>Mobile: https://<strong class="fc-primary td-underline">m.</strong>product.kt.com/<strong class="fc-primary td-underline">mDic</strong>/index.do?CateCode=6003</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<h2>2. 네이밍 규칙</h2>
+			<div class="guide-block">
+				<ul>
+					<li>Class 및 ID 명 하이픈( - ) 사용.</li>
+					<li>이미지명 언더바( _ ) 사용.</li>
+					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
+				</ul>
+			</div>
+
+			<h2>2. </h2>
+
+			<div class="guide-block">
+				<ul>
+					<li>
+						<strong>네이밍 기본 원칙</strong>
+						<ul class="pl20">
+							<li><strong>페이지 공통화 요소</strong> 또는 <strong>고유 페이지의 컨테이너</strong>에만 id 사용</li>
+							<li>그 외 모든 요소에는 class 사용</li>
+						</ul>
+					</li>
+					<li>
+						<strong>BEM(Block Element Modifier) 모델 적용</strong>
+						<ul class="pl20">
+							<li>클래스 네이밍은 BEM 방식을 따르되, 필요 시 ID도 사용 가능</li>
+							<li>JavaScript 라이브러리 적용 시 BEM 모델 사용 예외 가능 (예: swiper)</li>
+							<li>고유 블럭화가 가능할 경우 <strong>상위 요소명을 생략 가능</strong></li>
+						</ul>
+					</li>
+					<li>
+						<strong>각 페이지에 해당하는 고유한 클래스명 사용</strong>
+						<ul class="pl20">
+							<li>페이지별 스타일 적용이 필요할 경우 HTML 파일명의 클래스를 추가하여 사용</li>
+							<li>예시: story 카테고리 > 회사소개 페이지 → .container.about_us</li>
+						</ul>
+					</li>
+				</ul>
+				<h3 style="margin-top: 10px;">공통</h3>
+				<table>
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:20%">
+						<col style="width:25%">
+						<col style="width:40%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Category</th>
+							<th>Prototype</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="first">
+							<td>폼</td>
+							<td><strong>.form-area-</strong></td>
+							<td class="td_left">.form-area-종류--속성</td>
+							<td class="td_left">.form-area-input / .form-area-input--search</td>
+						</tr>
+						<tr>
+							<td>버튼</td>
+							<td><strong>.btn-</strong></td>
+							<td class="td_left">.btn-종류--속성</td>
+							<td class="td_left">.btn-primary / .btn-primary--big</td>
+						</tr>
+						<tr>
+							<td rowspan="6">게시판</td>
+							<td rowspan="6"><strong>.board-area</strong></td>
+							<td class="td_left">게시판 영역</td>
+							<td class="td_left">.board-area-wrap</td>
+						</tr>
+						<tr>
+							<td class="td_left">공지 영역</td>
+							<td class="td_left">.board-area__noti / .board-area__noti--caution</td>
+						</tr>
+						<tr>
+							<td class="td_left">게시판 리스트</td>
+							<td class="td_left">.board-area__list / .board-area__list--column-type / board-area__list-item</td>
+						</tr>
+						<tr>
+							<td class="td_left">메시지 관련</td>
+							<td class="td_left">board-area__message / .board-area__message--empty</td>
+						</tr>
+						<tr>
+							<td class="td_left">페이지네이션</td>
+							<td class="td_left">.board-area__page</td>
+						</tr>
+						<tr>
+							<td class="td_left">페이지네이션 버튼</td>
+							<td class="td_left">.board-area__page__btn--first / .board-area__page__btn--prev / .board-area__page__btn--next / .board-area__page__btn--last</td>
+						</tr>
+						<tr>
+							<td>아이콘</td>
+							<td><strong>.icon</strong></td>
+							<td class="td_left">.icon-종류--속성</td>
+							<td class="td_left">.icon-sns / .icon-sns--youtube</td>
+						</tr>
+						<tr>
+							<td>팝업(개별 ID)</td>
+							<td><strong>#popup-</strong></td>
+							<td class="td_left">#popup-고유네이밍</td>
+							<td class="td_left">#popup-main</td>
+						</tr>
+						<tr>
+							<td>팝업스타일(공통화)</td>
+							<td><strong>.popup-wrap-</strong></td>
+							<td class="td_left">.popup-wrap-종류--속성</td>
+							<td class="td_left">.popup-wrap-main--today-close / .popup-wrap-main--never-open</td>
+						</tr>
+						<tr>
+							<td>탭메뉴</td>
+							<td><strong>.tab-wrap-</strong></td>
+							<td class="td_left">.tab-wrap--속성</td>
+							<td class="td_left">.tab-wrap--round / .tab-wrap--scroll-fixed / .tab-wrap--scroll</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 style="margin-top: 20px;">고유 페이지 네이밍</h3>
+				<table >
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:40%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>구분</th>
+							<th>1depth</th>
+							<th>2depth</th>
+							<th>3depth</th>
+							<th>Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="first">
+							<td>전체</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>#welstory</strong></td>
+						</tr>
+						<tr>
+							<td rowspan="9">공통</td>
+							<td class="td_left">스킵</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.skip-nav</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left">헤더</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>header.header-wrap</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left">풋터</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>footer.footer-wrap</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left">플로팅</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.floating-wrap</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left" rowspan="5">메인</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>#main-container</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left">페이지경로</td>
+							<td class="td_left"></td>
+							<td><strong>.breadcrumbs</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left" rowspan="3">컨테이너(실작업) - <strong>페이지 공통화 개별 ID</strong></td>
+							<td class="td_left"></td>
+							<td><strong>.container</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left">컨테이너 상단 타이틀</td>
+							<td><strong>.container__head</strong></td>
+						</tr>
+						<tr>
+							<td class="td_left">컨테이너 내부 섹션</td>
+							<td><strong>.container__section > .container__section__cont</strong></td>
+						</tr>
+						<tr>
+							<td>주메뉴</td>
+							<td class="td_left">story</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#story</strong></td>
+						</tr>
+						<tr>
+							<td>주메뉴</td>
+							<td class="td_left">solution&service</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#solution</strong></td>
+						</tr>
+						<tr>
+							<td>주메뉴</td>
+							<td class="td_left">Frontrunner</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#frontrunner</strong></td>
+						</tr>
+						<tr>
+							<td>주메뉴</td>
+							<td class="td_left">innovation</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#innovation</strong></td>
+						</tr>
+						<tr>
+							<td>풋터메뉴</td>
+							<td class="td_left">문의하기</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#voc</strong></td>
+						</tr>
+						<tr>
+							<td>풋터메뉴</td>
+							<td class="td_left">위치/ 사이트맵 / 약관 및 방침</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#util</strong></td>
+						</tr>
+						<tr>
+							<td>기타</td>
+							<td class="td_left">시스템점검안내 및 에러페이지</td>
+							<td class="td_left"></td>
+							<td class="td_left"></td>
+							<td><strong>.container#etc</strong></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<h2>3. Image 규칙</h2>
+
+			<div class="guide-block">
+				<ul>
+					<li>
+						<strong>이미지 파일 네이밍 규칙</strong>
+						<ul class="pl20">
+							<li>영문 소문자, 숫자, 언더바(_) 사용 (예: icon_logo.svg)</li>
+							<li>아이콘은 기본적으로 SVG 사용</li>
+							<li>이름은 영문 대문자 및 숫자로 시작할 수 없음</li>
+						</ul>
+					</li>
+					<li>
+						<strong>저장 위치 규칙</strong>
+						<ul class="pl20">
+							<li>메인 페이지 이미지 → main 폴더</li>
+							<li>서브 페이지 이미지 → sub 폴더</li>
+						</ul>
+					</li>
+					<li>
+						<strong>서브 페이지 이미지명 규칙</strong>
+						<ul class="pl20">
+							<li>mo(모바일)_주메뉴ID_섹션_종류_속성(필요 시)</li>
+							<li>예시: voc_head_bg.png (PC) / mo_voc_head_bg.png (모바일)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+			<h2>4. Html 파일명 규칙</h2>
+
+			<div class="guide-block">
+				<ul>
+					<li>
+						<strong>파일명 규칙 개요</strong>
+						<ul class="pl20">
+							<li>초기에 **IA 메뉴명(영문)**을 기준으로 국문과 영문 파일명을 동일하게 작성</li>
+							<li>최종 파일명은 실제 IA 메뉴명과 일치하지 않을 수 있음</li>
+						</ul>
+					</li>
+				</ul>
+				<h3 style="margin-top: 20px;">HTML / JSP 파일명</h3>
+				<table>
+					<thead>
+						<tr>
+							<th style="width: 15%;">카테고리</th>
+							<th style="width: 15%;">메뉴명</th>
+							<th style="width: 20%;">HTML 파일명</th>
+							<th style="width: 20%;">JSP 파일명</th>
+							<th style="width: 20%;">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Main</td>
+							<td>메인</td>
+							<td>index.html</td>
+							<td>main.jsp</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="9">Story</td>
+							<td>회사소개</td>
+							<td>about_us.html</td>
+							<td>aboutUs.jsp</td>
+							<td rowspan="9">
+								- 뉴스, 채용 > 영문 페이지X
+							</td>
+						</tr>
+						<tr>
+							<td>비전</td>
+							<td>vision.html</td>
+							<td>vision.jsp</td>
+						</tr>
+						<tr>
+							<td>아카이브</td>
+							<td>archive.html</td>
+							<td>archive.jsp</td>
+						</tr>
+						<tr>
+							<td>뉴스</td>
+							<td>news_list.html</td>
+							<td>newsList.jsp</td>
+						</tr>
+						<tr>
+							<td>뉴스 - 상세</td>
+							<td>news_view.html</td>
+							<td>newsDetail.jsp</td>
+						</tr>
+						<tr>
+							<td>채용</td>
+							<td>people.html</td>
+							<td>peopleList.jsp</td>
+						</tr>
+						<tr>
+							<td>채용 - 상세</td>
+							<td>recruit_list.html</td>
+							<td>recruitDetail.jsp</td>
+						</tr>
+						<tr>
+							<td>전자공고</td>
+							<td>edisclosure.html</td>
+							<td>edisclosure.jsp</td>
+						</tr>
+						<tr>
+							<td>전자공고 - 상세</td>
+							<td>edisclosure_view_01.html</td>
+							<td>edisclosureDetail.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="4">Solution & Service</td>
+							<td>푸드서비스</td>
+							<td>food_service.html</td>
+							<td>foodService.jsp</td>
+							<td rowspan="4"></td>
+						</tr>
+						<tr>
+							<td>헬스케어 솔루션</td>
+							<td>health_care.html</td>
+							<td>healthCare.jsp</td>
+						</tr>
+						<tr>
+							<td>식자재 유통</td>
+							<td>distribution.html</td>
+							<td>distribution.jsp</td>
+						</tr>
+						<tr>
+							<td>360 솔루션</td>
+							<td>360_solution.html</td>
+							<td>360Solution.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="4">Frontrunner</td>
+							<td>푸드테크</td>
+							<td>technology.html</td>
+							<td>technology.jsp</td>
+							<td rowspan="4"></td>
+						</tr>
+						<tr>
+							<td>R&D</td>
+							<td>rnd.html</td>
+							<td>rnd.jsp</td>
+						</tr>
+						<tr>
+							<td>인프라</td>
+							<td>infra.html</td>
+							<td>infra.jsp</td>
+						</tr>
+						<tr>
+							<td>글로벌 네트워크</td>
+							<td>global.html</td>
+							<td>global.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="2">Innovation</td>
+							<td>Welstory Innovation Track</td>
+							<td>wit.html</td>
+							<td>wit.jsp</td>
+							<td rowspan="2"></td>
+						</tr>
+						<tr>
+							<td>Sustainable Story</td>
+							<td>sustainable_stories.html</td>
+							<td>sustainableStories.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="6">Footer</td>
+							<td>위치</td>
+							<td>location.html</td>
+							<td>location.jsp</td>
+							<td rowspan="6">
+								- 고객센터, 윤리경영 > 영문 페이지 X
+							</td>
+						</tr>
+						<tr>
+							<td>사이트맵</td>
+							<td>sitemap.html</td>
+							<td>sitemap.jsp</td>
+						</tr>
+						<tr>
+							<td>이용약관</td>
+							<td>terms.html</td>
+							<td>terms.jsp</td>
+						</tr>
+						<tr>
+							<td>개인정보처리방침</td>
+							<td>policy.html</td>
+							<td>policy.jsp</td>
+						</tr>
+						<tr>
+							<td>안전보건경영방침</td>
+							<td>safety_policy.html</td>
+							<td>safetyPolicy.jsp</td>
+						</tr>
+						<tr>
+							<td>윤리경영</td>
+							<td>ethics.html</td>
+							<td>ethics.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="6">고객센터</td>
+							<td>고객센터 - 메인</td>
+							<td>submain.html</td>
+							<td>submain.jsp</td>
+							<td rowspan="6">
+								- 위탁급식문의와 식자재 구매문의 화면 동일하여 HTML 파일 동일
+							</td>
+						</tr>
+						<tr>
+							<td>위탁급식문의</td>
+							<td>etc.html</td>
+							<td>etc.jsp</td>
+						</tr>
+						<tr>
+							<td>고객의소리</td>
+							<td>voice_of_customer.html</td>
+							<td>voiceOfCustomer.do</td>
+						</tr>
+						<tr>
+							<td>식자재 구매문의</td>
+							<td>etc.html</td>
+							<td>etcFood.do</td>
+						</tr>
+						<tr>
+							<td>식자재 납품문의</td>
+							<td>food_supply.html</td>
+							<td>foodSupply.jsp</td>
+						</tr>
+						<tr>
+							<td>문의 완료페이지</td>
+							<td>done.html</td>
+							<td>done.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="2">ETC</td>
+							<td>공통 에러페이지</td>
+							<td>common_error.html</td>
+							<td>commonError.jsp</td>
+							<td rowspan="2"></td>
+						</tr>
+						<tr>
+							<td>시스템점검안내</td>
+							<td>sys_maint.html</td>
+							<td>sysMaint.jsp</td>
+						</tr>
+						<tr>
+							<td rowspan="3">include</td>
+							<td>헤더</td>
+							<td>inc_header.html</td>
+							<td>incHeader.jsp</td>
+							<td rowspan="3">
+								- 고객의 소리 헤더 공통: incVocHead.jsp(html 파일X)
+							</td>
+						</tr>
+						<tr>
+							<td>푸터</td>
+							<td>inc_footer.html</td>
+							<td>incFooter.jsp</td>
+						</tr>
+						<tr>
+							<td>플로팅 메뉴</td>
+							<td>inc_floating.html</td>
+							<td>incFloating.jsp</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<h2>5. 주석 규칙</h2>
+
+			<div class="guide-block">
+				<ul>
+					<li>
+						<strong>수정 시 주석</strong><br>
+						<span class="pre">&lt;!-- 2024-10-01 수정 // --&gt;
+							&lt;!-- // 2024-10-01 수정 --&gt;</span>
+					</li>
+					<li style="margin-top: 10px;">
+						<strong>섹션 구분 주석</strong><br>
+						<span class="pre">&lt;!-- S :: 영역 설명 // --&gt;
+							&lt;!-- // E :: 영역 설명 --&gt;</span>
+					</li>
+					<li style="margin-top: 10px;">
+						<strong>개발 요청 역역 주석</strong><br>
+						<span class="pre">&lt;!-- S :: 개발 요청 - 영역 설명  // --&gt;
+							&lt;!-- // E :: 개발 요청 - 영역 설명 --&gt;</span>
+					</li>
+				</ul>
+			</div>
+
+
+			<h2>6. CSS 분리 및 구조</h2>
+
+			<div class="guide-block">
+			<ul>
+				<li>CSS 구조: common, layout 스타일</li>
+				<li>라이브러리 스타일 파일은 default.css에 모두 반영되어 있습니다.</li>
+			</ul>
+			</div>
+
+
+			<h2>6. 폴더 구조</h2>
+
+			<div class="guide-block">
+				<span class="pre">root/
+					│── [assets]
+					│   ├── [css]
+					│   ├── [font]
+					│   ├── [images]
+					│   ├── [js]
+					│   ├── [video]
+					│── [html]
+					│── [en]					
+				</span>
+			</div>
+
+
+			<h2>7. 작업 시 유의사항</h2>
+
+			<div class="guide-block">
+				<ul>
+					<li>
+						<strong>CSS 관련 주의 사항</strong>
+						<ul class="pl20">
+							<li>라이브러리 스타일은 default.css에 포함</li>
+							<li>CSS로 스타일을 최대한 구현하고, 자바스크립트 사용을 최소화</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

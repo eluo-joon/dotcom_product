@@ -1,0 +1,81 @@
+@charset "UTF-8";
+body, * { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { height: 100%; }
+
+table {border-collapse: collapse; border: 1px solid #000; margin-top: 5px;}
+
+th, tr, td {padding: 5px; border: 1px solid #000;}
+
+.guide-wrap { display: table; width: 100%; height: 100%; table-layout: fixed; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; position: absolute; top: 0; left: 0; }
+
+.guide-wrap > section, .guide-wrap > aside { display: table-cell; overflow: auto; border-collapse: collapse; }
+
+.guide-wrap > section embed, .guide-wrap > aside embed { display: block; width: 100%; height: 100%; }
+
+.guide-nav { width: 300px; height: 100%; border-right: 1px solid #e9e9e9; background-color: #fbfbfb; }
+
+.btn-guide-tree-all { float: left; margin-top: 5px; margin-right: 10px; margin-left: 10px; }
+
+.btn-guide-tree-all a { display: inline-block; overflow: hidden; width: 12px; height: 12px; cursor: pointer; text-indent: -9999px; background: url("../images/btn_collapse.gif") 0 0 no-repeat; }
+
+.btn-guide-tree-all a.btn-guide-tree-all-open { background-image: url("../images/btn_expand.gif"); }
+
+.btn-guide-tree-all img { vertical-align: middle; border: 0 none; }
+
+.guide-tree-title { font: bold 15px/15px 'sans-serif'; margin: 0; margin-bottom: 10px; padding: 23px 7px 22px; color: #616161; border-bottom: 1px solid #e9e9e9; }
+
+.dtree { font: normal 20px/15px '굴림'; margin: 20px 0; padding-left: 10px; white-space: nowrap; color: #000; }
+
+.dtree h2 { font: normal 12px '굴림'; padding: 2px; color: #999; }
+
+.dtree ol { padding-left: 2px; list-style: decimal; list-style-position: inside; }
+
+.dtree li { font: normal 12px/14px '돋움'; margin-left: 0; padding: 2px 0; }
+
+.dtree li span { font: normal 12px/14px '돋움'; margin-left: -5px; }
+
+.dtree p { text-align: right; }
+
+.dtree a { text-decoration: none; color: #999; }
+
+.dtree a.node, .dtree a.nodeSel { padding: 1px 2px; white-space: nowrap; }
+
+.dtree a.node { font-size: 12px; color: #000; }
+
+.dtree a.nodeSel { font-size: 12px; font-weight: bold; background-color: #f0ff00; }
+
+.dtree img { vertical-align: middle; border: 0 none; }
+
+.dtree .dTreeNode { font-size: 12px; color: #999; }
+
+.dtree .clip { overflow: hidden; }
+
+.guide-inner { font-weight: 400; font-size: 14px; }
+
+.guide-inner h1 { font-size: 28px; font-weight: 500; background-color: #222; padding: 12px 30px; color: #fff; margin-bottom: 10px; text-transform: uppercase;}
+
+.guide-inner h2 { font-size: 20px; font-weight: 500; padding-bottom: 10px; padding-top: 10px; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc;}
+
+.guide-inner-content { padding: 0 30px 30px; }
+
+.guide-inner .guide-block { padding: 10px 20px; margin-bottom: 10px; background-color: #fff; border-bottom: 1px solid #ccc; }
+
+.guide-inner .guide-block .pre { display: block; white-space: pre-line; }
+
+.guide-inner .guide-block ul li + li {margin-top: 5px;}
+
+.guide-inner .guide-block ul li ul {margin-top: 5px; list-style-type: none;}
+
+.guide-inner .guide-block ul li ul li {position: relative; padding-left: 10px;}
+
+.guide-inner .guide-block ul li ul li::before {display: block; content: '-'; position: absolute; left: 0; top: 0px;}
+
+.guide-inner .guide-block li.li-caption {position: relative; padding-left: 15px; list-style-type: none; list-style-type: none;}
+
+.guide-inner .guide-block li.li-caption::before {display: block; content: '※'; position: absolute; left: 0; top: 0px;}
+
+/* 추가 커스텀 */
+.guide-inner .fc-primary {color: red;}
+
+.guide-inner .td-underline {text-decoration: underline;}
