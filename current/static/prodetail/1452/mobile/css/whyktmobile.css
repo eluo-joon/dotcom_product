@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+.whykt-wrap {
+	color:#000;
+	text-align:center;
+}
+
+.whykt-ctit {
+	color:#fff;
+	font-weight:bold;
+	font-size:24px;
+	letter-spacing:-1.2px;
+}
+.whykt-ctit .point {
+	color:#7DE2F8;
+}
+.whykt-sstit {
+	margin:35px 0 0 0;
+	font-weight:bold;
+	font-size:21px;
+	letter-spacing:-1px;
+}
+.whykt-txt {
+	margin:15px 0 0 0;
+	font-size:15px;
+	line-height:1.5;
+}
+.whykt-note {
+	display:block;
+	margin:20px 0 0 0;
+	color:#000;
+	font-size:12px;
+	line-height:1.4;
+	letter-spacing:-0.6px;
+}
+
+.whykt-hsection {
+	padding:31px 0 28px;
+	background:#EEF3F3;
+}
+
+.whykt-rund-section {
+	padding:35px 25px 50px;
+	background:url('/static/prodetail/1452/mobile/images/bg_whykt_rund.png') no-repeat 50% 0;
+	background-size:cover;
+}
+.whykt-rund-section .whykt-stit {
+	margin:20px 0 0 0;
+	color:#fff;
+	font-weight:normal;
+	font-size:15px;
+	letter-spacing:-0.8px;
+}
+.whykt-rund-section .whykt-rund-list {
+	margin:25px 0 0 0;
+	padding:37px 30px 37px;
+	background:#FFF;
+	box-shadow:0px 1px 15px #00000052;
+	border-radius:10px;
+	text-align:left;
+	opacity:0.96;
+}
+.whykt-rund-section .whykt-rund-list li {
+	margin:22px 0 0 0;
+	padding:0 0 0 45px;
+	background:url('/static/prodetail/1452/mobile/images/icon_whykt_rund_01.png') no-repeat 0 0;
+	background-size:30px 30px;
+	font-weight:bold;
+	font-size:13px;
+	letter-spacing:-0.7px;
+}
+.whykt-rund-section .whykt-rund-list li:first-child {margin:0;}
+.whykt-rund-section .whykt-rund-list li .bold {
+	color:#071010;
+	font-weight:bold;
+	font-size:14px;
+}
+.whykt-rund-section .whykt-rund-list li.add1 {
+	background-image:url('/static/prodetail/1452/mobile/images/icon_whykt_rund_02.png');
+	background-size:30px 23px;
+}
+.whykt-rund-section .whykt-rund-list li.add2 {
+	background-image:url('/static/prodetail/1452/mobile/images/icon_whykt_rund_03.png');
+	background-size:30px 21px;
+}
+.whykt-rund-section .whykt-rund-list li.add3 {
+	background-image:url('/static/prodetail/1452/mobile/images/icon_whykt_rund_04.png');
+	background-size:30px 23px;
+}
+.whykt-rund-section .whykt-rund-list li.add4 {
+	background-image:url('/static/prodetail/1452/mobile/images/icon_whykt_rund_05.png');
+	background-size:40px 25px;
+}
+.whykt-rund-section .whykt-rund-list li.add5 {
+	background-image:url('/static/prodetail/1452/mobile/images/icon_whykt_rund_06.png');
+	background-size:30px auto;
+	background-position-y: 5px;
+}
+
+.whykt-midea-section {
+	margin:35px 0 0 0;
+	padding:0 25px;
+}
+.whykt-midea-section .whykt-player-box {
+	position:relative;
+	width:100%;
+	padding:56.6% 0 6px;
+	background:#000;
+}
+.whykt-midea-section .whykt-player-box iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.whykt-ap-histoy-section {
+	margin:35px 0 0 0;
+	padding:30px 25px;
+	background:url('/static/prodetail/1452/mobile/images/bg_awardhistory.png') no-repeat 50% 0;
+}
+.whykt-ap-histoy-section .whykt-sstit {margin:0;color:#fff;font-size:24px;}
+.whykt-ap-histoy-section .whykt-ap-histoy-list li {
+	position:relative;
+	margin:20px 0 0 0;
+	padding:25px 0;
+	border:2px solid #D9D9D9;
+	border-radius:10px;
+	background:#e9e8e7;
+	font-weight:bold;
+	font-size:14px;
+}
+.whykt-ap-histoy-section .whykt-ap-histoy-list li:first-child {margin:20px 0 0 0;}
+.whykt-ap-histoy-section .whykt-ap-histoy-list li .tit {
+	display:block;
+	margin:0 0 10px 0;
+	font-weight:bold;
+	font-size:16px;
+}
+.whykt-ap-histoy-section .whykt-ap-histoy-list li .ps {
+	display:block;
+	margin:20px 0 0 0;
+	font-weight:bold;
+}
+.whykt-ap-histoy-section .whykt-ap-histoy-list li .img {
+	position:absolute;
+	top:24px;
+	right:18px;
+	width:88px;
+	width:76px;
+}
+.whykt-ap-histoy-section .whykt-ap-histoy-list li.add1 .img {
+	top:13px;
+}
+.whykt-line:before {
+	content:'';
+	display:block;
+	width:25px;
+	padding:25px 0 0 0;
+	border-top:2px solid #000;
+	margin:0 auto;
+}
+
+.script-box {margin:0;}
+.script-box .accordion-trigger {position:static; width:100%; height:30px; line-height:28px; margin:0; padding:0; border:solid 2px #666; font-size:14px;}
+.script-box .accordion-trigger:before {content:none;}
+.script-box .accordion-contents {display:none; position:relative; max-height:140px; overflow:auto; padding:4px; font-size:14px; z-index:9; background:#fff;}

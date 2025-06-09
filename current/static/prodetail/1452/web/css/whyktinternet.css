@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* whyKT 인터넷 */
+.whykt-internet .w-section .inner {width:1080px;margin:0 auto;}
+.whykt-internet .w-section .column .inner {text-align:left;}
+.whykt-internet .w-quality {width:100%;height:450px;text-align:center;background:url(/static/prodetail/1452/web/images/whykt_visual.png) no-repeat 50% 50%;box-sizing:border-box;}
+.whykt-internet .w-quality .column .inner {text-align:center;}
+.whykt-internet .w-quality .w-heading {padding:135px 0 0;line-height:60px;font-weight:bold;font-size:54px;color:#fff;}
+.whykt-internet .w-quality .w-heading strong {position:relative; font-weight:bold; color:#E1F9F9;}
+.whykt-internet .w-quality .w-heading strong:after {content:''; position:absolute; top:16px; left:0; bottom:0; right:0; background-size:100%; background-image:linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));}
+.whykt-internet .w-quality .w-txtbox {margin:40px 0 0;line-height:30px;font-size:25px;color:#fff;}
+.whykt-internet .w-quality-info {background-color:#f5f6f9;}
+.whykt-internet .w-quality-info ul:after {content:'';display:block;clear:both;}
+.whykt-internet .w-quality-info ul {width:1080px;margin:0 auto;padding:30px 0 60px;}
+.whykt-internet .w-quality-info ul li {float:left;width:50%;margin:30px 0 0;box-sizing:border-box;}
+.whykt-internet .w-quality-info ul li .img {display:inline-block;margin:0 15px 0 0;width:92px;height:72px;vertical-align:top;}
+.whykt-internet .w-quality-info ul li .info {display:inline-block;margin:3px 0 0;font-size:20px;color:#000;}
+.whykt-internet .w-quality-info ul li .info strong {display:block;font-weight:bold;}
+.whykt-internet .w-usagefee {margin:25px 0 0;text-align:left;}
+.whykt-internet .w-usagefee .info strong {font-size:40px;color:#000;font-family:"Noto Sans Bold";}
+.whykt-internet .w-usagefee .info p {margin:20px 0 0;font-size:20px;color:#000;}
+.whykt-internet .w-usagefee .koreakt:after {content:'';display:block;clear:both;}
+.whykt-internet .w-usagefee .koreakt {margin:60px 0 0;}
+.whykt-internet .w-usagefee .koreakt .movie-area {position:relative; float:left;width:540px;height:316px;position:relative;}
+/*.whykt-internet .w-usagefee .koreakt .movie-area:before {content:'';position:absolute;left:0;top:0;display:block;width:540px;height:316px;border-radius:20px;background:rgba(0,0,0,.3);}*/
+.whykt-internet .w-usagefee .koreakt .movie-area .bg-usagefee-movie {width:540px;height:316px;border-radius:20px;}
+.whykt-internet .w-usagefee .koreakt .movie-area button {position:absolute;left:50%;top:50%;width:67px;height:67px;margin:-34px 0 0 -34px;}
+.whykt-internet .w-usagefee .koreakt .info {float:left;margin:60px 0 0 50px;}
+.whykt-internet .w-usagefee .usagefee {height:269px;background:url(/static/prodetail/1452/web/images/bg_usagefee_01.png) no-repeat right center;}
+.whykt-internet .w-usagefee .usagefee strong {display:block;padding:65px 0 0;}
+.whykt-internet .w-usagefee .coverage {height:407px;background:url(/static/prodetail/1452/web/images/bg_usagefee_02.png) no-repeat 90% center;}
+.whykt-internet .w-usagefee .coverage strong {display:block;padding:130px 0 0;}
+.whykt-internet .w-awardhistory {margin:20px 0 80px;}
+.whykt-internet .w-awardhistory h3 {margin:0 0 20px;text-align:left;font-weight:bold;font-size:38px;font-family:"Noto Sans Bold";}
+
+.whykt-internet .w-usagefee .koreakt .movie-area .script-box {width:540px;}
+.whykt-internet .w-usagefee .koreakt .movie-area .script-box .accordions {border:none; color:#000;}
+.whykt-internet .w-usagefee .koreakt .movie-area .script-box .accordion-trigger {position:static; width:100%; height:30px; margin:0; padding:0; line-height:26px; border:solid 2px #666; font-size:14px;}
+.whykt-internet .w-usagefee .koreakt .movie-area .script-box .accordion-trigger:before {content:none;}
+.whykt-internet .w-usagefee .koreakt .movie-area .script-box .accordion-contents {display:none; position:relative; max-height:140px; overflow:auto; padding:4px; font-size:14px; z-index:9; background:#fff;}
