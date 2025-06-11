@@ -1,18 +1,4 @@
 @charset "UTF-8";
-:root {
-  --color-primary-mint: #5DDFDE;
-  --color-primary-red: #D92C38;
-  --color-black: #000;
-  --color-gray-dark: #222;
-  --color-gray-600: #666;
-  --color-gray-700: #454545;
-  --color-gray-800: #444;
-  --color-gray-900: #333;
-  --color-bg-red: #E75357;
-  --color-bg-gray-light: #F4F7F9;
-  --color-bg-mint: #21FFF0;
-}
-
 /* Naunm */
 /*@font-face {
 	font-family:'NANSL';
@@ -286,7 +272,7 @@
   display: inline-block;
   min-height: 44px;
   font-size: 45px;
-  font-family: "NotoSansKR", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
   color: #222;
   padding-top: 85px;
   letter-spacing: 0;
@@ -813,7 +799,7 @@
 }
 .visual-02 .hgroup.is-red h3 {
   font-size: 60px;
-  font-family: "NotoSansKR", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
   color: #d71826;
   letter-spacing: 0;
   font-weight: 700;
@@ -2098,6 +2084,7 @@
 /*.detail-plan-area .out-box:after{content:"";display: block;position: absolute;bottom: -2px;right: -2px;width: 47px;height: 47px;background: url(../img/prodetail/mobile/bg-box-new-join-01.png) 0 0 no-repeat;}*/
 /* Y수능데이터무제한페스티벌 */
 /* 폰안심케어 */
+/* out-box 2 */
 /*.detail-plan-area a {display:inline-block;font-size:15px;line-height:36px;color:#666;border:1px solid #bbb;box-sizing:border-box;padding:0 20px;margin-top:30px;}
 .detail-plan-area a:hover {color:#d71826;}*/
 .price-information-area.ktnavi .table-plan {
@@ -5290,6 +5277,7 @@ p.txt_desc {
   padding-bottom: 37px;
 }
 
+/**/
 .total-dc-step-bx {
   display: block;
   width: 1080px;
@@ -18896,8 +18884,7 @@ strong, b {
   margin: 0 auto;
   padding: 80px 0 0 0;
   color: #000;
-  font-family: "NotoSansKR", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-family: "NotoSansKr";
+  font-family: "NotoSansKR";
   font-weight: 400;
   line-height: 1.4;
   word-break: keep-all;
@@ -22317,43 +22304,104 @@ strong, b {
   font-size: 20px;
 }
 
-/* 
-  25.06 신규 상품특장점 영역 가이드 리뉴얼, 
-  pdt new version(N-) 마크업 혼용 가능 
-*/
+/* Renewal Guide(rn-) 상품 상세 (특장점 등) */
+:root {
+  --color-primary-mint: #5DDFDE;
+  --color-primary-red: #D92C38;
+  --color-sub-navy-gray: #38445D;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-800: #333;
+  --color-gray-900: #222;
+  --color-bg-gray-light: #F4F7F9;
+}
+
 .rn-forte-wrap {
-  /* 25.06 신규 상품특장점 영역 가이드 리뉴얼 - 내부 공통 스타일 */
-  /* 25.06 신규 상품특장점 영역 가이드 리뉴얼 - 공통 레이아웃 */
+  /* 공통 스타일 */
+  /* 공통 utils */
 }
-.rn-forte-wrap .red {
-  color: var(--color-primary-red);
+.rn-forte-wrap * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.rn-forte-wrap .fw-300 {
-  font-weight: 300;
+.rn-forte-wrap .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.rn-forte-wrap .font-line {
-  position: relative;
+.rn-forte-wrap .flex-jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.rn-forte-wrap .font-line::after {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 18px;
+.rn-forte-wrap .flex-jc-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.rn-forte-wrap .font-line-mint::after {
-  z-index: -1;
-  left: 50%;
-  bottom: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: var(--color-primary-mint);
-  opacity: 0.2;
+.rn-forte-wrap .flex-jc-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-.rn-forte-wrap .rn-forte {
-  /* 폰트 */
-  /* 섹션 */
-  /* 배너 */
+.rn-forte-wrap .flex-jc-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.rn-forte-wrap .flex-jc-evenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.rn-forte-wrap .flex-ai-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.rn-forte-wrap .flex-ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rn-forte-wrap .flex-ai-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.rn-forte-wrap .flex-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.rn-forte-wrap .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.rn-forte-wrap .flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.rn-forte-wrap .grid {
+  display: grid;
+}
+.rn-forte-wrap .pd-t-50 {
+  padding-top: 50px;
+}
+.rn-forte-wrap .pd-t-60 {
+  padding-top: 60px;
+}
+.rn-forte-wrap .pd-b-60 {
+  padding-bottom: 60px;
+}
+.rn-forte-wrap .mg-t-60 {
+  margin-top: 60px;
 }
 .rn-forte-wrap .rn-forte-title {
   font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
@@ -22362,183 +22410,39 @@ strong, b {
   font-weight: 400;
   line-height: 130.435%;
   letter-spacing: -1.84px;
-  color: var(--color-black);
+  color: #000;
 }
-.rn-forte-wrap .rn-forte-title.bold, .rn-forte-wrap .rn-forte-title .bold {
+.rn-forte-wrap .rn-forte-title.red {
+  color: var(--color-primary-red);
+}
+.rn-forte-wrap .rn-forte-title.bold {
   font-weight: 700;
 }
-.rn-forte-wrap .rn-forte-info {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -1px;
-  color: var(--color-black);
-}
-.rn-forte-wrap .rn-forte-info-lg {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -1.5px;
-  color: var(--color-black);
-}
-.rn-forte-wrap .rn-forte-section {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -1px;
-}
-.rn-forte-wrap .rn-forte-section-title {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -1px;
-  padding: 60px 0 55px;
-}
-.rn-forte-wrap .rn-forte-section + .rn-forte-section {
-  margin-top: 80px;
-}
-.rn-forte-wrap .rn-forte-banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0;
-  overflow: hidden;
-}
-.rn-forte-wrap .rn-forte-banner img {
-  width: auto;
-  height: 100%;
-}
 .rn-forte-wrap .rn-forte-box {
-  text-align: left;
-  min-height: 330px;
-}
-.rn-forte-wrap .rn-forte-box:has(.rn-forte-box-inner) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 0;
-}
-.rn-forte-wrap .rn-forte-box:has(.rn-forte-box-inner) .rn-forte-box-inner {
-  width: 50%;
-}
-.rn-forte-wrap .rn-forte-box-reverse:has(.rn-forte-box-inner) {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.rn-forte-wrap .rn-forte-box-gray {
   background-color: var(--color-bg-gray-light);
 }
-.rn-forte-wrap .rn-forte-box-title {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -1.75px;
+.rn-forte-wrap .rn-forte-box-grid {
+  display: grid;
 }
-.rn-forte-wrap .rn-forte-box-content {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  letter-spacing: -1px;
-}
-.rn-forte-wrap .rn-forte-box:has(.rn-forte-box-content) .rn-forte-box-title + .rn-forte-box-content {
-  padding-top: 62px;
-  position: relative;
-}
-.rn-forte-wrap .rn-forte-box:has(.rn-forte-box-content) .rn-forte-box-title + .rn-forte-box-content::before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 2px;
-  left: 0;
-  top: 30px;
-  background: var(--color-bg-red);
-}
-.rn-forte-wrap .rn-forte-list > li {
-  padding-left: 15px;
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  letter-spacing: -1px;
-  position: relative;
-}
-.rn-forte-wrap .rn-forte-list > li::before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 5px;
-  height: 5px;
-  left: 0;
-  top: 7.5px;
-  background: var(--color-gray-700);
-  border-radius: 50%;
-}
-.rn-forte-wrap .rn-forte-list > li + li {
-  margin-top: 23px;
-}
-.rn-forte-wrap .rn-forte-list + .rn-forte-caption {
-  margin-top: 30px;
-}
-.rn-forte-wrap .rn-forte-caption {
-  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: -0.85px;
-  color: var(--color-gray-600);
+.rn-forte-wrap .rn-forte-box-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 4px;
+  gap: 0;
 }
-.rn-forte-wrap .rn-forte-caption::before {
-  display: block;
-  content: "※";
-  width: 17px;
-  height: 20px;
+.rn-forte-wrap .rn-forte-section:has(.rn-forte-title) {
+  padding-top: 70px;
 }
-.rn-forte-wrap .rn-forte-caption + .rn-forte-caption {
-  margin-top: 15px;
+.rn-forte-wrap .rn-forte-section:has(.rn-forte-title) + .rn-forte-section {
+  padding-top: 50px;
 }/*# sourceMappingURL=p_prodetail.css.map */

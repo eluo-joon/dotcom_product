@@ -2,22 +2,7 @@
 @use './utils/variables' as *;
 @use './utils/mixins' as *;
 
-:root {
-  --color-primary-mint: #{$color-primary-mint};
-  --color-primary-red: #{$color-primary-red}; 
-  --color-black: #{$color-black};      
-  --color-gray-dark: #{$color-gray-dark};
-  --color-gray-600: #{$color-gray-600};
-  --color-gray-700: #{$color-gray-700};
-  --color-gray-800: #{$color-gray-800};
-  --color-gray-900: #{$color-gray-900};
-  --color-bg-red: #{$color-bg-red};
-  --color-bg-gray-light: #{$color-bg-gray-light};
-  --color-bg-mint: #{$color-bg-mint};
-}
-
 /* Naunm */
-
 /*@font-face {
 	font-family:'NANSL';
 	font-style:300;
@@ -65,7 +50,6 @@
 	font-style:normal;
 	src:url('/static/font/pc/NanumSquare_acEB.woff2') format('woff2'), url('/static/font/pc/NanumSquare_acEB.woff') format('woff'), url('/static/font/pc/NanumSquare_acEB.ttf') format('truetype');
 }*/
-
 /*유선 웹 상품 상세 페이지 전용 css*/
 
 .html-location {
@@ -340,7 +324,7 @@
   display: inline-block;
   min-height: 44px;
   font-size: 45px;
-  font-family: $font-f-noto-v2;
+  font-family: "Noto Sans", "Malgun Gothic","맑은 고딕","MG","dotum","돋움", sans-serif ;
   color: #222;
   padding-top: 85px;
   letter-spacing: 0;
@@ -948,7 +932,6 @@
 }
 
 /* // pdt N btn */
-
 /* visual-02 */
 
 .visual-02 {
@@ -961,7 +944,7 @@
   .hgroup {
     &.is-red h3 {
       font-size: 60px;
-      font-family: $font-f-noto-v2;
+      font-family: "Noto Sans", "Malgun Gothic","맑은 고딕","MG","dotum","돋움", sans-serif ;
       color: #d71826;
       letter-spacing: 0;
       font-weight: 700;
@@ -2658,6 +2641,8 @@
 /* Y수능데이터무제한페스티벌 */
 
 /* 폰안심케어 */
+
+/* out-box 2 */
 
 /*.detail-plan-area a {display:inline-block;font-size:15px;line-height:36px;color:#666;border:1px solid #bbb;box-sizing:border-box;padding:0 20px;margin-top:30px;}
 .detail-plan-area a:hover {color:#d71826;}*/
@@ -4796,7 +4781,6 @@ p.txt_desc {
 }
 
 /* content-banner-area */
-
 /* tabs
 .tabs {width:1080px;margin-top:-8px;}
 .tabs .tab-trigger {background-color:#7a7c8d;}*/
@@ -6602,7 +6586,7 @@ p.txt_desc {
       line-height: 20px;
 
       &:before {
-        content: '※';
+        content: '※'; // 250611 utf 오류로 문자 깨짐발생 임의로 당구장표기로 변경
         line-height: 20px;
         vertical-align: top;
         margin-right: 2px;
@@ -6641,6 +6625,8 @@ p.txt_desc {
     padding-bottom: 37px;
   }
 }
+
+/**/
 
 .total-dc-step-bx {
   display: block;
@@ -6860,7 +6846,6 @@ p.txt_desc {
 /*.total-dc-step-bx > ol > li .step-list:after{display:block; content:'';position:absolute;right:-2px;bottom:-2px;width:47px;height:47px;background:url("../img/prodetail/international/bg-service-box.jpg") no-repeat;}*/
 
 /*.total-dc-step-bx.gather > ol > li .step-list .selbx > li:nth-child(2):before {content: ''; display: block; position: absolute; width: 36px; height: 36px; background: url(../img/prodetail/together/img-plus.png) no-repeat; top: 130px; left: -18px;}*/
-
 /*.total-dc-step-bx.gather > ol > li .step-list .selbx > li:nth-child(2):after {content: ''; display: block; position: absolute; width: 36px; height: 36px; background: url(../img/prodetail/together/img-plus.png) no-repeat; top: 130px; right: -18px; z-index: 2;}*/
 
 /* qna */
@@ -8212,7 +8197,7 @@ p.txt_desc {
 /* 기가 */
 
 .price h3 i.iot-o {
-  font-family: 'Malgun Gothic', sans-serif;
+  font-family: 'Malgun Gothic',sans-serif;
   font-weight: bold;
 }
 
@@ -12947,7 +12932,6 @@ p.txt_desc {
 }
 
 /*	0925 수정*/
-
 /* olleh tv 요금제 */
 
 .price .btns.calc {
@@ -13125,7 +13109,6 @@ p.txt_desc {
 }
 
 /*//0925 수정*/
-
 /* 놀e터 */
 
 .play-ground {
@@ -13261,12 +13244,10 @@ img.play-ground-img {
 }
 
 /* 올래닷컴 팝업 */
-
 /*.plan-pop-layout#cfmClWrapper{min-width: 1080px;overflow:hidden;}
 .plan-pop-layout #cfmClContents{padding-top: 0;}
 .plan-pop-layout .column{width: 1080px;}
 .plan-pop-layout .inner{left: 0;}*/
-
 /* y junior */
 
 .box-new {
@@ -17464,7 +17445,6 @@ b {
 }
 
 /* 상품상세 폰트 수정 */
-
 /* SEO고도화 */
 
 .detail-plan-area {
@@ -17558,7 +17538,6 @@ b {
 }
 
 /* SEO고도화 : 속성 적용시 태그가 아닌 클래스 사용으로 방식 병경 */
-
 /* SEO고도화 : 목록 제목과 목록 사이 여백 추가 */
 
 .price-information-area {
@@ -20934,7 +20913,6 @@ strong, b {
 }
 
 /* loading */
-
 @keyframes anime {
   0% {
     opacity: 0;
@@ -21089,7 +21067,6 @@ strong, b {
 }
 
 /* loading */
-
 @keyframes anime {
   0% {
     opacity: 0;
@@ -23009,8 +22986,7 @@ strong, b {
   margin: 0 auto;
   padding: 80px 0 0 0;
   color: #000;
-  font-family: $font-f-noto-v2;
-  font-family: 'NotoSansKr';
+  font-family: 'NotoSansKR';
   font-weight: 400;
   line-height: 1.4;
   word-break: keep-all;
@@ -26669,7 +26645,7 @@ strong, b {
     padding-left: 30px;
     font-size: 25px !important;
     font-weight: 400 !important;
-    font-family: "Noto Sans Regular" !important;
+    font-family: "Noto Sans Regular"  !important;
     letter-spacing: -1px;
     border-top: solid 1px #666;
     background-color: #e9e9e9;
@@ -26737,153 +26713,127 @@ strong, b {
   }
 }
 
-/* 
-  25.06 신규 상품특장점 영역 가이드 리뉴얼, 
-  pdt new version(N-) 마크업 혼용 가능 
-*/
+
+/* Renewal Guide(rn-) 상품 상세 (특장점 등) */
+:root {
+  --color-primary-mint: #{$color-primary-mint};
+  --color-primary-red: #{$color-primary-red};
+  --color-sub-navy-gray: #{$color-sub-navy-gray};
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+  --color-gray-800: #{$color-gray-800};
+  --color-gray-900: #{$color-gray-900};
+  --color-bg-gray-light: #{$color-bg-gray-light};
+}
+
 .rn-forte-wrap {
-  /* 25.06 신규 상품특장점 영역 가이드 리뉴얼 - 내부 공통 스타일 */
-  .red {
-      color: var(--color-primary-red);
-  }
-  .fw {
-      &-300 {
-          font-weight: 300;
-      }
-  }
+  /* 공통 스타일 */
+  * {box-sizing: border-box;}
 
-  .font-line {
-    @include after (100%, 18px);
+  /* 공통 utils */
+  // flex 세부 속성
+  .flex {
+    display: flex;
 
-    &-mint::after {
-      z-index: -1;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      background: var(--color-primary-mint);
-      opacity: 0.2;
+    &-jc-center {
+      justify-content: center;
+    }
+    &-jc-between {
+      justify-content: space-between;
+    }
+    &-jc-end {
+      justify-content: flex-end;
+    }
+    &-jc-around {
+      justify-content: space-around;
+    }
+    &-jc-evenly {
+      justify-content: space-evenly;
+    }
+
+    &-ai-start {
+      align-items: flex-start;
+    }
+    &-ai-center {
+      align-items: center;
+    }
+    &-ai-end {
+      align-items: flex-end;
+    }
+
+    // jc + ai 혼합 속성
+    &-center {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-column {
+      flex-direction: column;
+    }
+    &-row {
+      flex-direction: row;
     }
   }
-  /* 25.06 신규 상품특장점 영역 가이드 리뉴얼 - 공통 레이아웃 */
+
+  .grid {
+    display: grid;
+  }
+
+  // padding  
+  .pd {
+    &-t {
+      &-50 {padding-top: 50px;}
+      &-60 {padding-top: 60px;}
+    }
+
+    &-b {
+      &-60 {padding-bottom: 60px;}
+    }
+  }
+  
+  // margin
+  .mg {
+    &-t {
+      &-60 {margin-top: 60px;}
+    }
+  }
+
+  // contents
   .rn-forte {
-      /* 폰트 */
-      &-title {
-          @include font-title-46 {
-              color: var(--color-black);
-          };
+    &-title {
+      @include font-title-46 {
+        color: $color-black;
+      };
 
-          &.bold, .bold {
-              font-weight: 700;
-          }
-      }
-      &-info {
-          @include font-info-20 {
-              color: var(--color-black);
-          }
-
-          &-lg {
-              @include font-info-30 {
-                  color: var(--color-black);
-              }    
-          }
+      &.red {
+        color: var(--color-primary-red);
       }
 
-      /* 섹션 */
-      &-section {
-          @include font-info-20;
+      &.bold {
+        font-weight: 700;
+      }
+    }
+    
+    &-box {
+      background-color: var(--color-bg-gray-light);
 
-          &-title {
-              @include font-info-20;
-              padding: 60px 0 55px;
-          }
-
-          + .rn-forte-section {
-              margin-top: 80px;
-          }
+      &-grid {
+        display: grid;
       }
 
-      /* 배너 */
-      &-banner {
-          @include flex($jc: center) {
-              overflow: hidden;
-          };
-
-          img {
-              width: auto;
-              height: 100%;
-          }
+      &-flex {
+        @include flex;
       }
+    }
 
-      &-box {
-          text-align: left;
-          min-height: 330px;
+    &-section {
+      &:has(.rn-forte-title) {
+        padding-top: 70px;
 
-          &:has(.rn-forte-box-inner) {
-              @include flex;
-
-              .rn-forte-box-inner {
-                  width: 50%;
-              }
-          }
-          &-reverse:has(.rn-forte-box-inner) {
-              justify-content: flex-end;
-          }
-
-          &-gray {
-              background-color: var(--color-bg-gray-light);
-          }
-
-          &-title {
-              @include font-info-35;
-          }
-
-          &-content {
-              @include font-info-20($fw:300);
-          }
-
-          &:has(.rn-forte-box-content) {
-              .rn-forte-box-title + .rn-forte-box-content {
-                  padding-top: 62px;
-                  @include before (30px, 2px) {
-                      left: 0;
-                      top: 30px;
-                      background: var(--color-bg-red);
-                  };
-              }
-          }
+        + .rn-forte-section {
+          padding-top: 50px;
+        }
       }
-
-      &-list {
-
-          > li {
-              padding-left: 15px;
-              @include font-info-20($fw:300);
-              @include before (5px, 5px) {
-                  left: 0;
-                  top: 7.5px;
-                  background: var(--color-gray-700);
-                  border-radius: 50%;
-              };
-
-              + li {
-                  margin-top: 23px;
-              }
-          }
-
-          + .rn-forte-caption {
-              margin-top: 30px;
-          }
-      }
-
-      &-caption {
-          @include font-style ($fz:17px, $fw:400, $lh:120%, $ls:-0.85px) {
-              color: var(--color-gray-600);
-          }
-          @include before-flex(17px, 20px, 4px, '※');
-
-          + .rn-forte-caption {
-              margin-top: 15px;
-          }
-      }
+    }
   }
 }
