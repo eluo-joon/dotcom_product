@@ -11,6 +11,7 @@
   @content;
 }
 
+/* pc */
 @mixin font-title-46 ($fz:46px, $fw:400, $lh:130.435%, $ls:-1.84px) {
   @include font-style($fz, $fw, $lh, $ls);
   @content;
@@ -29,6 +30,13 @@
   @include font-style($fz, $fw, $lh, $ls);
   @content;
 }
+
+/* web */
+@mixin mo-font-title-23 ($fz:23px, $fw:400, $lh:130%, $ls:-0.92px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
 
 // layout
 @mixin flex ($direction: row, $ai: center, $jc: flex-start, $gap: 0) { 

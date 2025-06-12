@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* pc */
+/* web */
 /* Naunm */
 /*@font-face {
 	font-family:'NANSL';
@@ -22325,6 +22327,7 @@ strong, b {
 .rn-forte-wrap * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  word-break: keep-all;
 }
 .rn-forte-wrap .sr-only {
   position: absolute;

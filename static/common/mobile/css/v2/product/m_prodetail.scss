@@ -18508,3 +18508,130 @@ html.expand, body.expand {
   font-family: "Apple SD Gothic Neo", "Apple Gothic", -apple-system, BlinkMacSystemFont, Noto Sans, "Noto Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
 }
+
+/* Renewal Guide(rn-) 상품 상세 (특장점 등) */
+:root {
+  --color-primary-mint: #{$color-primary-mint};
+  --color-primary-red: #{$color-primary-red};
+  --color-sub-navy-gray: #{$color-sub-navy-gray};
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+  --color-gray-700: #{$color-gray-700};
+  --color-gray-800: #{$color-gray-800};
+  --color-gray-900: #{$color-gray-900};
+  --color-bg-gray-light: #{$color-bg-gray-light};
+}
+
+.rn-forte-wrap {
+  /* 기본 여백 좌우 20px, 불필요 시 .no-pd 추가 필요 (div.rn-forte-wrap.no-pd) */
+  &:not(.no-pd) {
+    padding: 0 20px;
+  }
+
+  /* 공통 스타일 */
+  * {
+    box-sizing: border-box;
+    word-break: keep-all;
+  }
+
+  /* 접근성 스타일 */
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;}
+
+  /* 공통 utils */
+  // flex 세부 속성
+  .d-flex {
+    display: flex;
+
+    &-jc-center {
+      justify-content: center;
+    }
+    &-jc-between {
+      justify-content: space-between;
+    }
+    &-jc-end {
+      justify-content: flex-end;
+    }
+    &-jc-around {
+      justify-content: space-around;
+    }
+    &-jc-evenly {
+      justify-content: space-evenly;
+    }
+
+    &-ai-start {
+      align-items: flex-start;
+    }
+    &-ai-center {
+      align-items: center;
+    }
+    &-ai-end {
+      align-items: flex-end;
+    }
+
+    // jc + ai 혼합 속성
+    &-center {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-column {
+      flex-direction: column;
+    }
+    &-row {
+      flex-direction: row;
+    }
+  }
+
+  .d-grid {
+    display: grid;
+  }
+
+  // padding  
+  .pd {
+    &-t {
+      &-30 {padding-top: 30px;}
+      &-50 {padding-top: 50px;}
+      &-60 {padding-top: 60px;}
+    }
+
+    &-b {
+      &-60 {padding-bottom: 60px;}
+    }
+  }
+  
+  // margin
+  .mg {
+    &-t {
+      &-60 {margin-top: 60px;}
+    }
+  }
+
+  // contents
+  .rn-forte {
+    &-title {
+      @include mo-font-title-23  {
+        color: $color-black;
+      };
+
+      &.red {
+        color: var(--color-primary-red);
+      }
+
+      &.bold {
+        font-weight: 700;
+      }
+    }
+    
+    &-box {
+      background-color: var(--color-bg-gray-light);
+
+      &-grid {
+        display: grid;
+      }
+
+      &-flex {
+        @include flex;
+      }
+    }
+  }
+}
