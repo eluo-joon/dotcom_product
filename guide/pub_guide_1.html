@@ -6,6 +6,12 @@
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
 	<title>기본 작업사항 | 작업사항</title>
 	<link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+	<style>
+		.process-flow {display: flex; flex-wrap: wrap; flex-direction: column; gap: 20px; text-align: center;}
+		.process-flow dl {position: relative; background: #efefef; max-width: 500px; border-radius: 10px; padding: 10px;}
+		.process-flow dl + dl:before {display: block; content: '▼'; width: 10px; height: 10px; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);}
+		.process-flow dl dt {font-weight: bold;}
+	</style>
 </head>
 
 <body>
@@ -13,8 +19,45 @@
 		<h1>Common Rule</h1>
 		
 		<div class="guide-inner-content">
-
-			<h2>1. 기본 사항</h2>
+			<h2>과업 범위 및 프로세스</h2>
+			<div class="guide-block">
+				<ul>
+					<li>KT.COM GNB 기준, 1Depth 상품 (2depth 소상공인 제외)</li>
+					<li>KT.COM GNB 기준, 1Depth 혜택 - 2depth 이용혜택</li>
+					<li class="li-caption">25.06까지 작업전달 기준으로 정리</li>
+					<li>상품 내부 상세페이지 수정 잦음 (신규 작업 / 단순 텍스트 변경 / 배너 교체 등)</li>
+					<li>
+						<strong>진행 프로세스</strong>
+						<div class="process-flow">
+							<dl>
+								<dt>KT고객사</dt>
+								<dd>요청사항 전달</dd>
+							</dl>
+							<dl>
+								<dt>기획 (지어소프트)</dt>
+								<dd>고객사 내용 정리 후 디자인/퍼블 요청</dd>
+							</dl>
+							<dl>
+								<dt>디자인 (엘루오)</dt>
+								<dd>KT고객사 컨펌 완료 시 퍼블 최종 전달</dd>
+								<dd>대부분 ASAP으로 미리 퍼블리싱 준비 권장</dd>
+							</dl>
+							<dl>
+								<dt>퍼블리싱 (엘루오)</dt>
+								<dd>작업 후 기획 전달 (담당자 메신저 / 메신저 미응답 시 메일)</dd>
+								<dd>미리보기까지만 진행 (배포 미진행)</dd>
+							</dl>
+							<dl>
+								<dt>기획 (지어소프트)</dt>
+								<dd>검수 진행 후 고객사 컨펌 요청</dd>
+								<dd>컨펌 완료 후 CMS 배포</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<h2>기본 사항</h2>
 			<div class="guide-block">
 				<ul>
 					<li>별도 형상관리 툴 부재로 CMS 및 로컬 작업을 진행하므로 항시 백업 후 작업.</li>
@@ -29,12 +72,20 @@
 				</ul>
 			</div>
 
-			<h2>2. 네이밍 규칙</h2>
+			<h2>Class 및 ID 규칙</h2>
 			<div class="guide-block">
 				<ul>
-					<li>Class 및 ID 명 하이픈( - ) 사용.</li>
-					<li>이미지명 언더바( _ ) 사용.</li>
+					<li>네이밍: 하이픈( - ) 사용.</li>
 					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
+				</ul>
+			</div>
+
+			<h2>이미지 규칙</h2>
+			<div class="guide-block">
+				<ul>
+					<li>네이밍: 언더바( _ ) 사용.</li>
+					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
+					<li>svg 확장자 사용불가 (상품 에디터 ckfinder 기준)</li>
 				</ul>
 			</div>
 

@@ -10,136 +10,19 @@
 
 <body>
 	<div class="guide-inner field_guide">
-		<h1>JavaScript Common Rule (JavaScript 공통 규칙 가이드)</h1>
+		<h1>통계코드 규칙</h1>
 
 		<div class="guide-inner-content">
-			<h2>1. 공통 원칙</h2>
+			<h2>기본사항</h2>
 			<div class="guide-block">
 				<ul>
-					<li>페이지 내 직접적인 &lt;script&gt; 작성 및 개별 JS 파일 생성 지양</li>
-					<li>UI 관련 스크립트는 Ui 클래스 내부 메서드로 추가</li>
-					<li>메서드 추가 시 반드시 분기처리 (조건문을 사용하여 요소가 없을 경우 실행 방지 및 콘솔 에러 방지)</li>
-					<li>사용 중인 외부 라이브러리: Swiper / AOS / gsap(scrollTrigger)</li>
+					<li>버튼 또는 랜딩 등 클릭이벤트가 발생하는 모든 요소에 onClick이벤트로 통계코드 이벤트 삽입</li>
+					<li>onclick="KT_trackClicks(파라미터 값);"</li>
+					<li class="li-caption">퍼블리싱이 진행되지 않는 CMS 연동 영역의 경우, 자동으로 통계코드 삽입 (예시: 기획 배너). 단, 해당 코드의 파라미터는 부정확함으로 참고 지양</li>
 				</ul>
 			</div>
 
-			<h2>2. ui.js - Ui.viewportObserver() (요소 뷰포트 감지 메서드)</h2>
-			<div class="guide-block">
-				<ul>
-					<li>
-						<strong>역할:</strong>
-						<ul class="pl20">
-							<li>특정 요소가 뷰포트에 진입/이탈하는 것을 감지</li>
-							<li>우선 사용 지향 아님 (GSAP / AOS 사용 가능)</li>
-						</ul>
-					</li>
-					<li>
-						<strong>사용 방법:</strong>
-						<ul class="pl20">
-							<li>감지할 대상 요소에 .viewport-observer 클래스 추가</li>
-							<li>요소가 뷰포트에 들어오면 .viewport-observer-on 클래스가 토글됨</li>
-						</ul>
-					</li>
-					<li>
-						<strong>옵션 속성 (HTML 데이터 속성 활용)</strong>
-						<ul class="pl20">
-							<li>
-								data-observer-rootMargin="0px y" (y값은 %, px 단위값 필요)<br>
-								뷰포트 상단으로부터 값이 y보다 작아질 경우 실행 - 미지정 시 0% 50% (화면 중앙) 디폴트
-							</li>
-							<li>
-								data-observer-threshold="0 ~ 1 값" 
-								지정된 요소의 몇 %가 뷰포트에 들어왔는지 체크 후 실행 - 미지정 시 0 디폴트 (화면 인입 즉시) 
-							</li>
-							<li>
-								data-observer-once='true' <br>
-								1번만 실행 - 미지정 시 false(반복) 디폴트
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<h3 style="margin-top: 10px;">옵션 속성 (HTML 데이터 속성 활용)</h3>
-				<table>
-					<colgroup>
-						<col style="width:30%">
-						<col style="width:45%">
-						<col style="width:25%">
-					</colgroup>
-					<thead>
-						<tr>
-							<th>속성명</th>
-							<th>역할</th>
-							<th>기본값</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="first">
-							<td>data-observer-rootMargin="0px y"</td>
-							<td>뷰포트 상단 기준 감지 위치 (y는 % 또는 px 단위)</td>
-							<td class="td_left">0% 50% (화면 중앙)</td>
-						</tr>
-						<tr>
-							<td>data-observer-threshold="0 ~ 1"	</td>
-							<td>요소의 몇 %가 뷰포트에 들어왔을 때 실행할지 설정</td>
-							<td class="td_left">0 (즉시 실행)</td>
-						</tr>
-						<tr>
-							<td>data-observer-once="true"</td>
-							<td>1회만 실행 여부 설정 (false일 경우 반복 실행)</td>
-							<td class="td_left">false (반복 실행)</td>
-						</tr>
-						<tr>
-							<td>observer-opacity="1"</td>
-							<td>기본 opacity: 0에서 페이드인 처리 예외 설정</td>
-							<td class="td_left">opacity: 0</td>
-						</tr>
-						<tr>
-							<td>data-count-speed="1"</td>
-							<td>data-count-speed="10" 느리게 / data-count-speed="0.5" 빠르게</td>
-							<td class="td_left">data-count-speed="1"</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<h2>3. ui.js - Ui.numCount() (숫자 카운트 메서드)</h2>
-			<div class="guide-block">
-				<ul>
-					<li>
-						<strong>역할:</strong>
-						<ul class="pl20">
-							<li>특정 숫자까지 카운팅 효과 적용</li>
-							<li>천 단위 콤마 자동 적용</li>
-						</ul>
-					</li>
-					<li>
-						<strong>사용 방법 (HTML 속성 활용)</strong>
-						<ul class="pl20">
-							<li>&lt;span class="num" data-count-target="1000" data-decimals="0" data-count-delay="1400" &gt;빈 값&lt;span&gt;</li>
-						</ul>
-					</li>
-					<li>
-						<strong>접근성(A11Y) 준수 사항</strong>
-						<ul class="pl20">
-							<li>
-								<strong>스크린 리더 지원을 위해 다음 속성 필수 설정</strong> <br>
-								- data-count-target → 최종 도달할 숫자 <strong>(수동 작성)</strong><br>
-								- aria-label = "최종 도달할 숫자 - 스크린리더가 읽는 내용" <strong>(ui.js 동적 생성 / 수동 작성 금지)</strong>
-							</li>
-							<li>
-								<strong>소수점 단위가 필요한 경우 data-decimals 속성 사용</strong>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<strong>역 카운트 사용 시</strong>
-						<ul class="pl20">
-							<li><strong>최종 값:</strong> data-count-target="1000"</li>
-							<li><strong>속성명:</strong> data-count-reverse="true"</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			
 
 		</div>
 
