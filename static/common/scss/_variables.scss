@@ -2,21 +2,36 @@
 $font-f-noto: "Noto Sans", "Malgun Gothic","맑은 고딕","MG","dotum","돋움",sans-serif;
 $font-f-noto-v2: "NotoSansKR", "Malgun Gothic","맑은 고딕","MG","dotum","돋움",sans-serif;
 
-// color
-$color-primary-mint: #5DDFDE;
-$color-primary-red : #D92C38;
-$color-sub-navy-gray : #38445D;
+// Red 계열
+$color-red-1: #fac3c8; 
+$color-red-2: #e75357; 
+$color-red-3: #d92c38; // 신규 title 색상
+$color-red-4: #d71826;
+
+// Mint / BlueGreen 계열
+$color-mint-1: #21fff0;
+$color-mint-2: #5DDFDE;
+$color-mint-3: #65dddc;
+$color-bluegreen-1: #009ea2;
+$color-bluegreen-2: #008abd;
+
+$color-gray-900: #222;
+$color-gray-800: #333;
+$color-gray-700: #444;
+$color-gray-600: #454545;
+$color-gray-500: #555;
+$color-gray-400: #666;
+$color-gray-300: #777;
+$color-gray-200: #888;
+$color-gray-100: #999;
+
+$color-gray-line-1: #ccc;
+
+$color-gray-bg-1 : #F4F7F9;
+
+$color-navy-gray-1:#536894;
+$color-navy-gray-2:#4d5973;
+$color-navy-gray-3: #38445D;
+
 $color-white: #fff;
 $color-black: #000;
-$color-gray-100: #222; // 미정
-$color-gray-300: #222; // 미정
-$color-gray-400: #222; // 미정
-$color-gray-500: #666; // 미정
-$color-gray-600: #454545;
-$color-gray-700: #444;
-$color-gray-800: #333;
-$color-gray-900: #222;
-
-$color-bg-red :  #E75357;
-$color-bg-gray-light : #F4F7F9;
-$color-bg-mint : #21FFF0;

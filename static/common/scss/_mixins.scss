@@ -2,7 +2,6 @@
 
 // font style
 @mixin font-style ($fz, $fw: inherit, $lh: normal, $ls: 0px) {
-  font-family: $font-f-noto;
   font-size: $fz;
   font-style: normal;
   font-weight: $fw;
