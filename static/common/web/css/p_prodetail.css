@@ -21891,7 +21891,7 @@ strong, b {
 .pduct-acodion-ott-guide-tt-area-column {
   color: var(--color-black);
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.7;
   text-align: center;
   letter-spacing: -0.95px;
   word-break: keep-all;
@@ -22051,8 +22051,21 @@ strong, b {
   position: absolute;
   top: -5px;
   left: 0;
-  min-width: 33px;
-  padding: 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 33px;
+  height: 33px;
   border: 2px solid var(--color-black);
   border-radius: 50%;
   font-size: 16px;
@@ -22429,6 +22442,9 @@ strong, b {
 .rn-forte-wrap .d-grid {
   display: grid;
 }
+.rn-forte-wrap .pd-t-0 {
+  padding-top: 0;
+}
 .rn-forte-wrap .pd-t-50 {
   padding-top: 50px;
 }
@@ -22475,9 +22491,12 @@ strong, b {
           justify-content: flex-start;
   gap: 0;
 }
-.rn-forte-wrap .rn-forte-section:has(.rn-forte-title) {
+.rn-forte-wrap .rn-forte-section:not(.pd-t-0):has(.rn-forte-title) {
   padding-top: 70px;
 }
-.rn-forte-wrap .rn-forte-section:has(.rn-forte-title) + .rn-forte-section {
+.rn-forte-wrap .rn-forte-section:not(.pd-t-0):has(.rn-forte-title) + .rn-forte-section {
   padding-top: 50px;
+}
+.rn-forte-wrap .rn-forte-section.ta-center, .rn-forte-wrap .rn-forte-section .ta-center {
+  text-align: center;
 }/*# sourceMappingURL=p_prodetail.css.map */

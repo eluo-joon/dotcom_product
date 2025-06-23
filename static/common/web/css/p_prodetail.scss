@@ -26265,7 +26265,7 @@ strong, b {
 .pduct-acodion-ott-guide-tt-area-column {
   color: var(--color-black);
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.7;
   text-align: center;
   letter-spacing: -0.95px;
   word-break: keep-all;
@@ -26432,8 +26432,9 @@ strong, b {
       position: absolute;
       top: -5px;
       left: 0;
-      min-width: 33px;
-      padding: 4px 0;
+      @include inline-flex($jc:center); 
+      width: 33px;
+      height: 33px;
       border: 2px solid var(--color-black);
       border-radius: 50%;
       font-size: 16px;
@@ -26817,6 +26818,7 @@ strong, b {
   // padding  
   .pd {
     &-t {
+      &-0 {padding-top: 0;}
       &-50 {padding-top: 50px;}
       &-60 {padding-top: 60px;}
     }
@@ -26860,12 +26862,16 @@ strong, b {
     }
 
     &-section {
-      &:has(.rn-forte-title) {
+      &:not(.pd-t-0):has(.rn-forte-title) {
         padding-top: 70px;
 
         + .rn-forte-section {
           padding-top: 50px;
         }
+      }
+
+      &.ta-center, .ta-center {
+        text-align: center;
       }
     }
   }
