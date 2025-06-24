@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Keywords" content="kt, 케이티, kt.com, kt닷컴, 케이티닷컴, olleh, 올레, kt기업. kt 기업">
+    <meta name="Description" content="kt의 모든 상품을 쉽고, 빠르게 찾아볼 수 있습니다. kt 상품의 궁금한 모든 것을 상품서비스 메뉴에서 편리하게 확인하시기 바랍니다.">
+    <title>페이지 없음 | KT</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/common/web/img/favicon/kt.ico">
+    <link rel="stylesheet" type="text/css" href="https://cfm.kt.com/css/vendor/cl-kt.css">
+    <link rel="stylesheet" type="text/css" href="https://cfm.kt.com/css/error.css">
+</head>
+
+<body>
+    <div class="error">
+        <div class="error-cont">
+            <div class="error-conts">
+                <div class="error-area">
+                    <div class="error-txt" style="background-image:url('/static/common/web/img/error/img-main-erro01.jpg');">
+                        <p>고객님, 죄송합니다.</p>
+                        <span>페이지를 찾을 수 없습니다.</span>
+                    </div>
+                    <div class="kt-bts"><a href="https://product.kt.com"><span>홈으로 이동</span></a></div>
+                    <div class="copyright">
+                        <p>[전화문의] 집전화(국번없이) 100, 핸드폰(지역번호)+100</p>
+                        <span>COPYRIGHTⓒ 2023 KT CORP. ALL RIGHTS RESERVED. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
