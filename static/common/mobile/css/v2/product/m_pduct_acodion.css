@@ -912,7 +912,8 @@
 .pduct-ott .top_price.tp1 .ott-layer-ask:before {content: "";position: absolute;top: -11px;left: 50%;width: 20px;height: 11px;background: url('https://product.kt.com/static/common/web/img/prodetail/sns/icon-sns-arrow.png') no-repeat;-webkit-transform: translateX(-50%);-ms-transform: translateX(-50%);transform: translateX(-50%);}
 .pduct-ott .top_price.tp1 .ott-layer-wrap.ott-btn {position:initial;flex:1;margin:0 0 0 10px;}
 .pduct-ott .top_price.tp1 .ott-btn {display:block;width:100%;border-radius: 10px;background: #5DDFDE;color: #000;font-weight: 600;font-size: 14px;line-height: 42px;text-align: center;box-sizing: border-box;}
-.pduct-ott .top_price.tp1 a.ott-layer-btn {display: inline-block;padding: 0px 10px;min-width: 45px;height: 25px;line-height: 21px;text-align: center;vertical-align: middle;border-radius: 5px;font-size: 14px;border: 2px solid #1caec5;color: #119891;}
+.pduct-ott .top_price.tp1 a.ott-layer-btn,
+.pduct-ott .top_price.tp1 button.ott-layer-btn {display: inline-block;padding: 0px 10px;min-width: 45px;height: 25px;line-height: 21px;text-align: center;vertical-align: middle;border-radius: 5px;font-size: 14px;border: 2px solid #1caec5;color: #119891;}
 .pduct-ott .top_price.tp1 .ott-layer-ask .ott-layer-tp1 {display:flex;flex-wrap:wrap;}
 .pduct-ott .top_price.tp1 .ott-layer-ask .ott-layer-tp1 > li {flex:0 0 50%;margin:0;padding:0 10px;border-left:1px solid #D3D3D3;font-weight:400;font-size:16px;text-align:center;}
 .pduct-ott .top_price.tp1 .ott-layer-ask .ott-layer-tp1 li:first-child {border-left:0;}
