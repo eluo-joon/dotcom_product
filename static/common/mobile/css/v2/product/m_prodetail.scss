@@ -12,6 +12,7 @@
   --color-mint-1: #{$color-mint-1};
   --color-mint-2: #{$color-mint-2};
   --color-mint-3: #{$color-mint-3};
+    --color-mint-4: #{$color-mint-4};
   --color-bluegreen-1: #{$color-bluegreen-1};
   --color-bluegreen-2: #{$color-bluegreen-2};
 
@@ -35,6 +36,8 @@
 
   --color-white: #{$color-white};
   --color-black: #{$color-black};
+
+  --underline-mint: var(--color-mint-4);
 }
 
 /*무선 웹 상품 상세 페이지 전용 css*/
@@ -1653,18 +1656,18 @@ p.txt_desc {
     padding-top: 0;
   }
 
-  h3, .pduct-m-heading {
+  h3:not(.sr-only), .pduct-m-heading {
     font-family: "Noto Sans";
     font-size: 23px;
     font-weight: normal;
     letter-spacing: -1.2px;
   }
 
-  h3:first-child, .pduct-m-heading:first-child {
+  h3:not(.sr-only):first-child, .pduct-m-heading:first-child {
     margin: -5px 0 0 0;
   }
 
-  h3 {
+  h3:not(.sr-only) {
     span {
       color: #d71826;
       font-weight: bold;
@@ -1681,17 +1684,17 @@ p.txt_desc {
     letter-spacing: -1.1px;
   }
 
-  h3 + p + p, .pduct-m-heading + p + p {
+  h3:not(.sr-only) + p + p, .pduct-m-heading + p + p {
     padding-top: 8px;
   }
 
-  h3 + p + p.h3-desc, .pduct-m-heading + p + p.h3-desc {
+  h3:not(.sr-only) + p + p.h3-desc, .pduct-m-heading + p + p.h3-desc {
     font-size: 12px;
     color: #666;
   }
 
   &.egg-data {
-    h3, .pduct-m-heading {
+    h3:not(.sr-only), .pduct-m-heading {
       letter-spacing: -0.9px;
     }
   }
@@ -18561,8 +18564,18 @@ html.expand, body.expand {
     word-break: keep-all;
   }
 
+  // font-style
+  .bold {
+    font-weight: 700;
+  }
   .red {
     color: var(--color-red-3);
+  }
+  .underline {
+    &-mint::after,
+    &-mint::before {
+      background: var(--underline-mint);
+    }
   }
 
   /* 접근성 스타일 */
@@ -18654,9 +18667,21 @@ html.expand, body.expand {
         color: $color-black;
       };
 
-      &.bold,
-      .bold {
-        font-weight: 700;
+      &-large {
+        @include mo-font-title-26  {
+          color: $color-black;
+        };
+      }
+
+      &-sub {
+        @include mo-font-title-20  {
+          color: $color-black;
+
+          &.underline,
+          .underline {
+            @include after-underline ($h: 10px);
+          }
+        };
       }
     }
     

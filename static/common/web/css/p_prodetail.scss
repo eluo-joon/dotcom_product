@@ -12,6 +12,7 @@
   --color-mint-1: #{$color-mint-1};
   --color-mint-2: #{$color-mint-2};
   --color-mint-3: #{$color-mint-3};
+  --color-mint-4: #{$color-mint-4};
   --color-bluegreen-1: #{$color-bluegreen-1};
   --color-bluegreen-2: #{$color-bluegreen-2};
 
@@ -35,6 +36,8 @@
 
   --color-white: #{$color-white};
   --color-black: #{$color-black};
+
+  --underline-mint: var(--color-mint-4);
 }
 
 /* Naunm */
@@ -1410,7 +1413,7 @@
       margin: -5px 0 0 0;
     }
 
-    h3 + p, .ctit + p, .pduct-m-tit + p, .pduct-m-tt {
+    h3:not(.sr-only) + p, .ctit + p, .pduct-m-tit + p, .pduct-m-tt {
       font-size: 18px;
       padding-top: 15px;
     }
@@ -26759,8 +26762,18 @@ strong, b {
     word-break: keep-all;
   }
 
+  // font-style
+  .bold {
+    font-weight: 700;
+  }
   .red {
     color: var(--color-red-3);
+  }
+  .underline {
+    &-mint::after,
+    &-mint::before {
+      background: var(--underline-mint);
+    }
   }
 
   /* 접근성 스타일 */
@@ -26843,12 +26856,18 @@ strong, b {
         color: $color-black;
       };
 
-      &.bold,
-      .bold {
-        font-weight: 700;
+      &-sub {
+        @include font-title-35 {
+          color: $color-black;
+        }
+
+        &.underline,
+        .underline {
+          @include after-underline ($h: 13px, $bottom: 1px);
+        }
       }
     }
-    
+
     &-box {
       background-color: var(--color-gray-bg-1);
 

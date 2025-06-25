@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* pc */
-/* web */
+/* mobile */
+/* KT 전용 스타일 */
 /* Color Variables */
 :root {
   --color-red-1: #fac3c8;
@@ -10,6 +11,7 @@
   --color-mint-1: #21fff0;
   --color-mint-2: #5DDFDE;
   --color-mint-3: #65dddc;
+  --color-mint-4: #9BEBDD;
   --color-bluegreen-1: #009ea2;
   --color-bluegreen-2: #008abd;
   --color-gray-900: #222;
@@ -28,6 +30,7 @@
   --color-navy-gray-3: #38445D;
   --color-white: #fff;
   --color-black: #000;
+  --underline-mint: var(--color-mint-4);
 }
 
 /* Naunm */
@@ -1197,7 +1200,7 @@
 .detail-plan-area .column .inner h3:first-child, .detail-plan-area .column .inner .ctit:first-child, .detail-plan-area .column .inner .pduct-m-tit:first-child, .detail-plan-area .column .inner .pduct-m-heading:first-child {
   margin: -5px 0 0 0;
 }
-.detail-plan-area .column .inner h3 + p, .detail-plan-area .column .inner .ctit + p, .detail-plan-area .column .inner .pduct-m-tit + p, .detail-plan-area .column .inner .pduct-m-tt {
+.detail-plan-area .column .inner h3:not(.sr-only) + p, .detail-plan-area .column .inner .ctit + p, .detail-plan-area .column .inner .pduct-m-tit + p, .detail-plan-area .column .inner .pduct-m-tt {
   font-size: 18px;
   padding-top: 15px;
 }
@@ -22361,8 +22364,14 @@ strong, b {
           box-sizing: border-box;
   word-break: keep-all;
 }
+.rn-forte-wrap .bold {
+  font-weight: 700;
+}
 .rn-forte-wrap .red {
   color: var(--color-red-3);
+}
+.rn-forte-wrap .underline-mint::after, .rn-forte-wrap .underline-mint::before {
+  background: var(--underline-mint);
 }
 .rn-forte-wrap .sr-only {
   position: absolute;
@@ -22465,9 +22474,32 @@ strong, b {
   letter-spacing: -1.84px;
   color: #000;
 }
-.rn-forte-wrap .rn-forte-title.bold,
-.rn-forte-wrap .rn-forte-title .bold {
-  font-weight: 700;
+.rn-forte-wrap .rn-forte-title-sub {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -1.75px;
+  color: #000;
+}
+.rn-forte-wrap .rn-forte-title-sub.underline,
+.rn-forte-wrap .rn-forte-title-sub .underline {
+  position: relative;
+  z-index: 0;
+}
+.rn-forte-wrap .rn-forte-title-sub.underline::after,
+.rn-forte-wrap .rn-forte-title-sub .underline::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 13px;
+  bottom: 1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  background-color: var(--underline-mint);
 }
 .rn-forte-wrap .rn-forte-box {
   background-color: var(--color-gray-bg-1);

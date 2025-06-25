@@ -16,6 +16,12 @@
   @content;
 }
 
+@mixin font-title-35 ($fz:35px, $fw:400, $lh:130%, $ls:-1.75px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
+
 @mixin font-info-20 ($fz:20px, $fw:400, $lh:normal, $ls:-1px) {
   @include font-style($fz, $fw, $lh, $ls);
   @content;
@@ -30,8 +36,18 @@
   @content;
 }
 
-/* web */
+/* mobile */
+@mixin mo-font-title-26 ($fz:26px, $fw:400, $lh:123%, $ls:-1.3px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
 @mixin mo-font-title-23 ($fz:23px, $fw:400, $lh:130%, $ls:-0.92px) {
+  @include font-style($fz, $fw, $lh, $ls);
+  @content;
+}
+
+@mixin mo-font-title-20 ($fz:20px, $fw:300, $lh:1.28571, $ls:-1.75px) {
   @include font-style($fz, $fw, $lh, $ls);
   @content;
 }
@@ -58,6 +74,7 @@
 // 가상요소 생성
 @mixin after($w, $h) {
   position: relative;
+  z-index: 0;
 
   &::after {
     display: block;
@@ -71,6 +88,7 @@
 
 @mixin before($w, $h) {
   position: relative;
+  z-index: 0;
 
   &::before {
     display: block;
@@ -94,5 +112,19 @@
     width: $w;
     height: $h;
     @content;
+  }
+}
+
+
+/* KT 전용 스타일 */
+@mixin after-underline ($w: 100%, $h, $bottom: 0, $left: 50%, $z-index: -1, $bg-color: var(--underline-mint)) {
+  @include after ($w, $h) {
+    bottom: $bottom;
+    left: $left;
+    @if $left == 50% {
+      transform: translateX(-50%);
+    }
+    z-index: $z-index;
+    background-color: $bg-color;
   }
 }
