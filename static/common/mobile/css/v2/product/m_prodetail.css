@@ -15412,6 +15412,15 @@ html.expand, body.expand {
 .rn-forte-wrap .mg-t-60 {
   margin-top: 60px;
 }
+.rn-forte-wrap .ta-center {
+  text-align: center;
+}
+.rn-forte-wrap .ta-left {
+  text-align: left;
+}
+.rn-forte-wrap .rn-forte-section-full {
+  margin: 0 -20px;
+}
 .rn-forte-wrap .rn-forte-title {
   font-size: 23px;
   font-style: normal;

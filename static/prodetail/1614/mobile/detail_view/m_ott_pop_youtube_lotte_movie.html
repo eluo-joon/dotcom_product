@@ -1,3 +1,4 @@
+
 <html lang="ko" class="js mobile ua-ios">
 <head>
 <meta charset="utf-8">
@@ -24,7 +25,7 @@ _dl = {
 		product_category :"모바일", // 카테고리 입력   예시) 모바일, 인터넷, TV, 인터냇+TV, 모바일+인터넷+TV, other(공유기 또는 모든 전화 상품)
 	}
 };
-var pageName = "^m^KT-개인^상품^모바일^OTT 구독^상품보기^" + productName;
+var pageName = "^m^KT-개인^상품^모바일^OTT 구독^상품보기^" + productName;
 _commonDL = {
 	pageInfo :{
 		page_name : pageName, //각 페이지명, 페이지명은 별도의 엑셀파일 참조, 페이지 depth 구분은 "^"로 구분
@@ -71,11 +72,11 @@ _commonDL = {
 	</div>
 	<input type="hidden" id="srv_target" name="srv_target" value="">
 	<div class="pdt-N-btns">
-		<a href="javascript:void(0);" class="pdt-N-btn" onclick="fnSubscribeApply('PL247V597'); detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일^OTT 구독^유튜브 프리미엄+롯데시네마^자세히보기^구독하기') ;">
+		<button type="button" class="pdt-N-btn" onclick="fnSubscribeApply('PL247V597'); detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일^OTT 구독^유튜브 프리미엄+롯데시네마^자세히보기^구독하기') ;">
 		<span>
 		<i>구독하기</i>
 		</span>
-		</a>
+		</button>
 	</div>
 </div>
 <div class="banner-area ba-line">

@@ -1,0 +1,313 @@
+
+<html lang="ko" class="js mobile ua-ios">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:title" content="블라이스 셀렉트">
+<meta property="og:Description" content="">
+<link rel="stylesheet" type="text/css" href="https://m.kt.com/css/v2/kt-style.css">
+<script>
+var default_domain = 'kt.com';
+var properties = 'prd';
+document.domain = default_domain;
+function isAppCheck(){
+	var isApp = false;
+	if(/ollehcs/i.test(navigator.userAgent)){
+		return true;
+	}
+	return isApp;
+}
+</script>
+<script src="https://m.kt.com/js/v2/plugin/jquery-3.6.0.min.js"></script>
+<script src="https://m.kt.com/js/ADOBE/mstaticsLogcodeLaunch.js"></script>
+<script>
+var $j = jQuery.noConflict() , $ = $j;
+
+var productName = "블라이스셀렉트";
+_dl = {
+	product : {
+		product_name : productName, // 상품명  예시) iPhone12 , (요금제의 경우) KT 5G 슈퍼플랜 초이스
+		product_detail : "", // 용량_색상,  예시) 64GB_퍼플
+		product_category :"모바일", // 카테고리 입력   예시) 모바일, 인터넷, TV, 인터냇+TV, 모바일+인터넷+TV, other(공유기 또는 모든 전화 상품)
+	}
+};
+var pageName = "^m^KT-개인^상품^모바일^OTT 구독^상품보기^" + productName;
+_commonDL = {
+	pageInfo :{
+		page_name : pageName, //각 페이지명, 페이지명은 별도의 엑셀파일 참조, 페이지 depth 구분은 "^"로 구분
+		page_url : window.location.href,
+		channel : "Mobile", //예시) pc web : PC, mobile web : Mobile, App : App
+		login_status : "N", // 예시) "Y"(로그인),  "N"(비로그인)
+		login_type : "", // 예시) ID 로그인 : normal, 소셜로그인 : facelook, kakaotalk, 자동로그인 : auto
+	}
+};
+</script>
+<title>블라이스 셀렉트 | KT</title>
+<link type="text/css" href="https://m.product.kt.com/static/common/mobile/css/v2/product/m_common.css" rel="stylesheet">
+<link type="text/css" href="https://m.product.kt.com/static/common/mobile/css/v2/product/m_util.css" rel="stylesheet">
+<link type="text/css" href="https://m.product.kt.com/static/common/mobile/css/v2/product/m_prodetail.css" rel="stylesheet">
+<link type="text/css" href="https://m.product.kt.com/static/common/mobile/css/v2/product.css" rel="stylesheet">
+<link type="text/css" href="https://m.product.kt.com/static/common/mobile/css/v2/product/m_pduct_acodion.css" rel="stylesheet">
+<link type="text/css" href="https://m.product.kt.com/static/common/mobile/css/v2/product_detail.css" rel="stylesheet">
+<script type="text/javascript" src="https://m.product.kt.com/static/common/mobile/js/m_dev2.js"></script>
+<script type="text/javascript" src="https://m.product.kt.com/static/common/mobile/js/m_prodetail2.js"></script>
+</head>
+<body class="my">
+<div class="pduct-ott">
+<div class="top_price tp1">
+	<input type="hidden" id="tokenId">
+	<div class="month-plan" tabindex="0">
+		<span role="text" aria-label="정상가 월 9,900원">월 <span class="discount">9,900&nbsp;원</span></span><strong role="text" aria-label="할인가 월 7,900원">월 7,900&nbsp;원</strong>
+		<p>(부가세 포함)</p>
+	</div>
+	<div class="summary-info icon-two">
+		<ul>
+			<li class="info-1">
+				<img src="https://product.kt.com/static/prodetail/1486/common/itemForte/images/blice_img01_01.png" alt="">
+				<span>셀렉트<br>웹소설&amp;웹툰<br>무제한 감상</span>
+			</li>
+			<li class="info-3">
+				<img src="https://product.kt.com/static/prodetail/1486/common/itemForte/images/blice_icon.png" alt="">
+				<span>최신 인기<br>로맨스, 판타지,<br>무협, 19금 등<br>다양한 콘텐츠</span>
+			</li>
+			<li class="info-2">
+				<img src="https://product.kt.com/static/prodetail/1486/common/itemForte/images/blice_img01_02.png" alt="">
+				<span>매월 엄선된<br>콘텐츠 업데이트</span>
+			</li>
+		</ul>
+	</div>
+	<input type="hidden" id="srv_target" name="srv_target" value="">
+	<div class="pdt-N-btns">
+		<button type="button" class="pdt-N-btn" onclick="fnSubscribeApply('PL22A4203'); detailClickStatistics.click('^mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일^OTT 구독^블라이스 스토리^자세히보기^구독하기') ;">
+		<span>
+		<i>구독하기</i>
+		</span>
+		</button>
+		<!-- 요금계산기 -->
+	</div>
+</div>
+
+<div class="banner-area ba-line"></div>
+<div class="detail-plan-area">
+	<h3 class="ctit">엄선된 웹툰과 웹소설이 무제한!<br>
+	<span class="bold"><span class="pduct-rgb-code-0ccab5">블라이스 셀렉트</span></span></h3>
+
+	<div class="pduct-ott-fte-column"><strong class="pduct-ott-c-heading"><span class="bold">블라이스 셀렉트란?</span></strong>
+
+	<p class="pduct-ott-c-tt">매월 업데이트되는 다양한 장르의 유료 웹툰·웹소설을<br>
+	무제한으로 즐길 수 있는 서비스입니다!</p>
+
+	<div class="img-column"><img alt="재난소녀, 멤버십, 13관, 귀환자 삼촌의 푸드트럭, 은퇴군인이 세상을 지킨다, 희긔아이돌의 멤버 육아일기" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_visual01.png"></div>
+	</div>
+
+	<h3 class="ctit">오로지 <span class="bold"><span class="pduct-rgb-code-0ccab5">블라이스 셀렉트</span></span> 에서<br>
+	즐겨보세요!</h3>
+
+	<div class="pduct-ott-fte-column"><strong class="pduct-ott-c-heading">매월 셀렉트에서만 감상 가능한<br>
+	<span class="bold">ORIGINAL 독점 신작</span></strong>
+
+	<p class="pduct-ott-c-tt">매월 업데이트되는 블라이스 독점 웹툰·웹소설을<br>
+	오로지 ‘블라이스 셀렉트’에서만 감상해 보세요!</p>
+
+	<div class="img-column"><img alt="" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_visual02.png"></div>
+	</div>
+
+	<div class="pduct-ott-fte-column2 tp1"><strong class="pduct-ott-c-heading"><span class="bold">셀렉트</span>가 처음이라면?</strong>
+
+	<p class="pduct-ott-c-tt">MD Pick, 장르 선호도, 키워드별로<br>
+	블라이스가 다~알아서 추천해드려요!</p>
+
+	<div class="img-column" style="max-width:340px;"><img alt="" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_visual03.png"></div>
+	</div>
+</div>
+
+<div class="price-information-area">
+	<div class="title">
+		 요금안내
+	</div>
+	<div id="appendPriceDiv" class="desc">
+		<p class="pduct-tbl-top-desc">
+			 부가세가 포함된 실제 지불금액입니다.
+		</p>
+		<table class="pduct-tbl-plan font-tp1">
+			<caption class="invisible">요금 안내 표, 요금제, 월정액, 제공해택 등으로 구성함</caption>
+			<colgroup>
+				<col style="width: 25%;">
+				<col style="width: 25%;">
+				<col style="width: 50%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>요금제</th>
+					<th>월정액</th>
+					<th>제공혜택</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>블라이스<br>
+					셀렉트</th>
+					<td><span class="td-sale-price-tp1" role="text" aria-label="정상가 월 9,900원">9,900원</span><br>
+					<span role="text" aria-label="할인가 월 7,900원">7,900원</span></td>
+					<td>매월 업데이트되는 다양한 장르의 유료 웹툰 및 웹소설을 무제한으로 즐길 수 있는 구독 서비스<br>
+					KT 모바일을 통해 ‘블라이스 셀렉트’ 서비스를 구독할 수 있는 상품입니다.</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="pduct-noted-list">
+			<li>OTT 구독 블라이스 셀렉트 가입 고객이라면 KT 장기고객 쿠폰드림 혜택을 받아보세요. <a href="https://m.my.kt.com/myproduct/s_PkgCouponList.do" class="pduct-btn-is-line" target="_top">바로가기</a></li>
+		</ul>
+	</div>
+</div>
+<div class="tab-toggle-area">
+	<div class="accordions">
+		<div class="tab-content-01">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일_상세^부가서비스_블라이스 셀렉트', '블라이스 셀렉트 계정 등록 방법');" title="닫힘">블라이스 셀렉트 계정 등록 방법</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion1">
+					<ul class="blice-step-list">
+						<li>
+						<div class="img-column"><img alt="STEP1" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_info-01--230731.png"></div>
+
+						<div class="tt">블라이스 앱 접속 &gt; 우상단 MY 아이콘 클릭</div>
+						</li>
+						<li>
+						<div class="img-column"><img alt="STEP2" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_info-02--230731.png"></div>
+
+						<div class="tt">회원가입 또는 로그인</div>
+						</li>
+						<li>
+						<div class="img-column"><img alt="STEP3" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_info-05--230731.png"></div>
+
+						<div class="tt">우상단 MY 아이콘 클릭 &gt;<br>
+						MY 페이지 - 셀렉트 메뉴 [가입] 클릭</div>
+						</li>
+						<li>
+						<div class="img-column"><img alt="STEP4" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_info-04--230731.png"></div>
+
+						<div class="tt">우상단 MY 아이콘 클릭 &gt;<br>
+						MY 페이지 - 셀렉트 메뉴 [KT요금제 사용 중] 확인</div>
+						</li>
+						<li>
+						<div class="img-column"><img alt="STEP5" src="https://m.product.kt.com/static/prodetail/1486/web/itemForte/images/blice_info-03--230731.png"></div>
+
+						<div class="tt">셀렉트 탭에서 매월 엄선된 웹툰·웹소설 무제한 감상</div>
+						</li>
+					</ul>
+					<style type="text/css">
+					.blice-step-list li + li {margin:40px 0 0 0;}
+					.blice-step-list .img-column {text-align:center;}
+					.blice-step-list .img-column img {max-width:250px;}
+					.blice-step-list  .tt {margin:20px 0 0 0;color:#000; font-size:13px;text-align:center;}
+					</style>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content-02">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일_상세^부가서비스_블라이스 셀렉트^', '가입 및 해지 유의사항');" title="닫힘">가입 및 해지 유의사항</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion2">
+					<ul class="pduct-list">
+						<li>5G/LTE 요금제 이용 중인 KT고객은 신청 가능합니다. <br />단, 선불, 알뜰폰 , 패드/웨어러블 요금제, 데이터쉐어링, 피처폰 이용고객은 가입할 수 없습니다.</li>
+						<li>개인 명의의 휴대전화 번호로만 가입 가능합니다.</li>
+						<li>통신사 요금제 및 부가서비스를 통해 블라이스 셀렉트를 이용 중인 경우 중복 가입이 불가하며, 가입을 원하실 경우 기존 이용권을 해지하셔야 합니다. (요금제 및 부가서비스 변경 또는 해지 신청은 이용 중인 통신사 고객센터에서 가능합니다.)</li>
+						<li>제휴사의 사정에 의해 서비스 내용이나 상시 할인 혜택은 변경, 또는 종료될 수 있습니다.</li>
+						<li>셀렉트는 블라이스 회원 가입 후 이용 가능합니다.</li>
+						<li>셀렉트 요금제 이용 시 셀렉트 메뉴 내 콘텐츠에 한해 무료로 감상 가능합니다.</li>
+						<li>최소 지원 환경(브라우저/OS 버전)은 FAQ에서 확인할 수 있습니다.</li>
+						<li>셀렉트 시크릿(19금) 작품은 애플 정책상 iOS 앱에서는 이용이 불가하며, PC/모바일웹(사파리 등)에서는 이용하실 수 있습니다.</li>
+						<li>쿠폰 등록 및 이용 문의는 블라이스 1:1 문의를 이용해주시기 바랍니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content-03">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일_상세^부가서비스_블라이스 셀렉트^', 'KT 장기고객 쿠폰드림 혜택');" title="닫힘">KT 장기고객 쿠폰드림 혜택</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion3">
+					<ul class="pduct-list">
+						<li>OTT 구독 블라이스 셀렉트에 가입하시면 KT 장기고객 쿠폰드림 혜택을 받으실 수 있습니다. <a href="https://m.my.kt.com/myproduct/s_PkgCouponList.do" class="pduct-btn-is-line" target="_top">바로가기</a></li>
+						<li>OTT 구독 3천원 할인 쿠폰은 중복으로 등록할 수 없습니다.</li>
+						<li>OTT 구독 블라이스 셀렉트 가입 후 쿠폰을 등록하셔야 할인이 적용됩니다.</li>
+						<li>OTT 구독 할인 쿠폰을 등록한 시점부터 1개월 동안 할인이 적용되며, 1개월 이전에 OTT 구독 블라이스 셀렉트 상품을 해지하시면 할인금액이 3천원보다 적을 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content-04">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일_상세^부가서비스_블라이스 셀렉트^', '블라이스 셀렉트 유의사항');" title="닫힘">블라이스 셀렉트 유의사항</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion4">
+					<ul class="pduct-list">
+						<li>블라이스에서 제공하는 월정액 서비스인 ‘셀렉트’ 콘텐츠를 무료로 감상하실 수 있습니다. <br/>
+						(전체 콘텐츠가 아닌 메뉴>셀렉트관 내에 제공되는 웹소설 및 웹툰 콘텐츠 한정)</li>
+						<li>요금제 가입 여부 확인을 위해 로그인 및 휴대폰 본인인증이 필요합니다.</li>
+						<li>블라이스 셀렉트 정기구독 상품을 이미 이용중인 경우 블라이스 홈페이지/App을 통해 해당 구독을 해지하셔야 본 부가서비스에서 제공하는 혜택을 이용하실 수 있습니다.</li>
+						<li>이용권 구매 또는 쿠폰을 등록한 상태에서 본 부가서비스에 가입할 경우 남은 기간은 부가서비스 제공 혜택으로 대체됩니다.</li>
+						<li>kt장기혜택쿠폰이 적용된 상태에서 본 부가서비스에 가입할 경우 남은 기간은 부가서비스 제공 혜택으로 대체됩니다.</li>
+						<li>인터넷 연결 환경이 아닌 상태에서 콘텐츠 감상 시 데이터 사용이 발생할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<script>self.resizeTo(document.body.scrollWidth, document.body.scrollHeight + 10);</script>
+<script src="https://m.product.kt.com/static/prodetail/1486/common/js/ott_common.js"></script>
+<script type="text/javascript">
+	//마이페이지 부모창으로 전송
+	function sendDataToMypage(dataObj) {
+		var tgtDomain = "https://m.my.kt.com";
+		window.parent.postMessage(dataObj, tgtDomain);
+	}
+
+	/*
+	 * 구독 토스트팝업 호출
+	 * 상품상세아이디(ottProdId)로 파라메터 전달
+	 */
+	function fnSubscribeApply(param) {
+		var pmParam = { fnName : "fnSubscribeApply", ottProdId : param };
+		sendDataToMypage(pmParam);
+	}
+
+	// 로컬테스트용
+	var Hostname = '';
+	$(document).ready(function() {
+		// TODO: postMessage rcv
+		window.addEventListener("message", function(e){
+			var fnName = e.data.fnName;
+			Hostname = e.data.hostName;
+
+			switch (fnName) 
+			{
+				case "setIframeHeight":
+					var pmParam = {
+						fnName : "setIframeHeight"
+					  , height : $("body").height()
+					}
+					sendDataToMypage(pmParam);
+					break;
+				default:
+					break;
+			}
+		});
+	});
+
+	$(document).ready(function() {
+		if(typeof _dl.page_event == 'undefined'){
+			_dl.page_event = {product_detail_view : true} 
+		}
+	});
+	// GA용 통계 스크립트 호출
+	ga('set', 'title', pageName); //GA용, adobe 통계 pageName을 그대로 호출
+	ga('rollup.set', 'title', pageName); //Adobe s.pageName
+	ga('set','dimension1','N');
+	ga('rollup.set','dimension1','N');
+	ga('send', 'pageview'); // GA용, 통계 전송
+	ga('rollup.send', 'pageview');
+</script>
+</body>
+</html>

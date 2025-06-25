@@ -18637,8 +18637,18 @@ html.expand, body.expand {
     }
   }
 
+  // text-align
+  .ta-center {text-align: center;}
+  .ta-left {text-align: left;}
+
   // contents
   .rn-forte {
+    &-section {
+      &-full {
+        margin: 0 -20px;
+      }
+    }
+
     &-title {
       @include mo-font-title-23  {
         color: $color-black;

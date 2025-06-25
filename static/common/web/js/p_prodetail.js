@@ -381,24 +381,88 @@ window.addEventListener('load',function(){
 		$moveBtn.addEventListener('click', function (evt) {
 			evt.preventDefault();
 			const targetSP = Array.from(document.querySelectorAll('.N-pdt-accordion-tit.opener')).find(function (button) {
-			   return button.textContent.trim() === '가입 및 유의사항'
+				return button.textContent.trim() === '가입 및 유의사항'
 			})
 			if (targetSP) {
-			   window.scrollTo({
-				  top: targetSP.getBoundingClientRect().top + window.pageYOffset - 110,
-				  behavior: 'smooth'
-			   });
-			   targetSP.classList.add('active');
-			   targetSP.setAttribute('title', '하위메뉴 닫기')
-			   const targetParent = targetSP.closest('.seo-improve-heading');
-			   const siblingTarget = targetParent.nextElementSibling;
-			   if (siblingTarget) {
-				  siblingTarget.style.display = 'block'
-			   }
+				window.scrollTo({
+				top: targetSP.getBoundingClientRect().top + window.pageYOffset - 110,
+				behavior: 'smooth'
+				});
+				targetSP.classList.add('active');
+				targetSP.setAttribute('title', '하위메뉴 닫기')
+				const targetParent = targetSP.closest('.seo-improve-heading');
+				const siblingTarget = targetParent.nextElementSibling;
+				if (siblingTarget) {
+				siblingTarget.style.display = 'block'
+				}
 			}
-		 })
+		})
 	}
- })
+
+	// OTT HTML 맞춤혜택 버튼 추가
+	(function activateBenefitBtn() {
+		const benefitWraps = document.querySelectorAll('.N-cSummry-list-benefit');
+		if (benefitWraps.length === 0) return;
+
+		benefitWraps.forEach(wrap => {
+			const btns = wrap.querySelectorAll('.btn-benefit');
+			if (btns.length === 0) return;
+
+			initBtns(btns);
+			bindEvent(btns);
+		});
+
+		function initBtns(btns) {
+			btns.forEach(btn => {
+				btn.classList.remove('active');
+				btn.removeAttribute('title');
+			});
+
+			const firstBtn = btns[0];
+			firstBtn.classList.add('active');
+			firstBtn.setAttribute('title', '선택됨');
+
+    updateContent(firstBtn);
+		}
+
+		function bindEvent(btns) {
+			btns.forEach(btn => {
+				btn.addEventListener('click', () => {
+					if (btn.classList.contains('active')) return;
+
+					btns.forEach(b => {
+						b.classList.remove('active');
+						b.removeAttribute('title');
+					});
+
+					btn.classList.add('active');
+					btn.setAttribute('title', '선택됨');
+
+					updateContent(btn);
+				});
+			});
+		}
+
+		function updateContent(btn) {
+			const type = btn.dataset.benefitType;
+			const group = btn.closest('[data-benefit-group]')?.dataset.benefitGroup || 'custom';
+			console.log(type, group)
+			document.querySelectorAll('[data-benefit-type]:not(.btn-benefit)').forEach(el => {
+				const targetType = el.dataset.benefitType;
+				const targetGroup = el.dataset.benefitGroup || 'custom';
+				if (targetType === type && targetGroup === group) {
+					// el.classList.add('active');
+					el.style.display ='block';
+				} else {
+					// el.classList.remove('active');
+					el.style.display ='none';
+				}
+			});
+		}
+	})();
+
+
+})
 
 $(document).ready(function() {
 	itemTabEvent();
