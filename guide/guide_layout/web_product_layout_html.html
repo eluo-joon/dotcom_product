@@ -1,0 +1,91 @@
+<html lang="ko" class="js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HTML 업로드 레이아웃</title>
+    <script type="text/javascript" src="/cfm.kt.com/js/common/global/KTGlobal.js"></script>
+    <link rel="stylesheet" type="text/css" href="/cfm.kt.com/css/v2/kt-style.css" />
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/plugin/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/plugin/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/plugin/gsap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/cfm.kt.com/js/cl/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css" />
+    <script type="text/javascript" src="/cfm.kt.com/js/cl/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/json/gtm_logUse_html.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/common_log.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_api.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_offer.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_common.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_ui.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_gnb.js"></script>
+    <script src="/cfm.kt.com/js/json/cl_gnb_menu.js" charset="UTF-8"></script>
+    <script src="/cfm.kt.com/js/json/cl_gnb_channel.js" charset="UTF-8"></script>
+    <script src="/cfm.kt.com/js/json/cl_gnb_top.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_floating.js"></script>
+    <script src="/cfm.kt.com/js/json/cl_gnb_direct_before.js" charset="UTF-8"></script>
+    <script src="/cfm.kt.com/js/json/cl_gnb_recommend.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_footer.js"></script>
+    <script src="/cfm.kt.com/js/json/cl_footer_html.js" charset="UTF-8"></script>
+    <script src="/cfm.kt.com/js/json/cl_smarttalk_txt.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_notice.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/v2/common/kt_search.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/sdp/check_utf.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/integrate/kLogcode.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/adobe/staticsLogcodeLaunch.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/adobe/s_codeLaunch.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/adobe/3212917f397b/b0cc8b10bf00/launch-4cdb9870e1a0.min.js" async=""></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/json/oms_logUse_html.js"></script>
+    <script type="text/javascript" src="/cfm.kt.com/js/common/global/oms.js"></script>
+    <script src="https://log.onmas.kt.com/js/logCollect.js"></script>
+    <script src="https://log.onmas.kt.com/js/targetOffer.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <link type="text/css" href="/static/common/web/css/p_common.css" rel="stylesheet" />
+    <link type="text/css" href="/static/common/web/css/p_prodetail.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/common/web/js/p_common.js"></script>
+    <script type="text/javascript" src="/static/common/web/js/p_index.js"></script>
+    <script type="text/javascript" src="/static/common/web/js/p_prodetail.js"></script>
+    <script type="text/javascript" src="/static/common/web/js/p_dev.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/skrollr.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="/static/common/lib/js/jquery.shapeshift.min.js"></script>
+  </head>
+  <body>
+    <div id="cfmClWrapper">
+      <!-- cfmCLContainer -->
+      <div id="cfmCLContainer">
+        <!-- cfmClContents -->
+        <div id="cfmClContents">
+          <div class="forte-area N-forte-area">
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const target = document.querySelector('.forte-area');
+
+                fetch('/current/product/1649_typeof_html/w/1649_w_html_등록.html')
+                .then(res => res.text())
+                .then(html => {
+                  target.innerHTML = html;
+
+                  // 스크립트 수동 삽입
+                  const script = document.createElement('script');
+                  script.src = '/static/prodetail/N_version/web/js/w_N_prodetail_ui.js';
+                  script.async = false; // 순서 유지하려면 false
+                  document.body.appendChild(script);
+
+                  target.dispatchEvent(new Event('include')); // 필요시 이벤트
+                });
+              });
+
+              </script>
+          </div>
+        </div>
+        <!-- /cfmClContents -->
+      </div>
+      <!-- /cfmCLContainer -->
+    </div>
+  </body>
+</html>
