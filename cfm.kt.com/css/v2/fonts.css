@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/* Noto Sans Thin */
+@font-face {
+	font-family:"Noto Sans Thin";
+	font-style:normal;
+	font-weight:100;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Thin.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Thin.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Thin.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Thin.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans - Basic */
+@font-face {
+	font-family:"Noto Sans";
+	font-style:normal;
+	font-weight:200;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Light.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Light */
+@font-face {
+	font-family:"Noto Sans Light";
+	font-style:normal;
+	font-weight:200;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Light.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans DemiLight
+@font-face {
+	font-family:"Noto Sans DemiLight";
+	font-style:normal;
+	font-weight:300;
+	src:url("https://cfm.kt.com/fonts/NotoSans-DemiLight.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-DemiLight.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-DemiLight.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-DemiLight.eot?#iefix") format("embedded-opentype");
+} */
+
+/* Noto Sans Regular */
+@font-face {
+	font-family:"Noto Sans Regular";
+	font-style:normal;
+	font-weight:400;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Regular.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Regular.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Regular.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Regular.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Medium */
+@font-face {
+	font-family:"Noto Sans Medium";
+	font-style:normal;
+	font-weight:500;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Medium.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Medium.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Medium.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Medium.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Bold */
+@font-face {
+	font-family:"Noto Sans Bold";
+	font-style:normal;
+	font-weight:600;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Bold.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Bold.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Bold.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Bold.eot?#iefix") format("embedded-opentype");
+}
+
+/* Noto Sans Black */
+@font-face {
+	font-family:"Noto Sans Black";
+	font-style:normal;
+	font-weight:700;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Black.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Black.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Black.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Black.eot?#iefix") format("embedded-opentype");
+}
+
+ /* Spoqa Han Sans" */
+@font-face {
+	font-family:"Spoqa Han Sans Bold";
+	font-weight:700;
+	font-weight:bold;
+	src:local("Spoqa Han Sans Bold"),
+		url("https://cfm.kt.com/fonts/SpoqaHanSans-Bold.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/SpoqaHanSans-Bold.woff") format('woff'), /*표준 브라우저*/
+		url("https://cfm.kt.com/fonts/SpoqaHanSans-Bold.ttf"),
+		url("https://cfm.kt.com/fonts/SpoqaHanSans-Bold.ttf?#iefix") format('embedded-opentype');
+}
+@font-face {
+	font-family:"Spoqa Han Sans Light";
+	font-weight:200;
+	src:local("SpoqaHanSans-Light"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Light.woff2") format("woff2"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Light.woff") format("woff");
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Light.ttf"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Light.ttf?#iefix") format('embedded-opentype');
+}
+@font-face {
+	font-family:"SHan Sans";
+	font-weight:400;
+	src: local("Spoqa Han Sans Regular"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.woff2") format("woff2"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.woff") format("woff");
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.ttf"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.ttf?#iefix") format('embedded-opentype');
+}
+@font-face {
+	font-family:"Spoqa Han Sans";
+	font-weight:400;
+	src: local("Spoqa Han Sans Regular"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.woff2") format("woff2"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.woff") format("woff");
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.ttf"),
+	url("https://cfm.kt.com/fonts/SpoqaHanSans-Regular.ttf?#iefix") format('embedded-opentype');
+}
+
+/* KT Bold, Light */
+@font-face {
+	font-family:"KTL";
+	font-style:normal;
+	src:local("KTL"),
+			url("https://cfm.kt.com/fonts/KTL.woff2") format('woff2'),
+			url("https://cfm.kt.com/fonts/KTL.woff") format('woff'),
+			url("https://cfm.kt.com/fonts/KTL.eot?#iefix") format('embedded-opentype');
+}
+@font-face {
+	font-family:"KTB";
+	font-weight:bold;
+	src:local("KTB"),
+			url("https://cfm.kt.com/fonts/KTB.woff2") format('woff2'),
+			url("https://cfm.kt.com/fonts/KTB.woff") format('woff'),
+			url("https://cfm.kt.com/fonts/KTB.eot?#iefix") format('embedded-opentype');
+}
+
+
+/* V2 추가 */
+/* noto-sans-kr*/
+@font-face {
+	font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 300;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Light.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Light.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+	font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 400;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Regular.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Regular.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Regular.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Regular.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+	font-family:'NotoSansKR';
+	font-style: normal;
+	font-weight: 500;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Medium.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Medium.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Medium.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Medium.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+	font-family:'NotoSansKR';
+	font-style: normal;
+	font-weight: 600;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Bold.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Bold.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Bold.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Bold.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+	font-family:'NotoSansKR';
+	font-style: bold;
+	font-weight: 700;
+	src:url("https://cfm.kt.com/fonts/NotoSans-Black.woff2") format("woff2"),
+		url("https://cfm.kt.com/fonts/NotoSans-Black.woff") format("woff"),
+		url("https://cfm.kt.com/fonts/NotoSans-Black.eot"),
+		url("https://cfm.kt.com/fonts/NotoSans-Black.eot?#iefix") format("embedded-opentype");
+}
+
+/* roboto */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	src: url("https://cfm.kt.com/fonts/Roboto-Thin.woff2") format('woff2'),
+		 url("https://cfm.kt.com/fonts/Roboto-Thin.woff") format('woff'),
+		 url("https://cfm.kt.com/fonts/Roboto-Thin.otf") format('opentype'),
+		 url("https://cfm.kt.com/fonts/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: url("https://cfm.kt.com/fonts/Roboto-Light.woff2") format('woff2'),
+		 url("https://cfm.kt.com/fonts/Roboto-Light.woff") format('woff'),
+		 url("https://cfm.kt.com/fonts/Roboto-Light.otf") format('opentype'),
+		 url("https://cfm.kt.com/fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url("https://cfm.kt.com/fonts/Roboto-Regular.woff2") format('woff2'),
+		  url("https://cfm.kt.com/fonts/Roboto-Regular.woff") format('woff'),
+		  url("https://cfm.kt.com/fonts/Roboto-Regular.otf") format('opentype'),
+		  url("https://cfm.kt.com/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url("https://cfm.kt.com/fonts/Roboto-Medium.woff2") format('woff2'),
+		  url("https://cfm.kt.com/fonts/Roboto-Medium.woff") format('woff'),
+		  url("https://cfm.kt.com/fonts/Roboto-Medium.otf") format('opentype'),
+		  url("https://cfm.kt.com/fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: bold;
+	font-weight: 700;
+	src: url("https://cfm.kt.com/fonts/Roboto-Bold.woff2") format('woff2'),
+		  url("https://cfm.kt.com/fonts/Roboto-Bold.woff") format('woff'),
+		  url("https://cfm.kt.com/fonts/Roboto-Bold.otf") format('opentype'),
+		  url("https://cfm.kt.com/fonts/Roboto-Bold.ttf") format("truetype");
+}
+

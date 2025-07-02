@@ -16779,6 +16779,7 @@ html.expand, body.expand {
       color: #000;
       font-weight: 900;
       font-size: 14px;
+      text-align: left;
 
       &:after {
         content: "";
@@ -18566,10 +18567,10 @@ html.expand, body.expand {
 
   // font-style
   .bold {
-    font-weight: 700;
+    font-weight: 700 !important;
   }
   .red {
-    color: var(--color-red-3);
+    color: var(--color-red-3) !important;
   }
   .underline {
     &-mint::after,

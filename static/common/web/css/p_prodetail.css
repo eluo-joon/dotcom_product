@@ -22365,10 +22365,10 @@ strong, b {
   word-break: keep-all;
 }
 .rn-forte-wrap .bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .rn-forte-wrap .red {
-  color: var(--color-red-3);
+  color: var(--color-red-3) !important;
 }
 .rn-forte-wrap .underline-mint::after, .rn-forte-wrap .underline-mint::before {
   background: var(--underline-mint);

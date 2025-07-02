@@ -26764,10 +26764,10 @@ strong, b {
 
   // font-style
   .bold {
-    font-weight: 700;
+    font-weight: 700 !important;
   }
   .red {
-    color: var(--color-red-3);
+    color: var(--color-red-3) !important;
   }
   .underline {
     &-mint::after,

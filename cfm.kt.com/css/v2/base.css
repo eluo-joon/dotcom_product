@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/*_____ scope - reset _____*/
+html, body, h1, h2, h3, h4, h5, h6, p, div, th, td, table, pre, code, form, fieldset, legend, input, button, address, ol, ul, li, dl, dt, dd, img, textarea, blockquote {margin:0;padding:0;}
+html, body {/* height:100%; 링투유 인사말에서 포커스를 잡아서 삭제*/height:auto !important; min-height:1080px;}/* 0705 길이지정 추가 */
+body, input, button, select, textarea {font-family:"Noto Sans Regular","Malgun Gothic","맑은 고딕","MG","dotum","돋움",sans-serif !important;font-size:100%;color:#000;line-height:1.45;letter-spacing:-0.5px;}
+input, button, select, textarea {box-sizing:border-box;}
+h1, h2, h3, h4, h5, h6 {color:#333;font-weight:normal;}
+table {table-layout:fixed;width:100%;border-collapse:separate;border-spacing:0;}
+ol, ul {list-style-type:none;}
+img, fieldset {vertical-align:top;border:0;}
+em, i, address {font-style:normal;}
+a:link, a:visited, a:active {text-decoration:none;}
+a:hover, a:focus {text-decoration:none;/*text-decoration:underline;*/}
+button {overflow:visible;background:none;border:0;cursor:pointer;}
+button, button:focus, button:active {padding:0;}
+button > span {position:relative;}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {border-style:none;padding:0;}
+[type="password"] {font-family:"Verdana";}
+[type=text]::-ms-clear {display: none; width:0; height:0;} /* Remove IE default X */
+[type="radio"]:focus + label, [type="checkbox"]:focus + label { outline: 1px dashed #666;}
+
+/*_____ scope - reserved word _____*/
+/* common */
+.invisible {overflow:hidden;position:absolute;left:-1000%;top:auto;width:1px;height:1px;}
+caption.invisible {position:relative;}
+.hide {display:none;}
+.flow {float:left;}
+.reverse {float:right;}
+.ellipsis {overflow:hidden;display:inline-block;max-width:95%;text-overflow:ellipsis;white-space:nowrap;letter-spacing:-0.5px;}
+
+/* 숨김텍스트 : 서브페이지에서 사용하는 클래스가 있어 둘다 필요함 */
+.hidetxt {position:absolute; width:1px; height:1px; margin:-1px; line-height:1; font-size:1px; overflow:hidden; clip:rect(0,0,0,0); color:transparent;}
+.txthide {position:absolute; color:transparent;} /* 0705 숨김텍스트 형식 추가 */
+
+/* focus
+*:focus {outline: dashed 1px #666;} */
+
+/* GNB 폰트, footer 폰트 */
+body #cfmClWrapper #cfmClHeader {font-family:"Noto Sans Regular","Malgun Gothic","맑은 고딕","MG","Apple SD","dotum","돋움",sans-serif;font-size:100%;color:#666;line-height:1.45;letter-spacing:-0.5px;}
+body #cfmClWrapper #cfmClGnb {font-family:"Noto Sans Regular","Malgun Gothic","맑은 고딕","MG","Apple SD","dotum","돋움",sans-serif;}
+body #cfmClWrapper #cfmClFooter {font-family:"Noto Sans Regular","Malgun Gothic","맑은 고딕","MG","Apple SD","dotum","돋움",sans-serif;}
+
+/* KT Bold, Light */
+.ktb {font-family:"KTB", "Spoqa Han Sans Bold","Malgun Gothic","맑은 고딕","MG", sans-serif;}
+.ktl {font-family:"KTL", "Spoqa Han Sans Bold","Malgun Gothic","맑은 고딕","MG", sans-serif;}
+
+/* align */
+.align-left {text-align:left !important;}
+.align-right {text-align:right !important;}
+/* ie9 select css */
+.no-cssanimations select {background-image:none;}
+
+/* ie9 예외 처리 */
+.no-cssanimations .no-ie9 { display: none !important;}
+.ie9-wrap { display: none; padding-bottom: 16px; background: url(/images/cl/ie9_img.png) no-repeat 50% 90px; text-align: center;}
+.ie9-wrap .ie9-msg1 { padding: 390px 0 20px; color: #222; font-size: 30px; line-height: 1.3;}
+.ie9-wrap .ie9-msg2 { color: #454545; font-size: 19px;}
+.ie9-wrap .browser-down { display: inline-block; margin: 70px auto 0;}
+.ie9-wrap .browser-down li { float: left; box-sizing: border-box; margin: 0 5px; width: 308px; height: 100px; border: 2px solid #333; border-radius: 4px; line-height: 90px; text-indent: 80px;}
+.ie9-wrap .browser-down li.explorer { background: url(/images/cl/ie9_explorer.png) no-repeat 41px 13px;}
+.ie9-wrap .browser-down li.chrome { background: url(/images/cl/ie9_chrome.png) no-repeat 53px 13px;}
+.ie9-wrap .browser-down li a { display: block; width: 100%; height: 100%; color: #222; font-size: 26px;}
+.no-cssanimations .ie9-wrap { display: block;}
+.no-cssanimations .ie9-wrap ~ * { display: none;}

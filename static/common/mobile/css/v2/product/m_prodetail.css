@@ -13730,6 +13730,7 @@ html.expand, body.expand {
   color: #000;
   font-weight: 900;
   font-size: 14px;
+  text-align: left;
 }
 .N-pdt-compare-section.N-pdt-btm-link-type .N-pdt-compare-column .more:after {
   content: "";
@@ -15320,10 +15321,10 @@ html.expand, body.expand {
   word-break: keep-all;
 }
 .rn-forte-wrap .bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .rn-forte-wrap .red {
-  color: var(--color-red-3);
+  color: var(--color-red-3) !important;
 }
 .rn-forte-wrap .underline-mint::after, .rn-forte-wrap .underline-mint::before {
   background: var(--underline-mint);
