@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+.fare-list li{position: relative;padding-left: 8px;text-align: left;}
+.fare-list li:after{position: absolute;content: '';display: block;width: 2px;height: 2px;border-radius: 50%;background-color: #222;left: 0;top:12px;margin-top: -1px;}
+.txt-red{color: #d71826;}
+.bx-controls .disabled{display: none !important;}
+
+/* search-period-area */
+.search-period-area {height:260px; background:#38445d;/*background:url("../img/index/img-search-period.jpg") top center no-repeat;*/}
+.search-period-area.margin-top-0 {margin-top:-70px;margin-bottom:70px;}
+.search-period-area .search-period {display:inline-block;}
+.search-period-area .search-period div {float:left; padding-left:30px;}
+.search-period-area .search-period div#choice1 {width:525px;}
+.search-period-area .search-period div#choice2 {width:525px;}
+.search-period-area .search-period div.wide{width: 100% !important;}
+.search-period-area .search-period div:first-child {padding-left:0;}
+.search-period-area .search-period h4 {font-size:23px;padding-top:30px;color:#fff;}
+.search-period-area .search-period ul {display:inline-block;padding-top:10px;}
+.search-period-area .search-period ul.etc {margin-left:100px;}
+.search-period-area .search-period ul > * {display:table;float:left;width:103px;height:140px;margin-top:4px;}
+.search-period-area .search-period ul > * a {display:table-cell;color:#fff;vertical-align:middle;border:1px solid #ced0d3;border-left:0;box-sizing:border-box;}
+.search-period-area .search-period ul li:first-child a {border-left:1px solid #fff;}
+.search-period-area .search-period ul li.active:first-child a {border-left:0;}
+.search-period-area .search-period ul > *.active{width:113px;height:148px;margin-top:0; margin-left:-3px;}
+.search-period-area .search-period ul > *.active a{background-color:#de142c;border:1px solid #de142c;box-sizing:border-box;}
+.search-period-area .search-period ul > * a span{display:inline-block;position:relative;font-size:18px;line-height:24px;letter-spacing:-0.25px;}
+.search-period-area .search-period ul > *:active a span,
+.search-period-area .search-period ul > *.active a span{font-weight:bold;}
+.search-period-area .search-period ul > * a:hover span:after,
+.search-period-area .search-period ul > *.active a span:after{content: "";position:absolute;left:0;bottom:-7px;width:100%;height:3px;display:block;text-align:center;background-color:#fff;}
+.search-period-area .search-period .white-select > *:hover a {color:#de142c;}
+.search-period-area .search-period .white-select > *.active a{background-color:#fff;border:1px solid #fff;box-sizing:border-box;color:#de142c;}
+.search-period-area .search-period .white-select > * a:hover span:after,
+.search-period-area .search-period .white-select > *.active a span:after{background-color:#de142c;}
+.search-period-area .search-period .only {padding-top:53px;}
+.search-period-area .search-period .banners {padding:22px 0 0 0;}
+.search-period-area2 {/*background:url("../img/index/img-search-period2.jpg") no-repeat 0 0;*/}
+
+/* [SR]212_213_214_216_���� 20190430 �߰� */
+.search-period-area.opt-choice .inner {width:1260px;}
+.search-period-area.opt-choice .search-period {margin:0 0 0 80px;font-size:0;}
+.search-period-area.opt-choice .search-period div#choice2 {width:625px;}
+/* // [SR]212_213_214_216_���� 20190430 �߰� */
+
+@media screen and (max-width: 1380px) {
+	.search-period-area2 .banner-area .bx-controls{left: 60px;}
+}
+.fare-select-area {background-color:#f6f6f6;}
+.fare-select-area .search-result {font-size:18px;line-height:60px;color:#000;}
+.fare-select-area .search-result strong {color:#d82c38;}
+.fare-select-area .search-result:after {content:"";display:block;position:absolute;bottom:-18px;left:50%;width:42px;height:18px;margin-left:-21px;background:url("../img/index/bg-result-arrow.png") no-repeat;}
+
+.fare-list-area {position:relative;}
+.fare-list-area .table-guide-title {float:left;font-size:22px;font-weight:bold;color:#222;margin-top:-9px;}
+.fare-list-area .table-guide-title.only {float:none;text-align:left;margin:60px 0 10px;}
+.fare-list-area .table-guide-desc {font-size:16px;letter-spacing:-0.75px;text-align:right;margin-top:60px;color:#666;padding-bottom:10px;}
+.fare-list-area .table-guide-desc.margin-top-40 {margin-top:40px;} {font-size:16px;letter-spacing:-0.75px;text-align:right;margin-top:60px;color:#666;padding-bottom:10px;}
+/* 230904_초고속인터넷 실태조사 결과에 따른 사업자 자율개선 권고에 따른 문구 변경 건 */
+.fare-list-area .table-guide-desc_noti { position: relative; margin-top: 5px; padding: 15px 0 0 17px; border-top: 3px solid #666; color: #666; text-align: left; letter-spacing: -0.8px; line-height: 1.43; }
+.fare-list-area .table-guide-desc_noti:before { content: "※"; position: absolute; top: 15px; left: 0; color: #666; letter-spacing: -0.8px; line-height: 1.43; }
+.fare-list-area .table-guide-desc_noti + .plan-list-area table.plan-list:first-child tr th, .fare-list-area .table-guide-desc_noti + .plan-list-area table.plan-list:first-child tr td { border-top: 0; }
+/* // 230904_초고속인터넷 실태조사 결과에 따른 사업자 자율개선 권고에 따른 문구 변경 건 */
+.fare-list-area .plan-list-area table.plan-list tr th, .fare-list-area .plan-list-area table.plan-list tr td{/*height:136px;*/padding:36px 0 /* 1023 ���� : 44px */; border-bottom:1px solid #cfcfcf;}
+.fare-list-area .plan-list-area table.plan-list:first-child tr th, .fare-list-area .plan-list-area table.plan-list:first-child tr td {border-top:3px solid #666;box-sizing:border-box;}
+.fare-list-area .plan-list-area table.plan-list:first-child .header-border td {border-top:1px solid #666;border-bottom:0;box-sizing:border-box;}
+.fare-list-area .plan-list-area table.plan-list:first-child .header-border:first-child td {border-top:3px solid #666;}
+.fare-list-area .plan-list-area table.plan-list:first-child .header-border:last-child td {border-bottom:1px solid #666;}
+#productListSize + .header-border td {border-top:3px solid #666;box-sizing:border-box;}
+.fare-list-area .plan-list-area table.plan-list .title {text-align:left; padding:14px 0 20px 0 /* 1023 ���� : 22px 0 28px 0 */;}
+.fare-list-area .plan-list-area table.plan-list .title span {display:inline-block; margin-bottom:10px; font-size:12px;line-height:24px;text-align:center;color:#fff;padding:0 10px;margin-right: 4px;}
+.fare-list-area .plan-list-area table.plan-list .title span.red {background-color:#d71826;}
+.fare-list-area .plan-list-area table.plan-list .title span.blue_purple{background-color:#6665e4;}
+.fare-list-area .plan-list-area table.plan-list .title span.green {background-color:#0c979a;}
+.fare-list-area .plan-list-area table.plan-list .title span.purple {background-color:#62708f;}
+.fare-list-area .plan-list-area table.plan-list .title span.navy {background-color:#38445d;}
+.fare-list-area .plan-list-area table.plan-list .title span.yellow {background-color:#E96303;}
+.fare-list-area .plan-list-area table.plan-list .title span.pink {border:1px solid #c896ed;line-height:22px; width:41px;}
+.fare-list-area .plan-list-area table.plan-list .title span.pink {color:#9f4fd6;}
+.fare-list-area .plan-list-area table.plan-list .title span.navy_blue{border:1px solid #a0aeef;line-height:22px;}
+.fare-list-area .plan-list-area table.plan-list .title span.navy_blue{color:#5163b4;}
+.fare-list-area .plan-list-area table.plan-list .title span.title-detail { display: block; margin: 0; padding: 0; color: #222; font-size: 13px; text-align: left; font-weight: normal; line-height: 1.47; letter-spacing: -0.33px; font-family: 'Noto Sans Regular', sans-serif !important; } /* 230608 태그 기준 상품명 줄바꿈 및 스타일 적용 시 문제점 건 */
+
+/*20190613 �߰�*/
+.fare-list-area .plan-list-area table.plan-list .title span.new_chl{border:1px solid #13b1d3;line-height:22px;}
+.fare-list-area .plan-list-area table.plan-list .title span.new_chl{color:#13b1d3;}
+.fare-list-area .plan-list-area table.plan-list .title span.new_vod{border:1px solid #4ace9e;line-height:22px;}
+.fare-list-area .plan-list-area table.plan-list .title span.new_vod{color:#4ace9e;}
+.fare-list-area .plan-list-area table.plan-list .title span.new_sev{border:1px solid #d78d5b;line-height:22px;}
+.fare-list-area .plan-list-area table.plan-list .title span.new_sev{color:#d78d5b;}
+/* 220210_y���߰� */
+.fare-list-area .plan-list-area table.plan-list .title span.new_y{background: #5ddfde;width:41px;}
+.fare-list-area .plan-list-area table.plan-list .title span.new_y{color:#000;}
+/* // 220210_y���߰� */
+
+.fare-list-area .plan-list-area table.plan-list .title strong{display:block;font-size:26px;color:#222;}
+.fare-list-area .plan-list-area table.plan-list .title .desc {font-size:15px;color:#222;letter-spacing:-0.25px;}
+.plans {width:360px; display: table;table-layout: fixed;}
+.plans li {position: relative; display: table-cell; padding: 0 4px; font-size:14px; line-height:17px; background:url("../img/index/bg-condition.png") repeat-y 0 0;}
+.plans li span{display: block;}
+.plans li:first-child {background:none;}
+.plans li p {padding-top:50px;color: #454545;}
+.plans li img {position: absolute;left: 50%;transform: translateX(-50%);max-width:42px;}
+.fare-list-area h3.tits {font-size:30px;font-weight:bold;color:#222;margin:60px 0 -25px;}
+.fare-list-area .plan-list-area table.plan-list .charge {font-size:20px;color:#000;text-align:right;padding-right:38px;}
+.fare-list-area .plan-list-area table.plan-list .charge strong{font-family:Spoqa Han Sans;font-size:26px;letter-spacing:-1.25px;word-break:keep-all;color:#d92c38;vertical-align:-3px;line-height:33px;}
+.fare-list-area .plan-list-area table.plan-list .charge span {display:block;font-size:14px;line-height:21px;color:#666;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit {margin:15px 0 0 0;padding:11px 0 0 0;border-top:1px solid #c5c5c5;color:#000;font-size:12px;line-height:21px;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .img {vertical-align:-2px;}
+
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-txt {display:inline-block;position:relative;color:#000;font-size:15px;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-inner-txt {z-index:2;position:relative;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-txt:before {content:'';position:absolute;top:-3px;left:-13px;width:11px;height:10px;background:url('https://product.kt.com/static/common/images/icon_kt_ps_benefit.gif') no-repeat 0 0;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-txt:after {content:'';z-index:1;position:absolute;bottom:-3px;left:0;width:100%;border-bottom:7px solid #ffefa3;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-txt .point {display:inline-block;margin:0;color:#d92c38;font-weight:bold;font-size:15px;}
+
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-sale {display:block;margin:3px 0 0 0;color:#d92c38;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-sale span {display:inline-block;margin:0;color:#d92c38;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-sale .mon {font-size:13px;vertical-align:1px;}
+
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-price {display:block;margin:2px 0 0 0;color:#000;font-family:'Spoqa Han Sans';font-weight:normal;font-size:18px;}
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-price strong {vertical-align:-3px; padding-left:0.2rem; color:#D92C38;font-family:'Spoqa Han Sans';font-weight:bold; font-size:26px;}/* ����� ����Ʈ ������_KT Shop ���ΰ� ǥ�� ��� ����_v.3_220629 *//* 0711 *//* 0714 */
+.fare-list-area .plan-list-area table.plan-list .ps-benefit .won {display:inline-block;margin:0;color:#000;font-family:'Malgun Gothic', '���� ����';font-weight:normal;font-size:20px;vertical-align:2px;}
+.fare-list-area .plan-list-area table.plan-list .btns button.only {margin-top:0;}
+.fare-list-area .plan-list-area table.plan-list .btns button,
+.fare-list-area .plan-list-area table.plan-list .btns div {margin-top:5px;/*background-color:#f9f9f9;*/}
+.fare-list-area .plan-list-area table.plan-list .btns .btn {width:120px;padding:0;font-size:14px;}
+.fare-list-area .plan-list-area table.plan-list .btns .width-170 {width:170px;padding:0 16px;}
+.fare-list-area .plan-list-area table.plan-list .btns button span i {background:url("https://product.kt.com/static/common/web/img/index/btn-list-open.png") right center no-repeat;padding-right:25px;}
+.fare-list-area .plan-list-area table.plan-list .btns button:hover span,
+.fare-list-area .plan-list-area table.plan-list .btns button.active {background-color:#f2f2f2;}
+.fare-list-area .plan-list-area table.plan-list .btns button.active span i {background:url("../img/index/btn-list-close.png") right center no-repeat;padding-right:25px;}
+.fare-list-area .plan-list-area table.plan-list .join-end {font-size:20px;font-weight:bold;line-height:50px;color:#d71826;}
+.fare-list-area .plan-list-area table.plan-list + .plan-list,
+.fare-list-area .plan-list-area table.detail-list.only {display:table; }
+.fare-list-area .plan-list-area table.detail-list {border-top:1px solid #eaeaea; border-bottom:1px solid #cfcfcf;}
+.fare-list-area .plan-list-area table.detail-list thead tr.color-blue th {color:#fff;background:#536895;border-left: 1px solid #fff;}
+.fare-list-area .plan-list-area table.detail-list thead tr.color-blue th:first-child{border-left: 0;}
+.fare-list-area .plan-list-area table.detail-list + .plan-list {margin-top:-2px;}
+.fare-list-area .plan-list-area table.detail-list {display:none;margin-top:-2px;}
+.fare-list-area .plan-list-area table.detail-list thead th {position:relative;height:55px;color:#222;border-top:0;box-sizing:border-box;background:url("../img/index/bg-table-line.jpg") left center #f0f0f0 no-repeat;font-weight: normal;}
+.fare-list-area .plan-list-area table.detail-list thead th:first-child {content:"";background-image:none;}
+.fare-list-area .plan-list-area table.detail-list tbody th,
+.fare-list-area .plan-list-area table.detail-list tbody td {position:relative;padding:14px 0 /* 1023 ���� : 30px 0 */;height: 100px;border-top:1px solid #eaeaea;background-color:#f9f9f9;}
+.fare-list-area .plan-list-area table.detail-list tbody th {font-size:22px;font-weight:bold;color:#222;text-align:left;padding-left:30px;padding-right: 20px;}
+.fare-list-area .plan-list-area table.detail-list tbody th .title-detail { display: block; margin: 0; padding: 0; color: #222; font-size: 11px; text-align: left; font-weight: normal; line-height: 1.6; letter-spacing: -0.28px; font-family: 'Noto Sans Regular', sans-serif !important; } /* 230608 태그 기준 상품명 줄바꿈 및 스타일 적용 시 문제점 건 */
+.fare-list-area .plan-list-area table.detail-list tbody td .btn.regular {height:36px;line-height:32px !important;font-size:14px;}/* 1023 �߰� */
+.fare-list-area .plan-list-area table.detail-list img {margin-top:1px;cursor:pointer;}
+
+.fare-list-area .plan-list-area table.detail-list .ps-benefit {margin:9px 0 0 0;padding:9px 0 0 0;border-top:1px solid #c5c5c5;color:#000;font-size:12px;line-height:21px;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .img {vertical-align:-2px;}
+
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-txt {display:inline-block;position:relative;color:#000;font-size:15px;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-inner-txt {z-index:2;position:relative;font-size:13px;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-txt:before {content:'';position:absolute;top:-3px;left:-13px;width:11px;height:10px;background:url('https://product.kt.com/static/common/images/icon_kt_ps_benefit.gif') no-repeat 0 0;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-txt:after {content:'';z-index:1;position:absolute;bottom:-3px;left:0;width:100%;border-bottom:7px solid #ffefa3;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-txt .point {display:inline-block;margin:0;color:#d92c38;font-weight:bold;}
+
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-sale {display:block;margin:2px 0 0 0;color:#d92c38;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-sale span {display:inline-block;margin:0;color:#d92c38;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-sale .mon {font-size:12px;vertical-align:1px;}
+
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .ps-benefit-price {display:block;margin:-1px 0 0 0;color:#D92C38;font-family:'Spoqa Han Sans';font-weight:bold;font-size:20px;}
+.fare-list-area .plan-list-area table.detail-list .ps-benefit .won {display:inline-block;margin:0;color:#000;font-family:'Malgun Gothic', '���� ����';font-weight:normal;font-size:16px;vertical-align:2px;}
+
+.fare-list-area .plan-list-area .detail-list.type-box {padding:0 40px 45px;background-color:#f1f2fa;}
+.fare-list-area .plan-list-area .detail-list .table-guide-desc {margin-top:0;padding:55px 0 2px;}
+.fare-list-area .plan-list-area .detail-list .table-plan + .desc {/*margin-top:-31px;*/}
+.fare-list-area .plan-list-area .detail-list .desc {text-align:left;}
+.fare-list-area .plan-list-area .detail-list .desc .pointer {line-height:31px;}
+.fare-list-area .plan-list-area .detail-list .desc .pointer span {display:block;padding-top:10px;}
+.fare-list-area .plan-list-area .detail-list .desc .pointer:before{content:"";float:left;width:2px;height:2px;margin:14px 5px 0 0;background-color:#666;}
+.fare-list-area .plan-list-area .detail-list .desc .pointer a {font-size:12px;font-weight:bold;line-height:26px !important;height:28px;padding:0 9px;margin-left:10px;}
+.used {overflow:hidden;display:inline-block;text-align:center;vertical-align:top;letter-spacing:-0.25px;box-sizing:border-box;height:40px;width:113px;padding:0 20px;margin-bottom:5px;font-size:15px;line-height:40px;color:#fff;background:#bbb;border-radius: 50px;}
+
+.tooltip-area {display:inline-block;position:relative;vertical-align:middle;cursor:pointer;}
+.tooltip{display:none;position:absolute;left:50%;top:28px;min-width:156px;font-size:14px;border:2px solid #000;box-sizing:border-box;background-color:#fff;margin-left:-78px;padding:4px 10px;z-index:10;}
+.tooltip:after{content:"";position:absolute;left:50%;top:-8px;width:11px;height:8px;margin-left:-5px;background:url("../img/index/icon-arrow-tooltip.png") no-repeat;}
+.tooltip-area:hover .tooltip,
+.tooltip-area img:focus + .tooltip {display:block;}
+.fare-list-area .plan-list-area table.detail-list .info ul{display: table;table-layout: fixed;width:100%;}
+.fare-list-area .plan-list-area table.detail-list .info li {display: table-cell;font-size:15px;line-height:20px;color:#000;vertical-align:middle;}
+.fare-list-area .plan-list-area table.detail-list .charge {font-size:18px;color:#222;line-height: 33px; text-align:right;padding-right:20px;}
+.fare-list-area .plan-list-area table.detail-list .charge strong {font-family:Spoqa Han Sans;font-size:23px;color:#d92c38;vertical-align:-3px;}
+.fare-list-area .plan-list-area table.detail-list .btns .btn {border-radius:50px;padding: 0 25px;min-width: 109px;}
+.fare-list-area .plan-list-area table.detail-list .btns a span,
+.fare-list-area .plan-list-area table.detail-list .btns button span {border-radius:50px;}
+.fare-list-area .plan-list-area table.detail-list .btns a + a,
+.fare-list-area .plan-list-area table.detail-list .btns a + button {margin-top:5px;}
+.fare-list-area .plan-list-area table.detail-list .btns .is-navygray{cursor: default;}
+.fare-list-area .plan-list-area table.detail-list .btns .is-navygray.active,
+.fare-list-area .plan-list-area table.detail-list .btns .is-navygray:hover{background-color: #333;}
+.fare-list-area .plan-list-area table.detail-list .btns a.active,
+.fare-list-area .plan-list-area table.detail-list .btns .is-line-navygray:hover {background-color:#ddd;}
+.fare-list-area .plan-list-area table.detail-list .btns .used.active{background-color: #bbb;cursor: default;}
+.fare-list-area .btn-more {position: relative;margin-top: -1px;display:block;line-height:48px;font-size:20px;color:#303030;border:1px solid #cfcfcf;box-sizing:border-box;background:#fcfcfc;}
+.fare-list-area .btn-more span {background:url("../img/index/btn-more-open.png") right 11px no-repeat;padding-right:25px;}
+
+/* fare-list-area layer popup */
+.fare-list-area .layers.active {display:block;}
+.fare-list-area .layers {display:none;position:absolute;top:0;left:-1100px;z-index:10;}
+.fare-list-area .layers .layer-header {height:78px;line-height:78px;font-size:26px;margin:0 33px;border:0;}
+.fare-list-area .layers .layer-header span{font-size:14px;line-height:17px;letter-spacing:-0.25px;margin-left:5px;}
+.fare-list-area .layers .layer-contents {position:relative;padding-top:0;}
+.fare-list-area .layers .layer-contents .table-area {height:370px;overflow-y: auto;overflow-x:hidden;box-sizing: border-box;border-top: 2px solid #bcbcbc;border-bottom: 1px solid #e0e0e0;}
+.fare-list-area .layers .layer-contents .layer-datalist thead th {height:41px;color:#222;border-bottom:1px solid #e0e0e0;box-sizing:border-box;background:url("../img/index/bg-table-line-01.jpg") left 12px no-repeat;}
+.fare-list-area .layers .layer-contents .layer-datalist thead th:first-child{font-size:14px;background:none;}
+.fare-list-area .layers .layer-contents .layer-datalist thead th.myplan-title {position:relative;}
+.fare-list-area .layers .layer-contents .layer-datalist thead th.myplan-title p {overflow: hidden; text-overflow: ellipsis; text-decoration: none; white-space: nowrap; position:relative; padding: 0 52px 0 10px; color:#d71826; text-align:left; text-align: center; } /* 230608 태그 기준 상품명 줄바꿈 및 스타일 적용 시 문제점 건 */
+.fare-list-area .layers .layer-contents .layer-datalist thead th .badge {position:absolute;top:-2px;right:0;width:55px;height:42px;}
+.fare-list-area .layers .layer-contents .layer-datalist tbody th,
+.fare-list-area .layers .layer-contents .layer-datalist tbody td {border-left:1px solid #e0e0e0;font-size:14px;color:#222;padding:13px 10px;vertical-align:top;}
+.fare-list-area .layers .layer-contents .layer-datalist tbody th {border-left:0;}
+.fare-list-area .layers .layer-contents .layer-datalist thead th select {color:#222;border:0;}
+.fare-list-area .layers .layer-contents .layer-datalist tbody tr.plan td{font-size:17px;}
+.fare-list-area .layers .layer-contents .layer-datalist tbody tr.plan td{font-family:Spoqa Han Sans;}
+.fare-list-area .layers .layer-contents .layer-datalist tbody .pointer {text-align:left;padding-left:20px;}
+.fare-list-area .layers .layer-contents .layer-datalist tbody .pointer:before{content: "";float: left;width: 2px;height: 2px;margin:13px 5px 0 -10px;background-color: #666;}
+.fare-list-area .layers .layer-contents .layer-datalist .planbox-area {position:relative;}
+.fare-list-area .layers .layer-contents .layer-datalist .planbox-area.active > .select-planlist{display:block;}
+.fare-list-area .layers .layer-contents .layer-datalist .planbox-area .select-planlist {display:none;position:absolute;top:38px;left:0;width:100%;border:1px solid #e0e0e0;box-sizing:border-box;background-color:#fff;}
+.fare-list-area .layers .layer-contents .layer-datalist .planbox-area a.selected {display:block;line-height:38px;text-align:left;background:url("../img/index/btn-planbox-arrow.png") calc(100% - 4px) center no-repeat;text-align: center;padding:0 25px 0 10px; } /* 230608 태그 기준 상품명 줄바꿈 및 스타일 적용 시 문제점 건 */
+.fare-list-area .layers .layer-contents .layer-datalist a {overflow: hidden; text-overflow: ellipsis; text-decoration: none; white-space: nowrap; padding: 0 10px; line-height:28px; color:#222; text-align:left; } /* 230608 태그 기준 상품명 줄바꿈 및 스타일 적용 시 문제점 건 */
+.fare-list-area .layers .layer-contents .layer-datalist a:hover {color:#d71826;}
+.fare-list-area .layers .layer-contents .btns {position: relative;z-index: 11;height:40px;text-align:left;padding-left:88px;padding-top: 20px;}
+.fare-list-area .layers .layer-contents .btns li {float:left;width:225px;height:36px;}
+.fare-list-area .layers .layer-contents .btns li a {display: inline-block;margin-left:60px;padding:0 24px; height:36px; line-height:36px;}
+.fare-list-area .layers .layer-contents .myplan {position:absolute;top:0;left:118px;width:228px;height:calc(100% + 2px);border:3px solid #d71826;box-sizing:border-box;z-index:10;}
+.fare-list-area .layers .layer-contents .myplan .login {display:block;width:100%;height:100%;background:url("../img/index/layer-thumb.png") center 73px #f9f9f9 no-repeat;}
+.fare-list-area .layers .layer-contents .myplan .login.deactive{display:none;}
+.fare-list-area .layers .layer-contents .myplan .login .title {font-size:16px;font-weight:bold;line-height:22px;color:#222;padding-top:163px;}
+.fare-list-area .layers .layer-contents .myplan .login .desc {font-size:14px;line-height:20px;padding-top:20px;}
+.fare-list-area .layers .layer-contents .myplan .login a {margin-top:25px;display: inline-block;}
+.fare-list-area .layers .layer-contents .myplan .login .btn.large {height:36px;font-size:16px;line-height:34px !important;padding:0 25px;padding-top: 0 !important;}
+.fare-list-area .layers .layer-contents .myplan .no-plan {display:block;width:100%;height:100%;background:url("../img/index/layer-thumb.png") center 155px #f9f9f9 no-repeat;}
+.fare-list-area .layers .layer-contents .myplan .no-plan .title{font-size:16px;font-weight:bold;line-height:22px;color:#222;padding-top:251px;}
+.fare-list-area .layers .layer-contents .myplan .no-plan.deactive{display:none;}
+/* ��ǰ����_�����_����Ʈ_��ɰ���_v0.1_20190226 ���̾� �˾� */
+.fare-list-area .floating-compare {position:absolute;right:-100px;top:-50px;z-index:89;width:80px;height:100px;}
+.fare-list-area .floating-compare .compare {margin:10px 0 0 0;background:url("../img/index/bg-floating-compare.png") no-repeat;}
+/* // ��ǰ����_�����_����Ʈ_��ɰ���_v0.1_20190226 ���̾� �˾� */
+.fare-list-area .floating-compare a {display:block;}
+.fare-list-area .floating-compare .title span {display:inline-block;font-size:16px;line-height:21px;color:#fff;padding:10px 0 6px;border-bottom:1px solid #242b37;}
+.fare-list-area .floating-compare .num {font-family:"Spoqa Han Sans";font-size:36px;line-height:62px;font-weight:bold;color:#ff0422;}
+.fare-list-area .compare-alert {display:none;position:fixed;top:50%;left:50%;width:250px;height:160px;margin:-80px 0 0 -125px;border-radius:10px;z-index:15;background:url("../img/index/icon-compare-alert.png") center 23px rgba(0,0,0,0.9) no-repeat;}
+.fare-list-area .compare-alert .desc {font-size:18px;line-height:26px;color:#fff;padding-top:90px;letter-spacing:-0.75px;}
+.fare-list-area .compare-alert .desc span {color:#d92c38;}
+
+.banner-area{position:relative}
+.banner-area .bx-wrapper {margin:0 auto;}
+.banner-area .visual li{float:left;width:100%;height:100%;}
+.banner-area .bx-controls .bx-controls-direction{width:1080px;margin: 0 auto;position: absolute;top: 50%;left: 0;right: 0}
+.banner-area .bx-controls .bx-controls-direction a{display: block;width: 11px;height: 22px;overflow:hidden;z-index: 10;position: absolute;background-repeat: no-repeat;text-indent: -9999em}
+.banner-area .bx-controls .bx-controls-direction a.bx-prev{left: 30px;background-image: url("../img/index/btn-banner-prev.png")}
+.banner-area .bx-controls .bx-controls-direction a.bx-next{right: 30px;background-image: url("../img/index/btn-banner-next.png")}
+.banner-area .bx-controls{position: absolute;z-index: 10;top: 50%;width: 100%;margin-top: -24px;text-align: center}
+.banner-area .bx-controls .bx-controls-auto{display: inline-block;position: relative;top: 103px;margin: 0 5px 0 0}
+.banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item{display: inline-block}
+.banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item a{display:none;width: 10px;height: 12px;overflow:hidden;background-repeat: no-repeat;text-indent: -9999em}
+.banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item a.bx-start{background-image: url("../img/index/btn-banner-play.png")}
+.banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item a.bx-stop{background-image: url("../img/index/btn-banner-pause.png")}
+.banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item a.active{display:block;}
+.banner-area .bx-controls .bx-pager{display: inline-block;padding: 2px 0 0;position: relative;top: 103px}
+.banner-area .bx-controls .bx-pager div{display: inline-block;margin: 0 3px}
+.banner-area .bx-controls .bx-pager div a{display: block;width: 11px;height: 11px;overflow:hidden;border: 2px solid #222;border-radius: 7px;box-sizing: border-box;background-color:transparent;text-indent: -9999em}
+.banner-area .bx-controls .bx-pager div a.active{background-color: #222}
+
+.slider-banner-area {margin-top:60px;}
+.slider-banner-area .banner-area .bx-wrapper {width:1084px;}
+.slider-banner-area .banner-area .bx-wrapper .bx-viewport {margin:0 0 0 -2px;height:auto !important;}
+.slider-banner-area .banner-area .visual {position:relative;height:220px;margin:0 0 0 1px;padding:2px 0;height:222px;background:none;}
+.slider-banner-area .banner-area .visual li {text-align:left;}
+.slider-banner-area .banner-area .visual li div {padding-left:108px;}
+.slider-banner-area .banner-area .visual li > a {display:inline-block;width:auto;height:auto;border:1px solid transparent;text-align:center;}
+.slider-banner-area .banner-area .visual li .title {font-size:22px;font-weight:bold;line-height:30px;color:#404141;padding-top:45px;}
+.slider-banner-area .banner-area .visual li .text {font-size:36px;font-weight:bold;line-height:30px;color:#12a6aa;padding-top:12px;}
+.slider-banner-area .banner-area .visual li .desc {font-size:18px;line-height:24px;color:#554747;padding-top:15px;}
+.slider-banner-area .banner-area .visual li.first {background:url("../img/index/bg-slider-banner-01.jpg") center no-repeat;}
+.slider-banner-area .banner-area .visual li.second {background:url("../img/index/bg-slider-banner-01.jpg") center no-repeat;}
+.slider-banner-area .banner-area .visual li.third {background:url("../img/index/bg-slider-banner-01.jpg") center no-repeat;}
+
+.slider-banner-area2 {margin-top:0;}
+.slider-banner-area2 .banner-area .visual {position:relative;height: auto;overflow:hidden;background:none;}/* 0622 ��� �������� ���� ��쿡�� ������ �� �������� ���� */
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-direction{margin-top: -11px;}
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-direction a{width: 48px;height: 48px;}
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-direction a.bx-prev{left: 30px;background-image: url("../img/index/btn-banner-prev2.png");}
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-direction a.bx-next{right: 30px;background-image: url("../img/index/btn-banner-next2.png");}
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-auto{top: 110px;}
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item a.bx-start{background-image: url("../img/index/btn-banner-play2.png");}
+.slider-banner-area2 .banner-area .bx-controls .bx-controls-auto .bx-controls-auto-item a.bx-stop{background-image: url("../img/index/btn-banner-pause2.png");}
+.slider-banner-area2 .banner-area .bx-controls .bx-pager{top: 113px;}
+.slider-banner-area2 .banner-area .bx-controls .bx-pager div a{border-color: #fff;}
+.slider-banner-area2 .banner-area .bx-controls .bx-pager div a.active{background-color: #fff;}
+.slider-banner-area2 .banner-area .bx-wrapper img { position: relative; top: 0; left: 50%; width: 100%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); } /* �̹��� ��� ���� */
+
+.half-banner-area {padding-top:10px;}
+.half-banner-area .half-banner:after{clear: both;content: '';display: block;}
+.half-banner-area .half-banner > div {float:left;overflow:hidden;width:539px;height:100%;text-align:left;}
+.half-banner-area .half-banner a {display:block;width:100%;height:100%;color:#fff;}
+.half-banner-area .half-banner .left {}
+.half-banner-area .half-banner .right {margin-left: 2px;}
+.half-banner-area .half-banner .title {font-size:24px;padding:20px 0 0 50px;}
+.half-banner-area .half-banner .title:after {content:"";display:block;width:24px;height:2px;background-color:#de2a36;margin-top:14px;}
+.half-banner-area .half-banner .desc {font-size:18px;padding:5px 0 0 50px;}
+
+.link-list-area {padding-top:10px;}
+.link-list-area .link-list {width:100%;height:100px;display: table;table-layout: fixed;}
+.link-list-area .link-list li {display: table-cell;font-size:20px;border:1px solid #cfcfcf;border-left:0;box-sizing:border-box;vertical-align:middle;background: #fcfcfc;}
+.link-list-area .link-list li:first-child {border-left:1px solid #cfcfcf;}
+.link-list-area .link-list li a {position: relative;color:#222;padding-left:20px;padding-right: 45px;display: block;text-align: left;}
+.link-list-area .link-list li:hover {background:#f1f1f1;}
+.link-list-area .link-list li a:after {content:"";position:absolute;top: 50%;margin-top: -11px;right:32px;width:11px;height:22px;background:url("../img/index/btn-banner-next.png") no-repeat;}
+
+/* 170819 ���ϱ� blank �߰� */
+.fare-list-area .layer-contents .blank{position: absolute;top: 0px;width: 224px;height: calc(100% - 2px);background-color: #fff;z-index: 10;}
+.fare-list-area .layer-contents .blank p{padding-top: 237px;border-top: 2px solid #bcbcbc;background: url(../img/index/layer-thumb-blank.png) no-repeat center bottom 61px;color: #222;font-weight: bold;}
+.fare-list-area .layer-contents .blank.deactive{display: none;}
+.fare-list-area .layer-contents .blank.sc3{right: 279px;}
+.fare-list-area .layer-contents .blank.sc4{right: 54px;}
+
+/* ��ǰ����_�����_����Ʈ_��ɰ���_v0.1_20190226 ���̾� �˾� */
+#findpop.layers.big .layer-header {padding:0 32px;font-size:21px;text-align:left;}
+#findpop.layers.big .layer-contents {padding:0;}
+
+.fare-list-area .plan-list-area .detail-list .desc-list {text-align:left;}
+.fare-list-area .plan-list-area .detail-list .desc-list li {position:relative;padding:0 0 0 5px;line-height:31px;}
+.fare-list-area .plan-list-area .detail-list .desc-list li:after {content:'';position:absolute;top:15px;left:0;width:2px;height:2px;background:#666;}
+.fare-list-area .plan-list-area .detail-list .desc-list li a {font-size:12px;font-weight:bold;line-height:26px !important;height:28px;padding:0 9px;margin-left:10px;}
+
+.fare-half-banner {width:1080px;margin:37px auto 0;font-size:0;}
+.fare-half-banner a {display:inline-block;width:539px;margin:0 0 0 2px;vertical-align:top;}
+.fare-half-banner a:first-child {margin:0;}
+
+/* ��ǰ ����Ʈ �ϴ� ��� */
+.list-bottom-banner {height:171px;margin:10px 0 0 0;font-size:0;}
+.list-bottom-banner .banner-column {display:inline-block;width:538px;height:171px;margin:0 0 0 4px;vertical-align:top;}
+.list-bottom-banner .banner-column img {width:100%;height:100%;}
+.list-bottom-banner .banner-column:first-child {margin:0;}
+.list-bottom-banner.three-column .banner-column {width:357px;}
+.list-bottom-banner.list-bottom-banner-round { margin: 30px 0 30px 0; border-radius: 15px; }
+.list-bottom-banner.list-bottom-banner-round .banner-column img {border-radius: 15px; }
+
+/* �һ���� ��ǰ ����Ʈ �ϴܹ�� */
+.s-inquiry-banner { height: auto; }
+.s-inquiry-banner .s-inquiry{ padding: 25px 32px; position: relative; border-radius: 15px; letter-spacing: -0.4px; font-size: 14px; color: #000; font-family: 'NSR'; background: #5DDFDE;  }
+.s-inquiry-banner .s-inquiry .s-inquiry-tit { letter-spacing: -1.12px; font-family: 'NSB'; font-size: 24px; font-weight: bold; color: #000; } 
+.s-inquiry-banner .s-inquiry .s-inquiry_btn-box { position: absolute; top: 50%; right: 32px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); border-radius: 5px; color: #000; font-family: 'NSB'; background: #fff; } 
+.s-inquiry-banner .s-inquiry .s-inquiry_btn { display: block; position: relative; padding: 15px 31px 15px 50px; border-radius: 5px; color: #000; font-weight: bold; font-family: 'NSB'; letter-spacing: -0.45px; background: url(https://product.kt.com/static/prodetail/1512/common/itemAccordion/images/w_sec-inquiry_btn-ico.png)15px 50% no-repeat; }
+.s-inquiry-banner .s-inquiry_btn:after { content: ''; position: absolute; top: 20px; right: 15px; display: inline-block; width: 8px; height: 13px; vertical-align: middle; background: url(https://product.kt.com/static/prodetail/1512/common/itemAccordion/images/sec-inquiry_btn-ico-2.png)no-repeat; }
+
+/* �һ���� �޴��̵� : p_prodetail.css�� �ִ� ����� �����ϰ�, ���� �ϴ� ���ٸ� �߰��� */
+.visual .top-three-box {position:absolute;bottom:13px;right:-120px;padding:0 15px 0 0;}
+.visual .btn-back {display:block;width:40px;height:40px;overflow:hidden;background:url('https://product.kt.com/static/common/web/img/prodetail/btn-back-list.png') no-repeat 0 0;background-size:100% 100%;text-indent:-999999px;}
+.visual .top-three-box .top-three {display:none;z-index:3;position:absolute;top:0;left:52px;min-width:159px;padding:15px 10px 7px 16px;border:1px solid #e2e2e2;border-radius:4px;color:#000;background:#fff;font-size:13px;text-align:right;box-shadow:1px 10px 9px -1px rgba(245,245,245,1);}
+.visual .top-three-box .top-three:before, .visual .top-three-box .top-three:after {content:'';z-index:2;position:absolute;top:15px;left:-7px;border-right:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;}
+.visual .top-three-box .top-three:after {z-index:1;left:-9px;border-right:8px solid #ebebeb;border-top:5px solid transparent;border-bottom:5px solid transparent;}
+.visual .top-three-box .three-list {margin:0 0 10px 0;text-align:left;}
+.visual .top-three-box .three-list li {max-width:159px;overflow:hidden;margin:5px 0 0 0;padding:0 0 0 18px;background:url('https://product.kt.com/static/common/image/prodetail/bl_top_three.png') no-repeat 0 3px;text-overflow:ellipsis;}
+.visual .top-three-box .three-list li:first-child {margin:0;}
+.visual .top-three-box .three-list li a {white-space:nowrap;}
+.visual .top-three-box .top-three a {color:#000;}
+.visual .hgroup {position:relative; display:inline-block;}
+.visual .top-three-box.ssmenulink {top:97px; bottom:auto; right:-70px;}
+.visual .top-three-box.ssmenulink .top-three {box-shadow: 1px 1px 9px -1px rgb(180 180 180);}
