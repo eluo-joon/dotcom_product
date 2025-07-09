@@ -1,4 +1,6 @@
 @charset "utf-8";
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
 
 .fare-list li {
   position: relative;
@@ -28,13 +30,223 @@
 }
 
 /* search-period-area */
-
 .search-period-area {
   height: 260px;
   background: #38445d;
-
   /*background:url("../img/index/img-search-period.jpg") top center no-repeat;*/
 
+  /* 2507 요금카테고리 개편*/
+  &.type-swiper {
+    min-height: 60px;
+    height: auto;
+    height: fit-content;
+    background-color: #fff;
+
+    &:has(.ui-tab.type-sub) {
+      position: relative;
+      height: 110px;
+    }
+
+    .column, .inner {
+      height: auto;
+    }
+
+    .ui-tab {
+      &-list-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+        font-feature-settings: "tnum";
+      }
+      &.type-main {
+        .ui-tab-list {
+          display: flex;
+          background-color: #F5F5F5;
+          border-radius: 10px 10px 0px 0px;
+          // overflow: hidden;
+          
+          li {
+            position: relative;
+          }
+
+          &-btn {
+            min-height: 60px;
+            padding: 15.5px 25px 16.5px;
+            padding: 0 25px;
+            color: #666;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.9px;
+            box-sizing: border-box;
+            &:hover, &:focus-visible {
+              color: #000;
+            }
+            &.active {
+              color: #000;
+              font-weight: 700;
+              background: #fff;
+              border-radius: 10px 10px 0px 0px;
+              border: 1px solid #E6E6E6;
+              border-bottom-width: 0;
+            }
+          }
+
+          &-tooltip {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 24px;
+            padding: 0 8px;
+            background: #FE2E36;
+            border-radius: 16px;
+            span {
+              display: block;
+              color: #FFF;
+              font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+              font-size: 11px;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: -0.55px;
+              white-space: nowrap;
+              @include after (10px, 6px) {
+                bottom: -8px;
+                left: 50%;
+                transform: translate(-50%);
+                background: url('/static/common/web/img/index/bg_tooltip_tip.png') no-repeat center / 100%;
+              }
+            }
+          }
+        }
+      }
+
+      &.type-sub {
+        .type-sub-item {
+          position: absolute;
+          left: 0;
+          top: 100%;
+          z-index: -1;
+          height: 50px;
+          width: 100%;
+          border-bottom: 1px solid #E6E6E6;
+          background: #fff;
+
+          &:has(.swiper-container.is-show){
+            z-index: 2;
+          }
+
+          .swiper-container {
+            outline: none;
+
+            &:hover .swiper-scrollbar {
+              opacity: 1;
+              transition: opacity 0.3s;
+            }
+          }
+        }
+
+        .swiper-container-initialized {
+          &:has(.swiper-button-prev:not(.swiper-button-disabled)) {
+            @include before (60px, 100%) {
+              top: 50%;
+              left: 0;
+              z-index: 10;
+              transform: translateY(-50%);
+              background: linear-gradient(to right, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
+            }
+          }
+          &:has(.swiper-button-next:not(.swiper-button-disabled)) {
+            @include after (60px, 100%) {
+              top: 50%;
+              right: 0;
+              z-index: 10;
+              transform: translateY(-50%);
+              background: linear-gradient(to left, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
+            }
+          }
+
+          .swiper-slide:first-child {
+            margin-left: -60px;
+          }
+        }
+
+        .swiper {
+          &-slide {
+            width: auto;
+            padding: 0 12.5px;
+          }
+                    &-button {
+            top: 50%;
+            transform: translateY(-50%);
+            margin-top: 0;
+            z-index: 20;
+            width: 24px;
+            height: 24px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            opacity: 1;
+            will-change: opacity;
+            transition: opacity 0.3s;
+
+            &::after {
+              display: none;
+            }
+
+            &-disabled {
+              opacity: 0;
+            }
+            &-prev {
+              background-image: url('/static/common/web/img/index/btn-tab-category-btn-prev.png');  
+              left: 0;
+            }
+            &-next {
+              background-image: url('/static/common/web/img/index/btn-tab-category-btn-next.png');  
+              right: 0;
+            }
+          }
+          // &-scrollbar {
+          //   bottom: 3px;
+          //   height: 3px;
+          //   opacity: 0;
+          //   transition: opacity 0.6s;
+          //   will-change: opacity;
+
+          //   &-drag {
+          //     background-color: rgba(0, 0, 0, 0.1);
+          //   }
+          // }
+        }
+
+        .ui-tab-list-btn {
+          color: #333;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: -0.3px;
+
+          &:hover,  &:focus-visible {
+            color:#000;
+          }
+
+          &.active {
+            color:#000;
+            font-weight: 700;
+            @include after(100%, 1px) {
+              left: 0;
+              bottom: 0;
+              background: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.search-period-area:not(.type-swiper) {
   &.margin-top-0 {
     margin-top: -70px;
     margin-bottom: 70px;
@@ -225,6 +437,35 @@
 
 .fare-list-area {
   position: relative;
+
+  .search-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 12px;
+    margin-top: 35px;
+    font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+
+    .search-result {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.56px;
+
+      strong {
+        color: #FE2E36;
+        font-weight: 700;
+        letter-spacing: -0.56px;
+      }
+    }
+    .table-guide-desc {
+      color: #666;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      margin: 0;
+      padding: 0;
+    }
+  }
 
   .table-guide-title {
     float: left;
@@ -593,7 +834,7 @@
 
             strong {
               vertical-align: -3px;
-              padding-left: 0.2rem;
+              padding-left: 2px;
               color: #D92C38;
               font-family: 'Spoqa Han Sans';
               font-weight: bold;

@@ -467,6 +467,32 @@ textarea {
       transform: none;
     }
   }
+
+  /* 2507 요금카테고리 개편*/
+  &.type-white {
+    background: #fff;
+    height: 195px;
+    text-align: left;
+    
+    .hgroup {
+      padding-top: 70px;
+
+      .seo-improve-heading + p {
+        font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -0.75px;
+      }
+    }
+
+    .seo-improve-heading {
+      font-size: 50px !important;
+      line-height: 100%;
+      letter-spacing: -2.5px;
+    }
+  }
 }
 
 /* SEO고도화 */

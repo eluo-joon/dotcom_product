@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* pc */
+/* mobile */
+/* KT 전용 스타일 */
 .fare-list li {
   position: relative;
   padding-left: 8px;
@@ -30,47 +33,259 @@
   height: 260px;
   background: #38445d;
   /*background:url("../img/index/img-search-period.jpg") top center no-repeat;*/
+  /* 2507 요금카테고리 개편*/
 }
-.search-period-area.margin-top-0 {
+.search-period-area.type-swiper {
+  height: 60px;
+  background-color: #fff;
+}
+.search-period-area.type-swiper:has(.ui-tab.type-sub) {
+  position: relative;
+  height: 110px;
+}
+.search-period-area.type-swiper .ui-tab-list-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-family: "NSR", "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F5F5F5;
+  border-radius: 10px 10px 0px 0px;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list li {
+  position: relative;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn {
+  height: 60px;
+  padding: 0 25px;
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.9px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn:hover, .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn.active, .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn:focus-visible {
+  color: #000;
+  font-weight: 700;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn.active {
+  background: #fff;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #E6E6E6;
+  border-bottom-width: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-tooltip {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  background: #FE2E36;
+  border-radius: 16px;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-tooltip span {
+  display: block;
+  color: #FFF;
+  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.55px;
+  white-space: nowrap;
+  position: relative;
+  z-index: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-tooltip span::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 6px;
+  bottom: -8px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: url("/static/common/web/img/index/bg_tooltip_tip.png") no-repeat center/100%;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .type-sub-item {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  z-index: -1;
+  height: 50px;
+  border-bottom: 1px solid #E6E6E6;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .type-sub-item:has(.swiper-container.is-show) {
+  z-index: 2;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .type-sub-item .swiper-container {
+  outline: none;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .type-sub-item .swiper-container:hover .swiper-scrollbar {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-container-initialized:has(.swiper-button-prev:not(.swiper-button-disabled)) {
+  position: relative;
+  z-index: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-container-initialized:has(.swiper-button-prev:not(.swiper-button-disabled))::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffffff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-container-initialized:has(.swiper-button-next:not(.swiper-button-disabled)) {
+  position: relative;
+  z-index: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-container-initialized:has(.swiper-button-next:not(.swiper-button-disabled))::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 100%;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #ffffff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-container-initialized .swiper-slide:first-child {
+  margin-left: -60px;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-slide {
+  width: auto;
+  padding: 0 12.5px;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-button {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 0;
+  z-index: 20;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  will-change: opacity;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-button::after {
+  display: none;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-button-disabled {
+  opacity: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-button-prev {
+  background-image: url(/static/common/web/img/index/btn-tab-category-btn-prev.png);
+  left: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .swiper-button-next {
+  background-image: url(/static/common/web/img/index/btn-tab-category-btn-next.png);
+  right: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn:hover, .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn.active, .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn:focus-visible {
+  color: #000;
+  font-weight: 700;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn.active {
+  position: relative;
+  z-index: 0;
+}
+.search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn.active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background: #000;
+}
+
+.search-period-area:not(.type-swiper).margin-top-0 {
   margin-top: -70px;
   margin-bottom: 70px;
 }
-.search-period-area .search-period {
+.search-period-area:not(.type-swiper) .search-period {
   display: inline-block;
 }
-.search-period-area .search-period div {
+.search-period-area:not(.type-swiper) .search-period div {
   float: left;
   padding-left: 30px;
 }
-.search-period-area .search-period div#choice1, .search-period-area .search-period div#choice2 {
+.search-period-area:not(.type-swiper) .search-period div#choice1, .search-period-area:not(.type-swiper) .search-period div#choice2 {
   width: 525px;
 }
-.search-period-area .search-period div.wide {
+.search-period-area:not(.type-swiper) .search-period div.wide {
   width: 100% !important;
 }
-.search-period-area .search-period div:first-child {
+.search-period-area:not(.type-swiper) .search-period div:first-child {
   padding-left: 0;
 }
-.search-period-area .search-period h4 {
+.search-period-area:not(.type-swiper) .search-period h4 {
   font-size: 23px;
   padding-top: 30px;
   color: #fff;
 }
-.search-period-area .search-period ul {
+.search-period-area:not(.type-swiper) .search-period ul {
   display: inline-block;
   padding-top: 10px;
 }
-.search-period-area .search-period ul.etc {
+.search-period-area:not(.type-swiper) .search-period ul.etc {
   margin-left: 100px;
 }
-.search-period-area .search-period ul > * {
+.search-period-area:not(.type-swiper) .search-period ul > * {
   display: table;
   float: left;
   width: 103px;
   height: 140px;
   margin-top: 4px;
 }
-.search-period-area .search-period ul > * a {
+.search-period-area:not(.type-swiper) .search-period ul > * a {
   display: table-cell;
   color: #fff;
   vertical-align: middle;
@@ -79,35 +294,35 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.search-period-area .search-period ul li:first-child a {
+.search-period-area:not(.type-swiper) .search-period ul li:first-child a {
   border-left: 1px solid #fff;
 }
-.search-period-area .search-period ul li.active:first-child a {
+.search-period-area:not(.type-swiper) .search-period ul li.active:first-child a {
   border-left: 0;
 }
-.search-period-area .search-period ul > *.active {
+.search-period-area:not(.type-swiper) .search-period ul > *.active {
   width: 113px;
   height: 148px;
   margin-top: 0;
   margin-left: -3px;
 }
-.search-period-area .search-period ul > *.active a {
+.search-period-area:not(.type-swiper) .search-period ul > *.active a {
   background-color: #de142c;
   border: 1px solid #de142c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.search-period-area .search-period ul > * a span {
+.search-period-area:not(.type-swiper) .search-period ul > * a span {
   display: inline-block;
   position: relative;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.search-period-area .search-period ul > *:active a span, .search-period-area .search-period ul > *.active a span {
+.search-period-area:not(.type-swiper) .search-period ul > *:active a span, .search-period-area:not(.type-swiper) .search-period ul > *.active a span {
   font-weight: bold;
 }
-.search-period-area .search-period ul > * a:hover span:after, .search-period-area .search-period ul > *.active a span:after {
+.search-period-area:not(.type-swiper) .search-period ul > * a:hover span:after, .search-period-area:not(.type-swiper) .search-period ul > *.active a span:after {
   content: "";
   position: absolute;
   left: 0;
@@ -118,23 +333,23 @@
   text-align: center;
   background-color: #fff;
 }
-.search-period-area .search-period .white-select > *:hover a {
+.search-period-area:not(.type-swiper) .search-period .white-select > *:hover a {
   color: #de142c;
 }
-.search-period-area .search-period .white-select > *.active a {
+.search-period-area:not(.type-swiper) .search-period .white-select > *.active a {
   background-color: #fff;
   border: 1px solid #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #de142c;
 }
-.search-period-area .search-period .white-select > * a:hover span:after, .search-period-area .search-period .white-select > *.active a span:after {
+.search-period-area:not(.type-swiper) .search-period .white-select > * a:hover span:after, .search-period-area:not(.type-swiper) .search-period .white-select > *.active a span:after {
   background-color: #de142c;
 }
-.search-period-area .search-period .only {
+.search-period-area:not(.type-swiper) .search-period .only {
   padding-top: 53px;
 }
-.search-period-area .search-period .banners {
+.search-period-area:not(.type-swiper) .search-period .banners {
   padding: 22px 0 0 0;
 }
 
@@ -185,6 +400,36 @@
 
 .fare-list-area {
   position: relative;
+}
+.fare-list-area .search-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0 12px;
+  margin-top: 35px;
+  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+}
+.fare-list-area .search-summary .search-result {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.56px;
+}
+.fare-list-area .search-summary .search-result strong {
+  color: #FE2E36;
+  font-weight: 700;
+  letter-spacing: -0.56px;
+}
+.fare-list-area .search-summary .table-guide-desc {
+  color: #666;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  margin: 0;
+  padding: 0;
 }
 .fare-list-area .table-guide-title {
   float: left;
@@ -486,7 +731,7 @@
 }
 .fare-list-area .plan-list-area table.plan-list .ps-benefit .ps-benefit-price strong {
   vertical-align: -3px;
-  padding-left: 0.2rem;
+  padding-left: 2px;
   color: #D92C38;
   font-family: "Spoqa Han Sans";
   font-weight: bold;
