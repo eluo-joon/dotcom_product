@@ -1,0 +1,359 @@
+
+<html lang="ko" class="js mobile ua-ios">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:title" content="모아진">
+<meta property="og:Description" content="">
+<link rel="stylesheet" type="text/css" href="https://m.kt.com/css/v2/kt-style.css">
+<script>
+var default_domain = 'kt.com';
+var properties = 'prd';
+document.domain = default_domain;
+</script>
+<script src="https://m.kt.com/js/v2/plugin/jquery-3.6.0.min.js"></script>
+<script src="https://m.kt.com/js/ADOBE/mstaticsLogcodeLaunch.js"></script>
+<script>
+var $j = jQuery.noConflict() , $ = $j;
+
+var productName = "모아진";
+_dl = {
+	product : {
+		product_name : productName, // 상품명  예시) iPhone12 , (요금제의 경우) KT 5G 슈퍼플랜 초이스
+		product_detail : "", // 용량_색상,  예시) 64GB_퍼플
+		product_category :"모바일", // 카테고리 입력   예시) 모바일, 인터넷, TV, 인터냇+TV, 모바일+인터넷+TV, other(공유기 또는 모든 전화 상품)
+	}
+};
+var pageName = "^m^KT-개인^상품^모바일^OTT 구독^상품보기^" + productName;
+_commonDL = {
+	pageInfo :{
+		page_name : pageName, //각 페이지명, 페이지명은 별도의 엑셀파일 참조, 페이지 depth 구분은 "^"로 구분
+		page_url : window.location.href,
+		channel : "Mobile", //예시) pc web : PC, mobile web : Mobile, App : App
+		login_status : "N", // 예시) "Y"(로그인),  "N"(비로그인)
+		login_type : "", // 예시) ID 로그인 : normal, 소셜로그인 : facelook, kakaotalk, 자동로그인 : auto
+	}
+};
+</script>
+<title>모아진 | KT</title>
+<link type="text/css" href="/static/common/mobile/css/v2/product/m_common.css" rel="stylesheet">
+<link type="text/css" href="/static/common/mobile/css/v2/product/m_util.css" rel="stylesheet">
+<link type="text/css" href="/static/common/mobile/css/v2/product/m_prodetail.css" rel="stylesheet">
+<link type="text/css" href="/static/common/mobile/css/v2/product.css" rel="stylesheet">
+<link type="text/css" href="/static/common/mobile/css/v2/product/m_pduct_acodion.css" rel="stylesheet">
+<link type="text/css" href="/static/common/mobile/css/v2/product_detail.css" rel="stylesheet">
+<script type="text/javascript" src="/static/common/mobile/js/m_dev2.js"></script>
+<script type="text/javascript" src="/static/common/mobile/js/m_prodetail2.js"></script>
+</head>
+<body class="my">
+<div class="pduct-ott">
+<div class="top_price tp1">
+	<input type="hidden" id="tokenId">
+	<div class="month-plan">
+		<strong>월 4,000 원~</strong>
+		<p>(부가세 포함)</p>
+	</div>
+	<div class="summary-info icon-two">
+		<ul>
+			<li class="info-1">
+					<img src="/static/prodetail/feature/국내외 1600여종 50000권호 매거진 스트리밍 서비스.png" alt="">
+					<span>국내외<br>1,600여종<br>50,000권호<br>매거진<br>스트리밍<br>서비스</span>
+				</li>
+			<li class="info-2">
+					<img src="/static/prodetail/feature/개인 취향에 맞는 매거진-기사 자동 추천.png" alt="">
+					<span>개인 취향에<br>맞는<br>매거진/기사<br>자동 추천</span>
+				</li>
+			<li class="info-3">
+					<img src="/static/prodetail/feature/해외매거진의 AI번역 TTS 등 편안한 매거진 생활 지원.png" alt="">
+					<span>해외매거진의<br>AI번역, TTS 등<br>편안한 매거진<br>생활 지원</span>
+				</li>
+			</ul>
+	</div>
+	<input type="hidden" id="srv_target" name="srv_target" value="">
+	<div class="pdt-N-btns">
+		<div class="ott-layer-wrap">
+			<button type="button" class="pdt-N-btn proBtn_popup" onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일_상세', '^mKT-개인_상품서비스_모바일^OTT 구독^모아진^자세히보기^신청하기') ;"><span><i>구독하기</i></span></button>
+			<div class="ott-layer-ask">
+				<ul class="ott-layer-tp1">
+					<li>
+						<strong class="tit">매거진 5종</strong>
+						<!-- <a class="ott-layer-btn" href="https://my.kt.com/product/MobileAddedProdView.do?ctgryProd=PL24AU907"
+						onclick="detailClickStatistics.click('KT-개인_상품서비스_모바일^상세', '^KT-개인_상품서비스_모바일^OTT 구독^모아진^신청하기^매거진 5종^신청');">신청</a> -->
+						<a class="ott-layer-btn" href="javascript:void(0);" onclick="fnSubscribeApply('PL24AU907'); detailClickStatistics.click('mKT-개인_상품서비스_모바일^상세', '^mKT-개인_상품서비스_모바일^OTT 구독^모아진^신청하기^매거진 5종^신청');">구독</a>
+					</li>
+					<li>
+						<strong class="tit">국내매거진무제한</strong>
+						<!-- <a class="ott-layer-btn" href="https://my.mKT.com/product/MobileAddedProdView.do?ctgryProd=PL24AU909"
+						onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일^상세', '^mKT-개인_상품서비스_모바일^OTT 신청^모아진^신청하기^국내매거진무제한^신청');">신청</a> -->
+						<a class="ott-layer-btn" href="javascript:void(0);" onclick="fnSubscribeApply('PL24AU909'); detailClickStatistics.click('mKT-개인_상품서비스_모바일^상세', '^mKT-개인_상품서비스_모바일^OTT 구독^모아진^신청하기^국내매거진무제한^신청');">구독</a>
+					</li>
+					<li>
+						<strong class="tit">국내해외매거진무제한</strong>
+						<!-- <a class="ott-layer-btn" href="https://my.mKT.com/product/MobileAddedProdView.do?ctgryProd=PL24AU912"
+						onclick="detailClickStatistics.click('mKT-개인_상품서비스_모바일^상세', '^mKT-개인_상품서비스_모바일^OTT 신청^모아진^신청하기^국내해외매거진무제한^신청');">신청</a> -->
+						<a class="ott-layer-btn" href="javascript:void(0);" onclick="fnSubscribeApply('PL24AU912'); detailClickStatistics.click('mKT-개인_상품서비스_모바일^상세', '^mKT-개인_상품서비스_모바일^OTT 구독^모아진^신청하기^국내해외매거진무제한^신청');">구독</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="banner-area ba-line"></div>
+
+<div class="detail-plan-area">
+	<h3 class="ctit" role="text" aria-label="나를 위한 세상의 모든 매거진 Moazine">나를 위한 세상의 모든 매거진 <br>
+		<span class="bold"><span class="pduct-rgb-code-e94548">'Moazine'</span></span>
+	</h3>
+	
+	<div class="pduct-fte-column first" style="background:#F4F7F9;">
+		<div class="img-column"><img alt="" src="https://product.kt.com/static/prodetail/1615/common/itemForte/images/pi_1615_fte_01.png">
+		</div>
+
+		<div class="fte-column"><strong class="heading"><span class="bold">나를 위한 세상의 모든 매거진<br>
+					Moazine</span></strong>
+
+			<p class="tt">매일을 특별하게 만드는 깊이 있는 콘텐츠와 일상에<br>
+				새로운 영감을 불어넣는 이야기를 만나보세요.</p>
+		</div>
+	</div>
+
+	<div class="pduct-fte-column">
+		<div class="fte-column"><strong class="heading"><span class="bold">전문가의 시선을<br>
+					Streaming zine으로 만나다.</span></strong>
+
+			<p class="tt">전문가의 시선을 담은 1,600여 종, 총 50,000권호의<br>
+				국내 매거진과 해외 매거진을<br>
+				정기적으로 스트리밍 해보세요.</p>
+		</div>
+
+		<div class="img-column"><img alt="" src="https://product.kt.com/static/prodetail/1615/common/itemForte/images/pi_1615_fte_02.png">
+		</div>
+	</div>
+
+	<div class="pduct-fte-column" style="background:#F4F7F9;">
+		<div class="img-column"><img alt="" src="https://product.kt.com/static/prodetail/1615/common/itemForte/images/pi_1615_fte_03.png">
+		</div>
+
+		<div class="fte-column"><strong class="heading"><span class="bold">나만의 취향을 가득 담은 매거진</span></strong>
+
+			<p class="tt">나의 취향에 꼭 맞는 매거진/기사를 자동으로 추천 받고,<br>
+				언제 어디서든 스마트 기기 하나로 가볍게 이용할 수 있어요.</p>
+		</div>
+	</div>
+
+	<div class="pduct-fte-column">
+		<div class="fte-column"><strong class="heading"><span class="bold">똑똑한 뷰어로 편안한 매거진 생활</span></strong>
+
+			<ul class="list">
+				<li><span class="bold">AI 번역</span> : 읽기 어려운 해외 매거진도 걱정 없어요.</li>
+				<li><span class="bold">스크랩 북</span> : 취미, 업무 등 내가 원하는 대로<br>
+					분류해서 스크랩해요.</li>
+				<li><span class="bold">뷰어</span> : PDF 뷰어와 텍스트 뷰어 모두 제공해요.</li>
+			</ul>
+		</div>
+
+		<div class="img-column"><img alt="" src="https://product.kt.com/static/prodetail/1615/common/itemForte/images/pi_1615_fte_04.png">
+		</div>
+	</div>
+
+</div>
+
+<div class="price-information-area">
+	<div class="title">요금안내</div>
+	<div id="appendPriceDiv" class="desc">
+		<p class="pduct-tbl-top-desc">면세 상품으로 부가세가 없습니다.</p>
+		<div class="pduct-scalable-x" tabindex="0">
+			<div class="pduct-scalable-x-w" tabindex="0">
+				<table class="pduct-tbl-plan font-tp1">
+					<caption class="invisible">요금안내 표, 요금제, 월정액, 제공혜택, 제약 사항, 이용기기 등으로 구성함</caption>
+					<colgroup>
+						<col style="width:20%;">
+						<col style="width:20%;">
+						<col style="width:25%;">
+						<col style="width:25%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>요금제</th>
+							<th>월정액</th>
+							<th>제공혜택</th>
+							<th>제약 사항</th>
+							<th>이용기기</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>매거진5종</th>
+							<td class=""><span class="td-sale-price-tp1"><span class="invisible">정상가</span>5,000원</span><br>
+								<span class="invisible">할인가</span>4,000원
+							</td>
+							<td>국내+해외 매거진 중 5권 선택 구독<br>(해외매거진 최대 2종 선택 가능)</td>
+							<td rowspan="3">디바이스 최대 5대 등록 가능<br>동시접속 최대 2대 가능</td>
+							<td rowspan="3">스마트폰, 태블릿, PC</td>
+						</tr>
+						<tr>
+							<th>국내매거진 무제한</th>
+							<td class=""><span class="td-sale-price-tp1"><span class="invisible">정상가</span>9,000원</span><br>
+								<span class="invisible">할인가</span>7,000원</td>
+							<td>국내매거진 1천여종 무제한 구독</td>
+						</tr>
+						<tr>
+							<th>국내해외매거진 무제한</th>
+							<td class=""><span class="td-sale-price-tp1"><span class="invisible">정상가</span>15,000원</span><br>
+								<span class="invisible">할인가</span>13,000원</td>
+							<td>국내+해외 매거진 무제한 구독</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tab-toggle-area">
+	<div class="accordions">
+		<div class="tab-content-01">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('KT-개인_상품서비스_모바일_상세', '^KT-개인_상품서비스_모바일_상세^부가서비스_모아진^', '가입 및 해지 유의사항');" title="닫힘">가입 및 해지 유의사항</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion1">
+					<ul class="pduct-list">
+						<li>5G/LTE 요금제 이용 중인 KT고객에게만 할인 혜택이 제공되는 OTT 구독 서비스 입니다.<br>단, 선불, 알뜰폰(MVNO) , 패드/웨어러블 요금제, 데이터쉐어링, 피처폰 이용고객은 가입할 수 없습니다.</li>
+						<li>본인인증을 완료한 14세 이상의 개인명의의 경우만 가입 가능합니다.</li>
+						<li>모아진 상품 간 중복 가입이 불가합니다.</li>
+						<li>서비스 결제/취소/환불 관련해서는 KT정책이 우선 적용 됩니다.</li>
+						<li>제휴사의 사정에 의해 서비스 내용이나 상시 할인 혜택은 변경, 또는 종료될 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content-02">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('KT-개인_상품서비스_모바일_상세', '^KT-개인_상품서비스_모바일_상세^부가서비스_모아진', '모아진 유의사항');" title="닫힘">모아진 유의사항</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion2">
+					<ul class="pduct-list">
+						<li>부가서비스 가입 후, 별도의 모아진 계정등록을 진행하셔야 혜택이 적용됩니다.</li>
+						<li>모아진 서비스 이용을 위해서는 모아진 회원 가입 시 모아진 이용약관, 개인정보 수집이용 및 기타 정책에 동의해야 합니다.</li>
+						<li>부가서비스 가입 후, 매월 서비스 이용료 결제일(서비스 이용기간 시작일) 기준 7일 이내 해지하시는 경우에는, 모아진 콘텐츠 이용 여부에 따라 해지 처리됩니다.
+						<ul class="pduct-desh-list">
+							<li>가입 후 7일 이내 모아진 사용 이력이 없는 경우, 즉시 해지가 가능하며, 명세서에 청구되지 않습니다.</li>
+							<li>가입 후 7일 이내 모아진 사용 이력이 존재하는 경우, 즉시 해지 불가 및 해지 예약되며 이용요금이 부과됩니다.<br>
+							<span class="bold">예시) 최초 가입일이 1월 3일인 경우, 서비스 이용료 결제일은 매월 3일이며 매월 3일 ~ 9일 동안 콘텐츠 사용 이력이 없는 경우 해지 시 이용료가 부과되지 않음</span></li>
+						</ul>
+						</li>
+						<li>부가서비스 가입 후, 매월 서비스 이용료 결제일(서비스 이용기간 시작일) 기준 7일 이후에 해지하시는 경우에는, 즉시 해지 불가 및 해지 예약되고 이용요금은 해당월의 이용료가 전액 청구되며, 모아진 콘텐츠를 1달 동안 지속 이용 가능합니다.<br>
+						<span class="bold">예시) 최초 가입일이 1월 3일인 경우, 서비스 이용료 결제일은 매월 3일이며 매월 10일부터 서비스 이용료 결제일인 3일 이전까지 해지 시 ＇월 이용료 전액 부과＇되며 익월 2일까지 모아진 콘텐츠 이용 가능</span></li>
+						<li>기존 전자책 월 정기구독을 이용하는 회원은 구독 적용이 가능하며, 이용 중이던 기간은 혜택 적용 종료 후 사용 가능하도록 처리됩니다. 단, 이용 중이던 잔여 기간에 대한 결제 금액은 환불되지 않습니다.</li>
+						<li>KT 모아진 혜택 이용 중, 모아진의 다른 상품으로 변경은 KT 혜택 종료 후 처리 가능합니다.</li>
+						<li>KT 부가서비스 이용 중 부가서비스 해지, 미납, 번호이동, 요금 미납 등이 발생하는 경우 혜택 이용은 즉시 종료됩니다.</li>
+						<li>KT 부가서비스 이용 중 요금제 일시정지 시 모아진 상품은 예약해지 됩니다.</li>
+					</ul>
+					<style type="text/css">
+						.pduct-list li .bold{font-weight: 700;}
+					</style>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content-03">
+			<button type="button" class="accordion-trigger title" onclick="detailClickStatistics.click('KT-개인_상품서비스_모바일_상세', '^KT-개인_상품서비스_모바일_상세^부가서비스_모아진', '모아진 계정 등록 방법');" title="닫힘">모아진 계정 등록 방법</button>
+			<div class="accordion-contents desc" style="display: none;">
+				<div id="accordion3">
+					<div class="pi-1615-accordion-moajin-box">
+						<div class="pi-1615-accordion-moajin-cover">
+						<div class="pi-1615-accordion-moajin-heading-column"><strong class="pi-1615-accordion-moajin-heading">모아진 계정 등록 방법</strong></div>
+						
+						<ul class="pi-1615-accordion-moajin-list">
+							<li><img alt="단계 1" src="/static/prodetail/1615/mobile/itemAccordion/images/pi_moajin_01.png">
+							<p class="tt">모아진 웹/앱 접속<br>
+							&gt; 우상단 마이페이지 아이콘 클릭</p>
+							</li>
+							<li><img alt="단계 2" src="/static/prodetail/1615/mobile/itemAccordion/images/pi_moajin_02.png">
+							<p class="tt">회원가입 또는 로그인</p>
+							</li>
+							<li><img alt="단계 3" src="/static/prodetail/1615/mobile/itemAccordion/images/pi_moajin_03.png">
+							<p class="tt">[구독권 관리] 클릭</p>
+							</li>
+							<li><img alt="단계 4" src="/static/prodetail/1615/mobile/itemAccordion/images/pi_moajin_04.png">
+							<p class="tt">[KT 혜택/결합상품 이용] 클릭</p>
+							</li>
+							<li><img alt="단계 5" src="/static/prodetail/1615/mobile/itemAccordion/images/pi_moajin_05.png">
+							<p class="tt">[KT 구독 시작하기] 클릭</p>
+							</li>
+						</ul>
+						</div>
+					</div>
+					<style type="text/css">
+						.pi-1615-accordion-moajin-box {padding:10px;background:#F3F3F3;font-family:"Apple SD Gothic Neo", "Apple Gothic", -apple-system, BlinkMacSystemFont, Noto Sans, "Noto Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;}
+						.pi-1615-accordion-moajin-cover {padding:24px 10px 10px 10px;border-radius:10px;background:#fff;}
+						.pi-1615-accordion-moajin-heading-column {text-align:center;}
+						.pi-1615-accordion-moajin-heading {display:inline-block;position:relative;padding:0 40px;color:#222;font-family:"Apple SD Gothic Neo", "Apple Gothic", -apple-system, BlinkMacSystemFont, Noto Sans, "Noto Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-weight:700;font-size:20px;letter-spacing:-1px;}
+						.pi-1615-accordion-moajin-heading:before, .pi-1615-accordion-moajin-heading:after {content:'';position:absolute;top:50%;left:0;width:22px;height:1px;background:#222;transform:translateY(-50%);}
+						.pi-1615-accordion-moajin-heading:after {left:initial;right:0;}
+						.pi-1615-accordion-moajin-list {display:flex;flex-wrap:wrap;justify-content:center;margin:20px 0 0 0;padding:0 0 20px 0;border-radius:13px;background:#F9F9F9;color:#000;font-size:0;}
+						.pi-1615-accordion-moajin-list li {justify-items:center;position:relative;max-width:640px;margin:26px 0 0 0;font-weight:400;font-size:14px;text-align:center;}
+						.pi-1615-accordion-moajin-list li + li {margin:40px 0 0 0;}
+						.pi-1615-accordion-moajin-list li img {max-width:50%;}
+						.pi-1615-accordion-moajin-list li .tt {margin:10px 0 0 0;}
+					</style>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<script>self.resizeTo(document.body.scrollWidth, document.body.scrollHeight + 10);</script>
+<script src="/static/prodetail/1486/common/js/ott_common.js"></script>
+<script type="text/javascript">
+	//마이페이지 부모창으로 전송
+	function sendDataToMypage(dataObj) {
+		var tgtDomain = "https://m.my.kt.com";
+		window.parent.postMessage(dataObj, tgtDomain);
+	}
+
+	/*
+	 * 구독 토스트팝업 호출
+	 * 상품상세아이디(ottProdId)로 파라메터 전달
+	 */
+	function fnSubscribeApply(param) {
+		var pmParam = { fnName : "fnSubscribeApply", ottProdId : param };
+		sendDataToMypage(pmParam);
+	}
+
+	// 로컬테스트용
+	var Hostname = '';
+	$(document).ready(function() {
+		// TODO: postMessage rcv
+		window.addEventListener("message", function(e){
+			var fnName = e.data.fnName;
+			Hostname = e.data.hostName;
+
+			switch (fnName) 
+			{
+				case "setIframeHeight":
+					var pmParam = {
+						fnName : "setIframeHeight"
+					  , height : $("body").height()
+					}
+					sendDataToMypage(pmParam);
+					break;
+				default:
+					break;
+			}
+		});
+	});
+
+	$(document).ready(function() {
+		if(typeof _dl.page_event == 'undefined'){
+			_dl.page_event = {product_detail_view : true} 
+		}
+	});
+	// GA용 통계 스크립트 호출
+	ga('set', 'title', pageName); //GA용, adobe 통계 pageName을 그대로 호출
+	ga('rollup.set', 'title', pageName); //Adobe s.pageName
+	ga('set','dimension1','N');
+	ga('rollup.set','dimension1','N');
+	ga('send', 'pageview'); // GA용, 통계 전송
+	ga('rollup.send', 'pageview');
+</script>
+</body>
+</html>

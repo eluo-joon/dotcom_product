@@ -61,9 +61,6 @@
 
   <body>
     <div id="cfmClWrapper">
-      <div id="cfmClSkip"><a href="#cfmClContents">본문 바로 가기</a><a href="#cfmClGnbLogo">주메뉴 바로 가기</a></div>
-      <!-- crmClSkip -->
-
       <!-- /crmClSkip -->
       <div id="cfmClHeader" class="bg-blur">
         <div id="cfmClFloating">
@@ -7428,20 +7425,35 @@
       </div>
       <div id="cfmCLContainer" tabindex="0">
         <div id="cfmClContents">
-          <!-- player-area -->
-          <div class="banner-area ba-line"><!-- end Div --></div>
-          <!-- /player-area -->
-
           <!-- detail-plan-area -->
           <div class="detail-plan-area">
             <div class="column">
               <div class="inner forte-area">
                 <!-- S :: 상품특장점 editor // -->
                 <script>
-                  $(function () {
-                    $('.forte-area').load('/current/product/1647/web_1647.html', function () {
-                      console.log('인클루드 완료!');
-                    });
+                  document.addEventListener('DOMContentLoaded', function () {
+                    const target = document.querySelector('.forte-area');
+                    fetch('/current/product/1653/web/1653_w_상품특장점.html')
+                      .then(res => res.text())
+                      .then(html => {
+                        target.innerHTML = html;
+
+                        // 포함된 <script> 수동 실행
+                        // const scripts = target.querySelectorAll('script');
+                        // scripts.forEach(script => {
+                        //   const newScript = document.createElement('script');
+                        //   if (script.src) {
+                        //     newScript.src = script.src;
+                        //   } else {
+                        //     newScript.textContent = script.textContent;
+                        //   }
+                        //   document.body.appendChild(newScript);
+                        //   script.remove(); // 기존 script 제거
+                        // });
+
+                        target.dispatchEvent(new Event('include')); // 필요시 이벤트 발생
+                      });
+
                   });
                 </script>
                 <!-- // E:: 상품특장점 editor -->

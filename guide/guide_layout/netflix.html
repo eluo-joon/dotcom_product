@@ -149,12 +149,12 @@
     <script type="text/javascript" src="/static/common/netflix.js"></script>
 
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <link type="text/css" href="/static/common/web/css/p_common.css?v=20250612v1" rel="stylesheet" />
-    <link type="text/css" href="/static/common/web/css/p_prodetail.css?v=20250612v1" rel="stylesheet" />
-    <script type="text/javascript" src="/static/common/web/js/p_common.js?v=20230227v1"></script>
-    <script type="text/javascript" src="/static/common/web/js/p_index.js?v=20240830v1"></script>
-    <script type="text/javascript" src="/static/common/web/js/p_prodetail.js?v=20250526v1"></script>
-    <script type="text/javascript" src="/static/common/web/js/p_dev.js?v=20250507v2"></script>
+    <link type="text/css" href="/static/common/web/css/p_common.css" rel="stylesheet" />
+    <link type="text/css" href="/static/common/web/css/p_prodetail.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/common/web/js/p_common.js"></script>
+    <script type="text/javascript" src="/static/common/web/js/p_index.js"></script>
+    <script type="text/javascript" src="/static/common/web/js/p_prodetail.js"></script>
+    <script type="text/javascript" src="/static/common/web/js/p_dev.js"></script>
     <script type="text/javascript" src="/static/common/lib/js/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="/static/common/lib/js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="/static/common/lib/js/jquery.scrollTo.min.js"></script>
@@ -179,35 +179,35 @@
         getHtml(item_disptype, link_type);
       });
 
-      function getHtml(item_disptype, link_type) {
-        var forte_path = "/static/prodetail/1405/web/itemForte/html/";
-        var forte_File = "";
-        var accordion_path = "/static/prodetail/1405/web/itemAccordion/html/";
-        var accordion_File = "";
+      // function getHtml(item_disptype, link_type) {
+      //   var forte_path = "/static/prodetail/1405/web/itemForte/html/";
+      //   var forte_File = "";
+      //   var accordion_path = "/static/prodetail/1405/web/itemAccordion/html/";
+      //   var accordion_File = "";
 
-        // html 불러오기
-        switch (item_disptype) {
-          case "A":
-          case "B":
-            // 신청하기/팝업(신청하기 버튼 위 레이어 팝업)
-            if (link_type == "2" || link_type == "6") {
-              if ("default_20210701225700.html" != null || "default_20210701225700.html" != "") {
-                $j(".layer-ask").load("/static/prodetail/1405/web/popup/default_20210701225700.html");
-              }
-            }
-            loadHtml.commDraw(forte_path, forte_File, accordion_path, accordion_File);
-            break;
-          case "C":
-            loadHtml.commDraw(forte_path, forte_File, accordion_path, accordion_File);
-            break;
-          case "D":
-            if ("htmlUploadType_20250508124729.html" != null || "htmlUploadType_20250508124729.html" != "") {
-              $j(".forte-area").load("/static/prodetail/1405/web/" + "htmlUploadType_20250508124729.html");
-            }
-          default:
-            break;
-        }
-      }
+      //   // html 불러오기
+      //   switch (item_disptype) {
+      //     case "A":
+      //     case "B":
+      //       // 신청하기/팝업(신청하기 버튼 위 레이어 팝업)
+      //       if (link_type == "2" || link_type == "6") {
+      //         if ("default_20210701225700.html" != null || "default_20210701225700.html" != "") {
+      //           $j(".layer-ask").load("/static/prodetail/1405/web/popup/default_20210701225700.html");
+      //         }
+      //       }
+      //       loadHtml.commDraw(forte_path, forte_File, accordion_path, accordion_File);
+      //       break;
+      //     case "C":
+      //       loadHtml.commDraw(forte_path, forte_File, accordion_path, accordion_File);
+      //       break;
+      //     case "D":
+      //       if ("htmlUploadType_20250508124729.html" != null || "htmlUploadType_20250508124729.html" != "") {
+      //         $j(".forte-area").load("/static/prodetail/1405/web/" + "htmlUploadType_20250508124729.html");
+      //       }
+      //     default:
+      //       break;
+      //   }
+      // }
 
       var isLogin = "false";
       var subscriptionRes = "";
@@ -7935,10 +7935,29 @@
 
             <!-- S :: 상품특장점 editor // -->
             <script>
-              $(function () {
-                $('.forte-area').load('/current/product/1405/1405_w.html', function () {
-                  console.log('인클루드 완료!');
-                });
+              document.addEventListener('DOMContentLoaded', function () {
+                const target = document.querySelector('.forte-area');
+                fetch('/current/product/1405/1405_w.html')
+                  .then(res => res.text())
+                  .then(html => {
+                    target.innerHTML = html;
+
+                    // 포함된 <script> 수동 실행
+                    const scripts = target.querySelectorAll('script');
+                    scripts.forEach(script => {
+                      const newScript = document.createElement('script');
+                      if (script.src) {
+                        newScript.src = script.src;
+                      } else {
+                        newScript.textContent = script.textContent;
+                      }
+                      document.body.appendChild(newScript);
+                      script.remove(); // 기존 script 제거
+                    });
+
+                    target.dispatchEvent(new Event('include')); // 필요시 이벤트 발생
+                  });
+
               });
             </script>
             <!-- // E:: 상품특장점 editor -->

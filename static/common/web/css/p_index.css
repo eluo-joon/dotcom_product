@@ -36,12 +36,19 @@
   /* 2507 요금카테고리 개편*/
 }
 .search-period-area.type-swiper {
-  height: 60px;
+  min-height: 60px;
+  height: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #fff;
 }
 .search-period-area.type-swiper:has(.ui-tab.type-sub) {
   position: relative;
   height: 110px;
+}
+.search-period-area.type-swiper .column, .search-period-area.type-swiper .inner {
+  height: auto;
 }
 .search-period-area.type-swiper .ui-tab-list-btn {
   display: -webkit-inline-box;
@@ -54,7 +61,9 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  font-family: "NSR", "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+  font-family: "Noto Sans", "Malgun Gothic", "맑은 고딕", "MG", "dotum", "돋움", sans-serif;
+  -webkit-font-feature-settings: "tnum";
+          font-feature-settings: "tnum";
 }
 .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list {
   display: -webkit-box;
@@ -67,7 +76,8 @@
   position: relative;
 }
 .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn {
-  height: 60px;
+  min-height: 60px;
+  padding: 15.5px 25px 16.5px;
   padding: 0 25px;
   color: #666;
   font-size: 18px;
@@ -76,11 +86,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn:hover, .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn.active, .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn:focus-visible {
+.search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn:hover, .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn:focus-visible {
   color: #000;
-  font-weight: 700;
 }
 .search-period-area.type-swiper .ui-tab.type-main .ui-tab-list-btn.active {
+  color: #000;
+  font-weight: 700;
   background: #fff;
   border-radius: 10px 10px 0px 0px;
   border: 1px solid #E6E6E6;
@@ -133,10 +144,12 @@
 .search-period-area.type-swiper .ui-tab.type-sub .type-sub-item {
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 100%;
   z-index: -1;
   height: 50px;
+  width: 100%;
   border-bottom: 1px solid #E6E6E6;
+  background: #fff;
 }
 .search-period-area.type-swiper .ui-tab.type-sub .type-sub-item:has(.swiper-container.is-show) {
   z-index: 2;
@@ -214,11 +227,11 @@
   opacity: 0;
 }
 .search-period-area.type-swiper .ui-tab.type-sub .swiper-button-prev {
-  background-image: url(/static/common/web/img/index/btn-tab-category-btn-prev.png);
+  background-image: url("/static/common/web/img/index/btn-tab-category-btn-prev.png");
   left: 0;
 }
 .search-period-area.type-swiper .ui-tab.type-sub .swiper-button-next {
-  background-image: url(/static/common/web/img/index/btn-tab-category-btn-next.png);
+  background-image: url("/static/common/web/img/index/btn-tab-category-btn-next.png");
   right: 0;
 }
 .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn {
@@ -227,11 +240,12 @@
   font-weight: 400;
   letter-spacing: -0.3px;
 }
-.search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn:hover, .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn.active, .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn:focus-visible {
+.search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn:hover, .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn:focus-visible {
   color: #000;
-  font-weight: 700;
 }
 .search-period-area.type-swiper .ui-tab.type-sub .ui-tab-list-btn.active {
+  color: #000;
+  font-weight: 700;
   position: relative;
   z-index: 0;
 }
