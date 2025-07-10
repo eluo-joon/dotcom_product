@@ -1,0 +1,79 @@
+[업무인수인계]
+TB/DEV 전한용 호스트 정보
+메모장 관리자 권한으로 실행 
+C:\Windows\System32\drivers\etc
+위 경로 접근 후 메모장으로 hosts 파일열기 
+1) 아래 내용 하단 붙여넣기
+2) #은 주석 의미, 지울 시 주석 해제
+- 호스트 접근 시 주석 해제
+
+------------------------------------------
+
+#product web1
+
+#14.63.149.47 product.kt.com m.product.kt.com simple.kt.com m.simple.kt.com
+
+#product web2
+
+#14.63.149.48 product.kt.com m.product.kt.com simple.kt.com m.simple.kt.com
+
+
+#TB
+
+#10.217.77.147 cms.product.kt.com product.kt.com m.product.kt.com simple.kt.com m.simple.kt.com
+
+#10.217.80.45 tb.search.kt.com tb.m.search.kt.com
+
+
+#kt.com, event TB
+
+#14.63.237.59 www.kt.com cfm.kt.com inside.kt.com event.kt.com biz.kt.com corp.kt.com
+
+#14.63.237.57 m.kt.com mtb.kt.com
+
+#14.63.237.65 m.kt.com
+
+
+# Shop 5시 핫딜1 (DEV)
+
+#10.217.58.192 dev.shop.kt.com
+
+#10.217.58.192 m.dev.shop.kt.com
+
+
+# Shop 5시 핫딜 / 지금초특가 (디버그) (SM 디버그 환경)
+
+#10.220.188.133 shop.kt.com 5g.kt.com direct.kt.com 
+
+#10.220.188.133 m.shop.kt.com m.5g.kt.com
+
+
+# 지금초특가 (DEV)
+
+#10.217.58.192  devle.shop.kt.com m.devle.shop.kt.com 
+
+
+* 호스트 정보 
+
+
+################# 닷컴 설정 #################
+
+## 닷컴 Mobile TB :: 57, 65 둘 다 TB 
+
+
+#14.63.237.65 m.kt.com
+
+#14.63.237.57 m.kt.com - 소상공인 확인은 여기
+
+#14.63.237.57 mtb.kt.com
+
+################# 닷컴 설정 #################
+
+[CMS]
+1. cms 방화벽 해제 
+→ 해당파트 기획담당자에게
+사번 이름 전화번호 ip 메일로 전달하여
+권한 해제 요청
+2. 주사용 메뉴
+- 상품관리 
+- 기타관리 CSS/JS 관리
