@@ -16,18 +16,21 @@
 
 <body>
 	<div class="guide-inner">
-		<h1>Common Rule</h1>
+		<h1>Common GUIDE</h1>
 		
 		<div class="guide-inner-content">
 			<h2>과업 범위 및 프로세스</h2>
 			<div class="guide-block">
 				<ul>
-					<li>KT.COM GNB 기준, 1Depth 상품 (2depth 소상공인 제외)</li>
-					<li>KT.COM GNB 기준, 1Depth 혜택 - 2depth 이용혜택</li>
+					<li>도메인 시작 기준, https://product.kt.com/~ </li>
+					<li>GNB &gt; 상품 &gt; OTT구독 (https://my.kt.com/product/OttSubscribeView.do) &gt; 페이지 내 OTT 레이어팝업 내부 HTML 랜딩파일</li>
 					<li class="li-caption">25.06까지 작업전달 현황 기준으로 정리</li>
-					<li>상품 내부 상세페이지 수정 잦음 (신규 작업 / 단순 텍스트 변경 / 배너 교체 등)</li>
+					<li class="li-caption">상품 GNB 내부에 있어도 도메인이 다른 경우 과업범위 아님</li>
+					<li>CMS 상품 내부 상세페이지 수정 잦음 (신규 작업 / 단순 텍스트 변경 / 배너 교체 등)</li>
+					<li>혜택 HTML 페이지 업데이트</li>
+					<li>java(url 기준 .do) 페이지 필요에 따라 개발 협업 진행 및 배포 참여</li>
 					<li>
-						<strong>진행 프로세스</strong>
+						<strong>진행 프로세스 - 상품</strong>
 						<div class="process-flow">
 							<dl>
 								<dt>KT고객사</dt>
@@ -38,19 +41,51 @@
 								<dd>고객사 내용 정리 후 디자인/퍼블 요청</dd>
 							</dl>
 							<dl>
-								<dt>디자인 (엘루오)</dt>
+								<dt>디자인 (엘루오) - 단순 문구 변경 작업의 경우 생략</dt>
 								<dd>KT고객사 컨펌 완료 시 퍼블 최종 전달</dd>
 								<dd>대부분 ASAP으로 미리 퍼블리싱 준비 권장</dd>
 							</dl>
-							<dl>
+							<dl style="background: red; color: white;">
 								<dt>퍼블리싱 (엘루오)</dt>
-								<dd>작업 후 기획 전달 (담당자 메신저 / 메신저 미응답 시 메일)</dd>
+								<dd>상용서버 CMS 작업 후 기획 전달 (담당자 메신저 / 메신저 미응답 시 메일)</dd>
 								<dd>미리보기까지만 진행 (배포 미진행)</dd>
 							</dl>
 							<dl>
 								<dt>기획 (지어소프트)</dt>
 								<dd>검수 진행 후 고객사 컨펌 요청</dd>
-								<dd>컨펌 완료 후 CMS 배포</dd>
+								<dd style="color: red;">컨펌 완료 후 CMS 배포</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<strong>진행 프로세스 - 혜택 / OTT구독 레이어팝업 HTML 파일</strong>
+						<div class="process-flow">
+							<dl>
+								<dt>KT고객사</dt>
+								<dd>요청사항 전달</dd>
+							</dl>
+							<dl>
+								<dt>기획 (지어소프트)</dt>
+								<dd>고객사 내용 정리 후 디자인/퍼블 요청</dd>
+							</dl>
+							<dl>
+								<dt>디자인 (엘루오) - 단순 문구 변경 작업의 경우 생략</dt>
+								<dd>KT고객사 컨펌 완료 시 퍼블 최종 전달</dd>
+								<dd>대부분 ASAP으로 미리 퍼블리싱 준비 권장</dd>
+							</dl>
+							<dl style="background-color: red; color: white;">
+								<dt>퍼블리싱 (엘루오)</dt>
+								<dd>TB 작업 후 기획 전달 (담당자 메신저 / 메신저 미응답 시 메일)</dd>
+								<dd>TB 작업 건의 경우 기타관리로 미리보기가 없는 경우에 해당</dd>
+							</dl>
+							<dl>
+								<dt>기획 (지어소프트)</dt>
+								<dd>검수 진행 후 고객사 컨펌 요청</dd>
+								<dd>컨펌 완료 후 퍼블 배포 요청</dd>
+							</dl>
+							<dl style="background-color: red; color: white;">
+								<dt>퍼블리싱 (엘루오)</dt>
+								<dd>최종 상용 배포</dd>
 							</dl>
 						</div>
 					</li>
@@ -80,16 +115,16 @@
 						</tr>
 						<tr class="first">
 							<td>김선경</td>
-							<td class="td_left">-</td>
+							<td class="td_left">정식 메일 미참조</td>
 						</tr>
 						<tr class="first">
 							<td rowspan="2">기획<br>(지어소프트)</td>
-							<td>최창익</td>
-							<td class="td_left">차장</td>
-						</tr>
-						<tr class="first">
 							<td>양정민</td>
 							<td class="td_left">과장</td>
+						</tr>
+						<tr class="first">
+							<td>유아현</td>
+							<td class="td_left">대리</td>
 						</tr>
 						<tr class="first">
 							<td rowspan="2">KT사업부<br>(디지털채널기획팀)</td>
@@ -102,52 +137,6 @@
 						</tr>
 					</tbody>
 				</table>
-			</div>
-			
-			<h2>기본 사항</h2>
-			<div class="guide-block">
-				<ul>
-					<li>별도 형상관리 툴 부재로 CMS 및 로컬 작업을 진행하므로 항시 백업 후 작업.</li>
-					<li>
-						적응형 사이트로 웹 / 모바일 화면 각각 작업 필요.
-						<ul>
-							<li class="li-caption">URL 각각 분리, 단순 브라우저 리사이징으로 디바이스 전환 불가</li>
-							<li>Web: https://product.kt.com/<strong class="fc-primary td-underline">wDic</strong>/index.do?CateCode=6003</li>
-							<li>Mobile: https://<strong class="fc-primary td-underline">m.</strong>product.kt.com/<strong class="fc-primary td-underline">mDic</strong>/index.do?CateCode=6003</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-			<h2>Class 및 ID 규칙</h2>
-			<div class="guide-block">
-				<ul>
-					<li>네이밍: 하이픈( - ) 사용.</li>
-					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
-				</ul>
-			</div>
-
-			<h2>이미지 규칙</h2>
-			<div class="guide-block">
-				<ul>
-					<li>네이밍: 언더바( _ ) 사용.</li>
-					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
-					<li>svg 확장자 사용불가 (상품 에디터 ckfinder 기준)</li>
-				</ul>
-			</div>
-
-			<h2>CSS 구조</h2>
-			<div class="guide-block">
-				<span class="pre">root/
-					│── [assets]
-					│   ├── [css]
-					│   ├── [font]
-					│   ├── [images]
-					│   ├── [js]
-					│   ├── [video]
-					│── [html]
-					│── [en]					
-				</span>
 			</div>
 
 			<h2>용어 정의</h2>
@@ -169,7 +158,10 @@
 						<tr class="first">
 							<td>TB</td>
 							<td>개발기</td>
-							<td class="td_left">html/js/css 업로드 위주 사용</td>
+							<td class="td_left">
+								상품 상세페이지 외 HTML 업로드 위주 검수용 사용<br>
+								(혜택 / OTT구독 레이어팝업 등)
+							</td>
 						</tr>
 						<tr class="first">
 							<td>상용</td>
@@ -181,7 +173,8 @@
 							<td>
 								상용CMS 수정 후 임시화면<br>
 								배포 전 상용 반영안됨<br>
-								상품상세페이지 에디터 수정 후 검수용
+								상품상세페이지 에디터 수정 후 검수용<br>
+								<span style="color: red">단, 에디터 내부 ckFinder 서버 업로드(이미지, html 등) 시 즉각 반영으로 절대 동일 파일명으로 오버라이드되지 않도록 유의.</span>
 							</td>
 							<td class="td_left">
 								<strong>
@@ -195,7 +188,7 @@
 							<td>ott (팝업) html</td>
 							<td>
 								(GNB) 상품 > 모바일 > OTT구독 > OTT 구독 상품보기 카드<br>
-								클릭 시 오픈되는 팝업 내부 html 의미
+								클릭 시 오픈되는 레이어 팝업 내부 html 의미
 							</td>
 							<td class="td_left">
 								<strong>해당 파일의 경우, 퍼블 수동 배포만 가능(ckfinder)</strong><br>
@@ -204,9 +197,73 @@
 								배포는 당일 상용서버 기존 파일 삭제 후 업로드
 							</td>
 						</tr>
+						<tr class="first">
+							<td>OC</td>
+							<td>메신저 의미</td>
+							<td class="td_left">
+								단순히 MS사 과거 메신저명으로 편의상 부름<br>
+								오씨 부탁드려요. = 메신저로 회신주세요.
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
+			
+			<h2>기본 사항</h2>
+			<div class="guide-block">
+				<ul>
+					<li>별도 형상관리 툴 부재로 CMS 및 로컬 작업을 진행하므로 항시 백업 후 작업.</li>
+					<li>
+						적응형 사이트로 웹 / 모바일 화면 각각 작업 필요.
+						<ul>
+							<li class="li-caption">URL 각각 분리, 단순 브라우저 리사이징으로 디바이스 전환 불가</li>
+							<li>Web: https://product.kt.com/<strong class="fc-primary td-underline">wDic</strong>/index.do?CateCode=6003</li>
+							<li>Mobile: https://<strong class="fc-primary td-underline">m.</strong>product.kt.com/<strong class="fc-primary td-underline">mDic</strong>/index.do?CateCode=6003</li>
+						</ul>
+					</li>
+					<li>상용과 TB의 화면은 항상 일치 필요 (콘텐츠 현행화 제외, CSS/JS/HMTL-OTT,혜택 등 정적파일 기준 일치)</li>
+				</ul>
+			</div>
+
+			<h2>Class 및 ID 규칙</h2>
+			<div class="guide-block">
+				<ul>
+					<li>네이밍: 하이픈( - ) 사용.</li>
+					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
+				</ul>
+			</div>
+
+			<h2>이미지 규칙</h2>
+			<div class="guide-block">
+				<ul>
+					<li>네이밍: 언더바( _ ) 사용.</li>
+					<li class="li-caption">KT닷컴 전체 페이지 공통 적용사항</li>
+					<li>svg 확장자 사용불가 (상품 에디터 ckfinder 업로드 불가 확장자 및 data-url 사용 불가)</li>
+				</ul>
+			</div>
+
+			<h2>JS</h2>
+			<div class="guide-block">
+				<ul>
+					<li>개발 협업 시 ES5 이하 문법 또는 제이쿼리 사용 권장</li>
+					<li>단순 퍼블 기능 구현 시 최신문법 사용 무관 </li>
+				</ul>
+			</div>
+
+			<h2>CSS 구조</h2>
+			<div class="guide-block">
+				<span class="pre">root/
+					│── [assets]
+					│   ├── [css]
+					│   ├── [font]
+					│   ├── [images]
+					│   ├── [js]
+					│   ├── [video]
+					│── [html]
+					│── [en]					
+				</span>
+			</div>
+
 		</div>
 
 	</div>
